@@ -1,0 +1,18 @@
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Backup folders (we have many dated backups)
+assets/images/backup/
+assets/images/*-before-*
+assets/images/*-2026*
+
+# Temp / generated during edits
+*.tmp
+*.bak
+
+# If we ever add build steps
+node_modules/
+dist/
