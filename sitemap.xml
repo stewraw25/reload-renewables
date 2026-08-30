@@ -1,86 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-  RELOAD Renewables & AC - Sitemap for outstanding local SEO (targeting "solar installers wrexham", "solar installers chester" etc)
-  Update ALL <loc> domains + Sitemap: in robots.txt to your live domain after deployment (Netlify, Vercel etc).
-  Submit sitemap in Google Search Console + Bing Webmaster Tools. Keep lastmod updated on content changes.
--->
+<!-- Draft sitemap for https://stewraw25.github.io/reload-renewables/ — do not point a custom domain until Stewart says. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.primerenewables.co.uk/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://stewraw25.github.io/reload-renewables/</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.primerenewables.co.uk/services.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://stewraw25.github.io/reload-renewables/solar.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://www.primerenewables.co.uk/about.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://stewraw25.github.io/reload-renewables/battery.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://www.primerenewables.co.uk/projects.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.primerenewables.co.uk/contact.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.primerenewables.co.uk/domestic.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://stewraw25.github.io/reload-renewables/domestic.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.primerenewables.co.uk/commercial.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://stewraw25.github.io/reload-renewables/commercial.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.primerenewables.co.uk/mission.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://stewraw25.github.io/reload-renewables/contact.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://stewraw25.github.io/reload-renewables/services.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.primerenewables.co.uk/solar.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://www.primerenewables.co.uk/battery.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://www.primerenewables.co.uk/heat-pumps.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://www.primerenewables.co.uk/ac.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
-  </url>
-  <url>
-    <loc>https://www.primerenewables.co.uk/our-work.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://stewraw25.github.io/reload-renewables/about.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://stewraw25.github.io/reload-renewables/heat-pumps.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://stewraw25.github.io/reload-renewables/ac.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://stewraw25.github.io/reload-renewables/our-work.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://stewraw25.github.io/reload-renewables/projects.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://stewraw25.github.io/reload-renewables/mission.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
