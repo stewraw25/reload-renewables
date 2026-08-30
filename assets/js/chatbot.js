@@ -13,7 +13,7 @@
     { keywords: ["mcs", "accredited", "niceic", "trustmark"], answer: "Yes — we are fully MCS accredited, NICEIC registered, RECC members, TrustMark approved, and F-Gas certified." },
     { keywords: ["servicing", "maintenance", "service", "annual", "repair"], answer: "We offer annual servicing and maintenance plans for solar PV, batteries, heat pumps and air conditioning across Wrexham, Chester and North Wales. Keeps systems efficient and protects your warranties. F-Gas certified for AC." },
     { keywords: ["cost", "price", "how much", "expensive"], answer: "Our popular packages start from £8,000 for Silver (3.6kWp + 5.1kWh battery). Prices vary depending on your property — we always provide a free, no-obligation site survey and quote." },
-    { keywords: ["payback", "return", "save", "bill reduction"], answer: "Most customers see 70-90% reduction in energy bills. Payback is typically 6–9 years depending on the system and your usage/tariff." },
+    { keywords: ["payback", "return", "save", "bill reduction"], answer: "Savings depend on your usage, tariff and the system we specify. Use the estimator on the homepage for a modelled figure, or call (01978) 809 500 for a site survey. We use ~980 kWh/kWp for this area." },
     { keywords: ["tesla", "powerwall", "byd"], answer: "We install both BYD batteries (excellent value) and Tesla Powerwall 3. The Platinum package includes the Tesla Powerwall 3 + Gateway." },
     { keywords: ["commercial", "business", "office", "chester", "wrexham business"], answer: "Yes, we regularly work with homes and businesses, offices, farms, and commercial properties for solar, battery storage, heat pumps and air conditioning in Wrexham, Chester and across North Wales." },
     { keywords: ["time", "how long", "installation", "install"], answer: "A typical domestic solar + battery install takes 1–3 days. We handle everything including scaffolding, DNO applications, and MCS registration." },
@@ -149,30 +149,23 @@
           source: "Website Chatbot - " + window.location.pathname
         };
 
-        // IMPORTANT: Replace this with your actual Formspree endpoint
-        const formspreeEndpoint = "https://formspree.io/f/YOUR_FORM_ID_HERE";
-
-        try {
-          const response = await fetch(formspreeEndpoint, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData)
-          });
-
-          if (response.ok) {
-            leadForm.innerHTML = `
-              <div class="text-center py-8">
-                <i class="fas fa-check-circle text-emerald-500 text-4xl mb-4"></i>
-                <h3 class="font-semibold text-lg">Thank you!</h3>
-                <p class="text-sm text-slate-600 mt-2">We've received your details and chat transcript. A member of our team will contact you shortly.</p>
-              </div>
-            `;
-          } else {
-            throw new Error("Form submission failed");
-          }
-        } catch (err) {
-          alert("There was a problem sending your enquiry. Please call us directly on (01978) 809 500.");
-        }
+        const subject = 'Website chat enquiry from ' + formData.name;
+        const body = [
+          'Name: ' + formData.name,
+          'Phone: ' + formData.phone,
+          'Email: ' + formData.email,
+          'Interest: ' + formData.interest,
+          'Source: ' + formData.source,
+          '',
+          formData.summary || ''
+        ].join('\n');
+        window.location.href = 'mailto:hello@reloadrenewables.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        leadForm.innerHTML = `
+          <div class="text-center py-8">
+            <h3 class="font-semibold text-lg">Open your email app</h3>
+            <p class="text-sm text-slate-600 mt-2">This site does not send the form itself. If your email app did not open, email hello@reloadrenewables.com or call (01978) 809 500.</p>
+          </div>
+        `;
       });
     }
   };

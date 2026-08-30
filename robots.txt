@@ -1,16 +1,9 @@
-# RELOAD Renewables & AC - robots.txt
-# Technical SEO foundation for ranking as the top solar installers Wrexham, solar installers Chester & North Wales
+# Reload Renewables & AC — draft GitHub Pages site.
+# Keep this sitemap until Stewart names the live domain. Do not add a CNAME here.
 
 User-agent: *
 Allow: /
 
-# Keep images crawlable for local image SEO / visual search (Google Images for "solar wrexham" etc)
-# Block only internal logo variants if needed
-Disallow: /assets/images/logos/
+Disallow: /assets/images/custom/backup/
 
-# Point to sitemap — UPDATE DOMAIN + re-submit in GSC after you go live (Netlify recommended)
-Sitemap: https://www.primerenewables.co.uk/sitemap.xml
-
-# Google: After launch, submit sitemap in Search Console, verify ownership, monitor "solar installers wrexham", "solar chester", "battery storage wrexham", "heat pump installers chester", "f gas ac wrexham" etc.
-# Also claim/optimise your Google Business Profile with exact NAP, services, photos of local Wrexham/Chester installs and recent reviews.
-# Dedicated service pages (solar.html, battery.html, heat-pumps.html, ac.html) + our-work.html for portfolio signals and local pack.
+Sitemap: https://stewraw25.github.io/reload-renewables/sitemap.xml
