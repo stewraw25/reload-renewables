@@ -5,21 +5,21 @@
 
   const knowledgeBase = [
     { keywords: ["area", "cover", "wrexham", "chester", "mold", "oswestry", "north wales", "where", "serve"], answer: "We cover Wrexham, Chester, Mold, Oswestry, Flint, Deeside, Rhyl and all of North Wales plus the North West (including parts of Cheshire and Wirral). If you're unsure if we serve your area, just let us know your postcode." },
-    { keywords: ["finance", "0%", "zero", "interest", "payment", "pay monthly"], answer: "Yes! We offer 0% interest finance options. These are arranged through our authorised broker partners to ensure full compliance with UK consumer credit regulations." },
+    { keywords: ["finance", "0%", "zero", "interest", "payment", "pay monthly"], answer: "Three ways to pay, on the Gold from £10,000 package: pay in full; 0% via an authorised broker (subject to status; illustration if approved with no deposit 120 × £83 — Reload is not the lender); or a separate representative example at 9.9% APR, 120 months, £10,000, no deposit, 120 × £132, total amount payable £15,840. Do not mix 0% and 9.9% — they are different products." },
     { keywords: ["warranty", "guarantee", "how long"], answer: "We provide 10-year workmanship warranties on all installations. Panels typically come with 25–30 year performance warranties, and batteries (BYD/Tesla) usually have 10-year warranties." },
     { keywords: ["battery only", "no solar", "just battery", "arbitrage", "off peak", "octopus go"], answer: "Absolutely. Many customers install battery storage only, especially on tariffs like Octopus Go. You can charge overnight at cheap rates and use the power during the day." },
-    { keywords: ["heat pump", "grant", "bus", "air source"], answer: "Yes, we install air source heat pumps and can help with the Boiler Upgrade Scheme (BUS) grant of up to £7,500. We handle the full application." },
+    { keywords: ["heat pump", "grant", "bus", "air source"], answer: "Yes, we install air source heat pumps and can help with the Boiler Upgrade Scheme (BUS) grant of up to £7,500 on qualifying jobs. MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote." },
     { keywords: ["air conditioning", "ac", "cooling", "mitsubishi", "daikin"], answer: "We install high-quality air conditioning systems from Mitsubishi, Daikin, and LG for both homes and commercial properties. We're F-Gas certified." },
-    { keywords: ["mcs", "accredited", "niceic", "trustmark"], answer: "Yes — we are fully MCS accredited, NICEIC registered, RECC members, TrustMark approved, and F-Gas certified." },
+    { keywords: ["mcs", "accredited", "niceic", "trustmark"], answer: "We hold NICEIC and TrustMark. Certificates on request. MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote. F-Gas is held for air-conditioning and heat-pump refrigerant work." },
     { keywords: ["servicing", "maintenance", "service", "annual", "repair"], answer: "We offer annual servicing and maintenance plans for solar PV, batteries, heat pumps and air conditioning across Wrexham, Chester and North Wales. Keeps systems efficient and protects your warranties. F-Gas certified for AC." },
     { keywords: ["cost", "price", "how much", "expensive"], answer: "Our popular packages start from £8,000 for Silver (3.6kWp + 5.1kWh battery). Prices vary depending on your property — we always provide a free, no-obligation site survey and quote." },
     { keywords: ["payback", "return", "save", "bill reduction"], answer: "Savings depend on your usage, tariff and the system we specify. Use the estimator on the homepage for a modelled figure, or call (01978) 809 500 for a site survey. We use ~980 kWh/kWp for this area." },
     { keywords: ["tesla", "powerwall", "byd"], answer: "We install both BYD batteries (excellent value) and Tesla Powerwall 3. The Platinum package includes the Tesla Powerwall 3 + Gateway." },
     { keywords: ["commercial", "business", "office", "chester", "wrexham business"], answer: "Yes, we regularly work with homes and businesses, offices, farms, and commercial properties for solar, battery storage, heat pumps and air conditioning in Wrexham, Chester and across North Wales." },
-    { keywords: ["time", "how long", "installation", "install"], answer: "A typical domestic solar + battery install takes 1–3 days. We handle everything including scaffolding, DNO applications, and MCS registration." },
-    { keywords: ["solar installers", "solar wrexham", "solar chester", "best solar", "recommended solar", "solar installers wrexham", "solar installers chester"], answer: "We are professional local solar installers based in Wrexham serving homes and businesses in Wrexham, Chester, Mold, Oswestry and all of North Wales. MCS accredited with premium DAS 450W panels, full project management, 10-year workmanship warranty and free site surveys." },
+    { keywords: ["time", "how long", "installation", "install"], answer: "A typical domestic solar + battery install takes 1–3 days. We handle scaffolding and DNO applications. MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote." },
+    { keywords: ["solar installers", "solar wrexham", "solar chester", "best solar", "recommended solar", "solar installers wrexham", "solar installers chester"], answer: "We are professional local solar installers based in Wrexham serving homes and businesses in Wrexham, Chester, Mold, Oswestry and all of North Wales. NICEIC and TrustMark accredited with premium DAS 450W panels, full project management, 10-year workmanship warranty and free site surveys." },
     { keywords: ["solar cost", "how much solar", "solar price", "solar wrexham cost", "solar chester price"], answer: "Our Silver package starts from £8,000 (3.6kWp solar + 5.1kWh battery). Most 4-6kWp systems with battery land between £9k-£14k after 0% VAT. We always do a free site survey for an accurate fixed quote tailored to your roof and usage." },
-    { keywords: ["choose installer", "best installer", "how to pick", "mcs important", "why choose you"], answer: "Look for current MCS certification, NICEIC, local base (we are in Wrexham Industrial Estate), transparent quotes listing exact equipment (DAS panels, BYD/Tesla batteries), and real local reviews. We publish our accreditations and give honest advice — even if a smaller system or waiting for a grant is better for you." },
+    { keywords: ["choose installer", "best installer", "how to pick", "mcs important", "why choose you"], answer: "Look for NICEIC, TrustMark, a local base (we are in Wrexham Industrial Estate) and transparent quotes listing exact equipment (DAS panels, BYD/Tesla batteries). MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote." },
     { keywords: ["grant solar", "eco4", "bus solar", "free solar", "funding wrexham"], answer: "The main grant for heat pumps is the Boiler Upgrade Scheme (BUS) up to £7,500. Solar PV itself has 0% VAT on residential installs and Smart Export Guarantee payments. We can advise on ECO4 / GBIS schemes for eligible homes in Wrexham and Chester — ask during your survey." }
   ];
 
@@ -117,7 +117,7 @@
 
       if (!window.primeChatHasGreeted) {
         setTimeout(() => {
-          addLocalMessage("Hi! I'm here to help with questions about solar installers in Wrexham & Chester, battery storage, air conditioning, heat pumps, grants and our 0% finance options.");
+          addLocalMessage("Hi. Questions about solar installation and battery storage in Wrexham and Chester — weekdays, usually within 2 hours if you leave details. Remote look first, free survey second.");
           setTimeout(() => {
             addLocalMessage("What would you like to know?");
             showQuickReplies(["Do you cover my area?", "0% finance details", "Battery only options", "How much does it cost?"], chatMessages, (reply) => {
@@ -140,21 +140,32 @@
       leadFormEl.addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        const val = (id) => (document.getElementById(id) || {}).value || '';
         const formData = {
-          name: document.getElementById('lead-name').value,
-          phone: document.getElementById('lead-phone').value,
-          email: document.getElementById('lead-email').value,
-          interest: document.getElementById('lead-interest').value,
-          summary: document.getElementById('chat-summary').value,
+          name: val('lead-name'),
+          phone: val('lead-phone'),
+          email: val('lead-email'),
+          property: val('lead-property'),
+          postcode: val('lead-postcode'),
+          interest: val('lead-interest'),
+          roof: val('lead-roof'),
+          kwh: val('lead-kwh'),
+          window: val('lead-window'),
+          summary: val('chat-summary'),
           source: "Website Chatbot - " + window.location.pathname
         };
 
-        const subject = 'Website chat enquiry from ' + formData.name;
+        const subject = 'Survey request from ' + formData.name;
         const body = [
           'Name: ' + formData.name,
           'Phone: ' + formData.phone,
           'Email: ' + formData.email,
-          'Interest: ' + formData.interest,
+          'Postcode: ' + formData.postcode,
+          'Home or commercial: ' + formData.property,
+          'Solar / battery / both: ' + formData.interest,
+          'Roof type: ' + formData.roof,
+          'Annual kWh (optional): ' + formData.kwh,
+          'Preferred survey window: ' + formData.window,
           'Source: ' + formData.source,
           '',
           formData.summary || ''
@@ -163,7 +174,7 @@
         leadForm.innerHTML = `
           <div class="text-center py-8">
             <h3 class="font-semibold text-lg">Open your email app</h3>
-            <p class="text-sm text-slate-600 mt-2">This site does not send the form itself. If your email app did not open, email hello@reloadrenewables.com or call (01978) 809 500.</p>
+            <p class="text-sm text-slate-600 mt-2">This does not send a quote from the website. Remote look first, free survey second. If nothing opens, email hello@reloadrenewables.com or call (01978) 809 500. Weekdays, usually within 2 hours.</p>
           </div>
         `;
       });

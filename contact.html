@@ -26,7 +26,7 @@
     "geo": { "@type": "GeoCoordinates", "latitude": 53.0385, "longitude": -2.918 },
     "areaServed": ["Wrexham", "Chester", "Mold", "Oswestry", "Flintshire", "Denbighshire", "North Wales", "Cheshire West and Chester"],
     "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-13:00"],
-    "accreditation": ["MCS","NICEIC","F-Gas","RECC","TrustMark"],
+    "accreditation": ["NICEIC","TrustMark","F-Gas"],
     "description": "Contact professional solar installers Wrexham & Chester for solar PV, battery storage, heat pumps and air conditioning. Free quotes and site surveys from our local Wrexham team serving Mold, Oswestry, Flint and surrounding areas."
   }
   </script>
@@ -130,25 +130,23 @@
             <img src="assets/images/logo-reload-stamp.png?v=47" alt="RELOAD circular branding stamp logo with RELOAD text above horizontal full battery emoji symbol, cyan/royal blue ring with brighter golden yellow (255,212,81) halo, solid white background" class="h-8 w-8 rounded-full object-contain">
             <h1 class="heading-font text-4xl tracking-tighter">Solar and battery quotes in Wrexham and Chester</h1>
           </div>
-          <p class="text-slate-600 mt-2">Ask for a survey on a home or a commercial roof in Wrexham, Chester, Mold, Oswestry, Deeside or Flint. The form opens your email to hello@reloadrenewables.com — or call (01978) 809 500. Heat pumps and AC can be mentioned on the same enquiry.</p>
-          <p class="mt-3 text-sm text-emerald-700 font-medium">0% finance options available — provided through our authorised broker partners for full compliance with UK consumer credit regulations.</p>
+          <p class="text-slate-600 mt-2">Remote look at the roof first, then a free survey. The form opens your email to hello@reloadrenewables.com — it does not send a quote from this website. Or call (01978) 809 500. Weekdays, usually within 2 hours.</p>
         </div>
 
         <form id="quote-form" class="mt-8 space-y-6" action="mailto:hello@reloadrenewables.com" method="post" enctype="text/plain" onsubmit="return handleSubmit(event)">
           <div class="grid sm:grid-cols-2 gap-5">
             <div>
-              <label class="block text-sm font-medium mb-1.5 text-slate-700">Full Name</label>
+              <label class="block text-sm font-medium mb-1.5 text-slate-700">Full name</label>
               <input type="text" id="name" required class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3 text-base">
             </div>
             <div>
-              <label class="block text-sm font-medium mb-1.5 text-slate-700">Phone Number</label>
+              <label class="block text-sm font-medium mb-1.5 text-slate-700">Phone</label>
               <input type="tel" id="phone" required class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3 text-base">
             </div>
           </div>
-
           <div class="grid sm:grid-cols-2 gap-5">
             <div>
-              <label class="block text-sm font-medium mb-1.5 text-slate-700">Email Address</label>
+              <label class="block text-sm font-medium mb-1.5 text-slate-700">Email</label>
               <input type="email" id="email" required class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3 text-base">
             </div>
             <div>
@@ -156,42 +154,59 @@
               <input type="text" id="postcode" required class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3 text-base uppercase">
             </div>
           </div>
-
           <div>
-            <label class="block text-sm font-medium mb-1.5 text-slate-700">What are you interested in?</label>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
-              <label class="flex items-center gap-x-2 border border-slate-300 px-4 py-3 rounded-2xl cursor-pointer hover:bg-white">
-                <input type="checkbox" value="Solar PV" class="accent-[#00A3E0]"> <span>Solar PV</span>
-              </label>
-              <label class="flex items-center gap-x-2 border border-slate-300 px-4 py-3 rounded-2xl cursor-pointer hover:bg-white">
-                <input type="checkbox" value="Battery Storage" class="accent-[#00A3E0]"> <span>Battery Storage</span>
-              </label>
-              <label class="flex items-center gap-x-2 border border-slate-300 px-4 py-3 rounded-2xl cursor-pointer hover:bg-white">
-                <input type="checkbox" value="Air Conditioning" class="accent-[#00A3E0]"> <span>Air Conditioning</span>
-              </label>
-              <label class="flex items-center gap-x-2 border border-slate-300 px-4 py-3 rounded-2xl cursor-pointer hover:bg-white">
-                <input type="checkbox" value="Heat Pump" class="accent-[#00A3E0]"> <span>Heat Pump</span>
-              </label>
-              <label class="flex items-center gap-x-2 border border-slate-300 px-4 py-3 rounded-2xl cursor-pointer hover:bg-white">
-                <input type="checkbox" value="Servicing" class="accent-[#00A3E0]"> <span>Servicing / Repair</span>
-              </label>
-            </div>
+            <label class="block text-sm font-medium mb-1.5 text-slate-700">Home or commercial</label>
+            <select id="property-type" required class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3 text-base">
+              <option value="">Select</option>
+              <option value="Home">Home</option>
+              <option value="Commercial">Commercial</option>
+            </select>
           </div>
-
           <div>
-            <label class="block text-sm font-medium mb-1.5 text-slate-700">Project details / questions</label>
-            <textarea id="message" rows="5" class="form-input w-full border border-slate-300 rounded-3xl px-4 py-3 text-base resize-y" placeholder="Tell us a little about your property or what you're hoping to achieve..."></textarea>
+            <label class="block text-sm font-medium mb-1.5 text-slate-700">Solar, battery, or both</label>
+            <select id="system-want" required class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3 text-base">
+              <option value="">Select</option>
+              <option value="Solar">Solar</option>
+              <option value="Battery">Battery</option>
+              <option value="Both">Both</option>
+            </select>
           </div>
-
+          <div>
+            <label class="block text-sm font-medium mb-1.5 text-slate-700">Roof type</label>
+            <select id="roof-type" class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3 text-base">
+              <option value="">Select if you know</option>
+              <option value="Pitched tile">Pitched tile</option>
+              <option value="Slate">Slate</option>
+              <option value="Flat">Flat</option>
+              <option value="Metal / industrial">Metal / industrial</option>
+              <option value="Not sure">Not sure</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1.5 text-slate-700">Annual kWh from your bill <span class="text-slate-400 font-normal">(optional)</span></label>
+            <input type="text" id="annual-kwh" class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3 text-base" placeholder="e.g. 3200">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1.5 text-slate-700">Preferred survey window</label>
+            <select id="survey-window" class="form-input w-full border border-slate-300 rounded-2xl px-4 py-3 text-base">
+              <option value="">Select</option>
+              <option value="Weekday morning">Weekday morning</option>
+              <option value="Weekday afternoon">Weekday afternoon</option>
+              <option value="Saturday by appointment">Saturday by appointment</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1.5 text-slate-700">Anything else</label>
+            <textarea id="message" rows="4" class="form-input w-full border border-slate-300 rounded-3xl px-4 py-3 text-base resize-y" placeholder="Heat pump, AC or servicing can go here too."></textarea>
+          </div>
           <div class="flex items-start gap-x-3 pt-1">
             <input type="checkbox" id="consent" required class="mt-1 accent-[#00A3E0]">
-            <label for="consent" class="text-xs text-slate-600">I consent to Reload Renewables & AC contacting me about my enquiry. We will never share your data with third parties.</label>
+            <label for="consent" class="text-xs text-slate-600">I consent to Reload Renewables &amp; AC contacting me about this survey request. We will not share your data with third parties except the authorised finance broker if you later ask for finance.</label>
           </div>
-
           <button type="submit" class="accent-btn w-full sm:w-auto text-white font-semibold px-12 h-14 rounded-2xl text-base shadow-sm">
-            Open email to send enquiry
+            Open email to request a survey
           </button>
-          <div id="form-note" class="text-xs text-slate-500">This form opens your email app to hello@reloadrenewables.com. It does not send from the website. You can also call (01978) 809 500.</div>
+          <div id="form-note" class="text-xs text-slate-500">This opens your email app. It does not send a quote from the website. Remote look first, free survey second.</div>
         </form>
       </div>
 
@@ -241,27 +256,33 @@
         <div class="mt-6 text-xs bg-white border border-slate-200 rounded-3xl p-6">
           <div class="font-semibold mb-2">What happens next?</div>
           <ol class="list-decimal list-inside text-slate-600 space-y-1">
-            <li>We'll contact you to understand your needs</li>
-            <li>Arrange a convenient time for a free site survey</li>
-            <li>Receive a clear, fixed-price proposal</li>
+            <li>Remote look at the roof or unit first</li>
+            <li>Free survey at your preferred window</li>
+            <li>Written spec and from-price — not a quote generated by this form</li>
           </ol>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Accreditations - Official logos placed underneath "CERTIFIED & TRUSTED BY" on bottom of page -->
-  <section class="max-w-7xl mx-auto px-6 py-10">
+  <section class="max-w-7xl mx-auto px-6 py-10" id="trust">
     <div class="text-center mb-6">
       <div class="text-xs tracking-[2px] font-semibold text-slate-500">CERTIFIED &amp; TRUSTED BY</div>
+      <p class="mt-2 text-sm text-slate-600 max-w-2xl mx-auto">NICEIC and TrustMark. Certificates on request.</p>
     </div>
-    <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 opacity-90">
-      <img src="assets/images/accreditations/mcs.png" alt="Official MCS Certified logo - RELOAD Renewables &amp; AC MCS certified solar, battery &amp; heat pump installers Wrexham Chester North Wales" class="h-12 w-auto">
-      <img src="assets/images/accreditations/niceic-approved.png" alt="Official NICEIC Approved Contractor logo - RELOAD Renewables &amp; AC NICEIC registered electrical &amp; renewables contractors for Wrexham &amp; Chester" class="h-12 w-auto">
-      <img src="assets/images/accreditations/trustmark.png" alt="Official TrustMark logo - RELOAD Renewables &amp; AC TrustMark registered quality scheme member serving Wrexham, Chester &amp; North Wales" class="h-12 w-auto">
-      <img src="assets/images/accreditations/hies.png" alt="Official HIES logo - RELOAD Renewables &amp; AC HIES Consumer Code registered for home energy systems Wrexham Chester" class="h-12 w-auto">
-      <div class="text-center text-sm font-semibold tracking-wider text-slate-600">RECC • F-Gas • Tesla Certified</div>
+    <div class="grid sm:grid-cols-2 gap-4 text-sm max-w-3xl mx-auto">
+      <div class="bg-white border border-slate-200 rounded-2xl p-4">
+        <img src="assets/images/accreditations/niceic-approved.png" alt="NICEIC Approved Contractor" class="h-10 w-auto mx-auto mb-3">
+        <div class="font-semibold text-center">NICEIC</div>
+        <p class="text-xs text-slate-600 mt-1">Electrical competence for the installation — wiring, isolation and testing to UK standards.</p>
+      </div>
+      <div class="bg-white border border-slate-200 rounded-2xl p-4">
+        <img src="assets/images/accreditations/trustmark.png" alt="TrustMark" class="h-10 w-auto mx-auto mb-3">
+        <div class="font-semibold text-center">TrustMark</div>
+        <p class="text-xs text-slate-600 mt-1">Government-endorsed quality mark for trades that meet a recognised standard.</p>
+      </div>
     </div>
+    <p class="text-center text-sm text-slate-700 mt-6 max-w-2xl mx-auto">MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote.</p>
+    <p class="text-center text-xs text-slate-500 mt-4">F-Gas is held for air-conditioning and heat-pump refrigerant work. Tesla Powerwall 3 is a product we specify on Platinum, not an installer award listed here. Consumer protection and deposit protection are explained on the quote.</p>
   </section>
 
 <footer class="bg-[#0F172A] text-white/70 text-xs py-7">
@@ -303,17 +324,23 @@
       const phone = (document.getElementById('phone') || {}).value || '';
       const email = (document.getElementById('email') || {}).value || '';
       const postcode = (document.getElementById('postcode') || {}).value || '';
+      const propertyType = (document.getElementById('property-type') || {}).value || '';
+      const systemWant = (document.getElementById('system-want') || {}).value || '';
+      const roofType = (document.getElementById('roof-type') || {}).value || '';
+      const annualKwh = (document.getElementById('annual-kwh') || {}).value || '';
+      const surveyWindow = (document.getElementById('survey-window') || {}).value || '';
       const message = (document.getElementById('message') || {}).value || '';
-      const interests = Array.from(form.querySelectorAll('input[type="checkbox"]:checked'))
-        .map(function (el) { return el.value; })
-        .join(', ') || 'Not specified';
-      const subject = 'Website enquiry from ' + name;
+      const subject = 'Survey request from ' + name;
       const body = [
         'Name: ' + name,
         'Phone: ' + phone,
         'Email: ' + email,
         'Postcode: ' + postcode,
-        'Interest: ' + interests,
+        'Home or commercial: ' + propertyType,
+        'Solar / battery / both: ' + systemWant,
+        'Roof type: ' + roofType,
+        'Annual kWh (optional): ' + annualKwh,
+        'Preferred survey window: ' + surveyWindow,
         '',
         message
       ].join('\n');
@@ -342,9 +369,14 @@
 
   <script src="assets/js/chatbot.js"></script>
 
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-[998] bg-white border-t border-slate-200 px-3 py-2 flex gap-2" style="padding-bottom: max(0.5rem, env(safe-area-inset-bottom));">
+    <a href="tel:01978809500" class="flex-1 text-center border border-slate-300 rounded-xl py-3 text-sm font-semibold">Call 01978 809 500</a>
+    <button type="button" onclick="renderOpenSolarWidget()" class="flex-1 accent-btn text-white rounded-xl py-3 text-sm font-semibold">Get quote</button>
+  </div>
+
   <!-- AI Chatbot Floating Button + Modal -->
   <div id="chat-button" 
-       class="fixed bottom-6 right-6 z-[999] flex items-center gap-x-2 bg-[#00A3E0] hover:bg-[#0088C2] text-white shadow-xl rounded-full px-5 py-3.5 cursor-pointer transition-all active:scale-95">
+       class="fixed bottom-24 md:bottom-6 right-6 z-[999] flex items-center gap-x-2 bg-[#00A3E0] hover:bg-[#0088C2] text-white shadow-xl rounded-full px-5 py-3.5 cursor-pointer transition-all active:scale-95">
     <i class="fas fa-comments text-xl"></i>
     <span class="hidden sm:block font-semibold text-sm tracking-tight">Chat with us</span>
   </div>
@@ -360,7 +392,7 @@
             <div class="font-semibold tracking-tight">Reload Renewables &amp; AC</div>
             <div class="text-xs text-emerald-400 flex items-center gap-x-1">
               <i class="fas fa-circle text-[8px]"></i> 
-              <span>Usually replies in minutes</span>
+              <span>Weekdays, usually within 2 hours</span>
             </div>
           </div>
         </div>
@@ -377,18 +409,35 @@
             <input type="tel" id="lead-phone" placeholder="Phone number" required class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
           </div>
           <input type="email" id="lead-email" placeholder="Email address" required class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
+          <select id="lead-property" required class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
+            <option value="">Home or commercial</option>
+            <option value="Home">Home</option>
+            <option value="Commercial">Commercial</option>
+          </select>
+          <input type="text" id="lead-postcode" placeholder="Postcode" required class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full uppercase">
           <select id="lead-interest" required class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
-            <option value="">What are you interested in?</option>
-            <option value="Solar + Battery">Solar + Battery</option>
-            <option value="Battery Only">Battery Only (off-peak)</option>
-            <option value="Air Conditioning">Air Conditioning</option>
-            <option value="Heat Pumps">Heat Pumps</option>
-            <option value="Servicing">Servicing / Maintenance</option>
-            <option value="Multiple">Multiple services</option>
+            <option value="">Solar, battery, or both</option>
+            <option value="Solar">Solar</option>
+            <option value="Battery">Battery</option>
+            <option value="Both">Both</option>
+          </select>
+          <select id="lead-roof" class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
+            <option value="">Roof type (if known)</option>
+            <option value="Pitched tile">Pitched tile</option>
+            <option value="Slate">Slate</option>
+            <option value="Flat">Flat</option>
+            <option value="Metal / industrial">Metal / industrial</option>
+          </select>
+          <input type="text" id="lead-kwh" placeholder="Annual kWh from bill (optional)" class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
+          <select id="lead-window" class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
+            <option value="">Preferred survey window</option>
+            <option value="Weekday morning">Weekday morning</option>
+            <option value="Weekday afternoon">Weekday afternoon</option>
+            <option value="Saturday by appointment">Saturday by appointment</option>
           </select>
           <textarea id="chat-summary" rows="3" placeholder="Notes from our chat (auto-filled)" class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full resize-y"></textarea>
-          <button type="submit" class="w-full accent-btn text-white font-semibold py-3 rounded-2xl text-sm">Send to the team</button>
-          <p class="text-[10px] text-center text-slate-500">We'll reply within 2 hours during working hours.</p>
+          <button type="submit" class="w-full accent-btn text-white font-semibold py-3 rounded-2xl text-sm">Open email to request a survey</button>
+          <p class="text-[10px] text-center text-slate-500">Does not send a quote from the website. Remote look first, free survey second. Weekdays, usually within 2 hours.</p>
         </form>
       </div>
 

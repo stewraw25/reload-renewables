@@ -51,6 +51,6 @@ Open `index.html` in a browser, or serve the folder (paths are relative so they 
 - Real customer photos and permissioned reviews
 - Form backend (Formspree / CRM) when ready
 - Live domain (then swap canonicals, sitemap and schema)
-- Which accreditations are current (MCS, NICEIC, TrustMark, HIES, RECC, F-Gas, Tesla)
+- Confirmed: NICEIC and TrustMark. MCS for Reload is in progress (qualifying jobs certified by an MCS contractor named on the quote). RECC/HIES not claimed. Tesla is a product (Powerwall 3), not a trust-row award. F-Gas is held for AC/heat-pump refrigerant work.
 - Package prices and any stats beyond ~980 kWh/kWp
 - Hero video — only keep if it is real footage Stewart is happy to show
