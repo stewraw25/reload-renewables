@@ -210,9 +210,9 @@
             </ul>
           </div>
           <div>
-            <div class="font-semibold mb-2 text-base">Typical payback</div>
-            <div class="text-4xl font-semibold heading-font text-[#00A3E0]">5–7 <span class="text-base align-baseline text-slate-400">years</span></div>
-            <div class="text-slate-600 mt-1">With current Smart Export Guarantee rates and rising energy prices.</div>
+            <div class="font-semibold mb-2 text-base">Yield modelled on survey</div>
+            <div class="text-4xl font-semibold heading-font text-[#00A3E0]">~980 <span class="text-base align-baseline text-slate-400">kWh/kWp</span></div>
+            <div class="text-slate-600 mt-1">Payback is modelled on the bill and roof, not a brochure year-range.</div>
           </div>
         </div>
       </div>
@@ -397,7 +397,7 @@
       <img src="assets/images/accreditations/niceic-approved.png" alt="Official NICEIC Approved Contractor logo - RELOAD Renewables &amp; AC NICEIC registered electrical &amp; renewables contractors for Wrexham &amp; Chester" class="h-12 w-auto">
       <img src="assets/images/accreditations/trustmark.png" alt="Official TrustMark logo - RELOAD Renewables &amp; AC TrustMark registered quality scheme member serving Wrexham, Chester &amp; North Wales" class="h-12 w-auto">
       <img src="assets/images/accreditations/hies.png" alt="Official HIES logo - RELOAD Renewables &amp; AC HIES Consumer Code registered for home energy systems Wrexham Chester" class="h-12 w-auto">
-      <div class="text-center text-sm font-semibold tracking-wider text-slate-600">RECC • F-Gas • Tesla Certified</div>
+      <div class="text-center text-sm font-semibold tracking-wider text-slate-600">F-Gas for AC and heat pumps</div>
     </div>
   </section>
 
@@ -446,7 +446,7 @@
 
   <!-- AI Chatbot Floating Button + Modal -->
   <div id="chat-button" 
-       class="fixed bottom-6 right-6 z-[999] flex items-center gap-x-2 bg-[#00A3E0] hover:bg-[#0088C2] text-white shadow-xl rounded-full px-5 py-3.5 cursor-pointer transition-all active:scale-95">
+       class="fixed bottom-24 md:bottom-6 right-6 z-[999] flex items-center gap-x-2 bg-[#00A3E0] hover:bg-[#0088C2] text-white shadow-xl rounded-full px-5 py-3.5 cursor-pointer transition-all active:scale-95">
     <i class="fas fa-comments text-xl"></i>
     <span class="hidden sm:block font-semibold text-sm tracking-tight">Chat with us</span>
   </div>
@@ -462,7 +462,7 @@
             <div class="font-semibold tracking-tight">Reload Renewables &amp; AC</div>
             <div class="text-xs text-emerald-400 flex items-center gap-x-1">
               <i class="fas fa-circle text-[8px]"></i> 
-              <span>Usually replies in minutes</span>
+              <span>Weekdays, usually within 2 hours</span>
             </div>
           </div>
         </div>
@@ -479,18 +479,35 @@
             <input type="tel" id="lead-phone" placeholder="Phone number" required class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
           </div>
           <input type="email" id="lead-email" placeholder="Email address" required class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
+          <select id="lead-property" required class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
+            <option value="">Home or commercial</option>
+            <option value="Home">Home</option>
+            <option value="Commercial">Commercial</option>
+          </select>
+          <input type="text" id="lead-postcode" placeholder="Postcode" required class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full uppercase">
           <select id="lead-interest" required class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
-            <option value="">What are you interested in?</option>
-            <option value="Solar + Battery">Solar + Battery</option>
-            <option value="Battery Only">Battery Only (off-peak)</option>
-            <option value="Air Conditioning">Air Conditioning</option>
-            <option value="Heat Pumps">Heat Pumps</option>
-            <option value="Servicing">Servicing / Maintenance</option>
-            <option value="Multiple">Multiple services</option>
+            <option value="">Solar, battery, or both</option>
+            <option value="Solar">Solar</option>
+            <option value="Battery">Battery</option>
+            <option value="Both">Both</option>
+          </select>
+          <select id="lead-roof" class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
+            <option value="">Roof type (if known)</option>
+            <option value="Pitched tile">Pitched tile</option>
+            <option value="Slate">Slate</option>
+            <option value="Flat">Flat</option>
+            <option value="Metal / industrial">Metal / industrial</option>
+          </select>
+          <input type="text" id="lead-kwh" placeholder="Annual kWh from bill (optional)" class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
+          <select id="lead-window" class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full">
+            <option value="">Preferred survey window</option>
+            <option value="Weekday morning">Weekday morning</option>
+            <option value="Weekday afternoon">Weekday afternoon</option>
+            <option value="Saturday by appointment">Saturday by appointment</option>
           </select>
           <textarea id="chat-summary" rows="3" placeholder="Notes from our chat (auto-filled)" class="border border-slate-300 rounded-2xl px-4 py-2.5 text-sm w-full resize-y"></textarea>
-          <button type="submit" class="w-full accent-btn text-white font-semibold py-3 rounded-2xl text-sm">Send to the team</button>
-          <p class="text-[10px] text-center text-slate-500">We'll reply within 2 hours during working hours.</p>
+          <button type="submit" class="w-full accent-btn text-white font-semibold py-3 rounded-2xl text-sm">Open email to request a survey</button>
+          <p class="text-[10px] text-center text-slate-500">Does not send a quote from the website. Remote look first, free survey second. Weekdays, usually within 2 hours.</p>
         </form>
       </div>
 

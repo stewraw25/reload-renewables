@@ -5,7 +5,7 @@
 
   const knowledgeBase = [
     { keywords: ["area", "cover", "wrexham", "chester", "mold", "oswestry", "north wales", "where", "serve"], answer: "We cover Wrexham, Chester, Mold, Oswestry, Flint, Deeside, Rhyl and all of North Wales plus the North West (including parts of Cheshire and Wirral). If you're unsure if we serve your area, just let us know your postcode." },
-    { keywords: ["finance", "0%", "zero", "interest", "payment", "pay monthly"], answer: "Yes! We offer 0% interest finance options. These are arranged through our authorised broker partners to ensure full compliance with UK consumer credit regulations." },
+    { keywords: ["finance", "0%", "zero", "interest", "payment", "pay monthly"], answer: "Three ways to pay, explained on the homepage: pay in full; 0% via an authorised broker (we are not the lender); or a separate 9.9% APR 120-month representative example. Do not mix 0% and 9.9% — they are different products." },
     { keywords: ["warranty", "guarantee", "how long"], answer: "We provide 10-year workmanship warranties on all installations. Panels typically come with 25–30 year performance warranties, and batteries (BYD/Tesla) usually have 10-year warranties." },
     { keywords: ["battery only", "no solar", "just battery", "arbitrage", "off peak", "octopus go"], answer: "Absolutely. Many customers install battery storage only, especially on tariffs like Octopus Go. You can charge overnight at cheap rates and use the power during the day." },
     { keywords: ["heat pump", "grant", "bus", "air source"], answer: "Yes, we install air source heat pumps and can help with the Boiler Upgrade Scheme (BUS) grant of up to £7,500. We handle the full application." },
@@ -117,7 +117,7 @@
 
       if (!window.primeChatHasGreeted) {
         setTimeout(() => {
-          addLocalMessage("Hi! I'm here to help with questions about solar installers in Wrexham & Chester, battery storage, air conditioning, heat pumps, grants and our 0% finance options.");
+          addLocalMessage("Hi. Questions about solar installation and battery storage in Wrexham and Chester — weekdays, usually within 2 hours if you leave details. Remote look first, free survey second.");
           setTimeout(() => {
             addLocalMessage("What would you like to know?");
             showQuickReplies(["Do you cover my area?", "0% finance details", "Battery only options", "How much does it cost?"], chatMessages, (reply) => {
@@ -140,21 +140,32 @@
       leadFormEl.addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        const val = (id) => (document.getElementById(id) || {}).value || '';
         const formData = {
-          name: document.getElementById('lead-name').value,
-          phone: document.getElementById('lead-phone').value,
-          email: document.getElementById('lead-email').value,
-          interest: document.getElementById('lead-interest').value,
-          summary: document.getElementById('chat-summary').value,
+          name: val('lead-name'),
+          phone: val('lead-phone'),
+          email: val('lead-email'),
+          property: val('lead-property'),
+          postcode: val('lead-postcode'),
+          interest: val('lead-interest'),
+          roof: val('lead-roof'),
+          kwh: val('lead-kwh'),
+          window: val('lead-window'),
+          summary: val('chat-summary'),
           source: "Website Chatbot - " + window.location.pathname
         };
 
-        const subject = 'Website chat enquiry from ' + formData.name;
+        const subject = 'Survey request from ' + formData.name;
         const body = [
           'Name: ' + formData.name,
           'Phone: ' + formData.phone,
           'Email: ' + formData.email,
-          'Interest: ' + formData.interest,
+          'Postcode: ' + formData.postcode,
+          'Home or commercial: ' + formData.property,
+          'Solar / battery / both: ' + formData.interest,
+          'Roof type: ' + formData.roof,
+          'Annual kWh (optional): ' + formData.kwh,
+          'Preferred survey window: ' + formData.window,
           'Source: ' + formData.source,
           '',
           formData.summary || ''
@@ -163,7 +174,7 @@
         leadForm.innerHTML = `
           <div class="text-center py-8">
             <h3 class="font-semibold text-lg">Open your email app</h3>
-            <p class="text-sm text-slate-600 mt-2">This site does not send the form itself. If your email app did not open, email hello@reloadrenewables.com or call (01978) 809 500.</p>
+            <p class="text-sm text-slate-600 mt-2">This does not send a quote from the website. Remote look first, free survey second. If nothing opens, email hello@reloadrenewables.com or call (01978) 809 500. Weekdays, usually within 2 hours.</p>
           </div>
         `;
       });
