@@ -90,6 +90,7 @@
   }
 
   window.initPrimeChatbot = function () {
+    if (window.primeChatInitDone) return;
     const chatButton = document.getElementById("chat-button");
     const chatModal = document.getElementById("chat-modal");
     const closeChat = document.getElementById("close-chat");
@@ -97,6 +98,7 @@
     const chatInput = document.getElementById("chat-input");
     const sendBtn = document.getElementById("chat-send");
     if (!chatButton || !chatModal || !chatMessages || !chatInput || !sendBtn || !closeChat) return;
+    window.primeChatInitDone = true;
 
     function sendMessage() {
       const text = chatInput.value.trim();
@@ -133,4 +135,10 @@
       chatModal.classList.remove("flex");
     });
   };
+  // Start the chat on every page, even ones that don't call initPrimeChatbot themselves.
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", window.initPrimeChatbot);
+  } else {
+    window.initPrimeChatbot();
+  }
 })();
