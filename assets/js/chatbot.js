@@ -1,10 +1,7 @@
-// Reload Renewables & AC - AI Chatbot
-(function() {
-  let conversation = [];
-  let hasGreeted = false;
-
+// Reload Renewables & AC — on-site answers. Quote hand-off goes to the contact page embed.
+(function () {
   const knowledgeBase = [
-    { keywords: ["area", "cover", "wrexham", "chester", "mold", "oswestry", "north wales", "where", "serve"], answer: "We cover Wrexham, Chester, Mold, Oswestry, Flint, Deeside, Rhyl and all of North Wales plus the North West (including parts of Cheshire and Wirral). If you're unsure if we serve your area, just let us know your postcode." },
+    { keywords: ["area", "cover", "wrexham", "chester", "mold", "oswestry", "north wales", "where", "serve"], answer: "We cover Wrexham, Chester, Mold, Oswestry, Flint, Deeside, Flintshire, Denbighshire and North Wales. If you are not sure, send your postcode with the quotation form." },
     { keywords: ["finance", "0%", "zero", "interest", "payment", "pay monthly"], answer: "Three ways to pay, on the Gold from £10,000 package: pay in full; 0% via an authorised broker (subject to status; illustration if approved with no deposit 120 × £83 — Reload is not the lender); or a separate representative example at 9.9% APR, 120 months, £10,000, no deposit, 120 × £132, total amount payable £15,840. Do not mix 0% and 9.9% — they are different products." },
     { keywords: ["warranty", "guarantee", "how long"], answer: "We provide 10-year workmanship warranties on all installations. Panels typically come with 25–30 year performance warranties, and batteries (BYD/Tesla) usually have 10-year warranties." },
     { keywords: ["battery only", "no solar", "just battery", "arbitrage", "off peak", "octopus go"], answer: "Absolutely. Many customers install battery storage only, especially on tariffs like Octopus Go. You can charge overnight at cheap rates and use the power during the day." },
@@ -15,43 +12,57 @@
     { keywords: ["cost", "price", "how much", "expensive"], answer: "Our popular packages start from £8,000 for Silver (3.6kWp + 5.1kWh battery). Prices vary depending on your property — we always provide a free, no-obligation site survey and quote." },
     { keywords: ["payback", "return", "save", "bill reduction"], answer: "Savings depend on your usage, tariff and the system we specify. Use the estimator on the homepage for a modelled figure, or call (01978) 809 500 for a site survey. We use ~980 kWh/kWp for this area." },
     { keywords: ["tesla", "powerwall", "byd"], answer: "We install both BYD batteries (excellent value) and Tesla Powerwall 3. The Platinum package includes the Tesla Powerwall 3 + Gateway." },
-    { keywords: ["commercial", "business", "office", "chester", "wrexham business"], answer: "Yes, we regularly work with homes and businesses, offices, farms, and commercial properties for solar, battery storage, heat pumps and air conditioning in Wrexham, Chester and across North Wales." },
+    { keywords: ["commercial", "business", "office", "chester", "wrexham business"], answer: "We design and install solar, battery storage, heat pumps and air conditioning for homes and businesses in Wrexham, Chester and North Wales." },
     { keywords: ["time", "how long", "installation", "install"], answer: "A typical domestic solar + battery install takes 1–3 days. We handle scaffolding and DNO applications. MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote." },
-    { keywords: ["solar installers", "solar wrexham", "solar chester", "best solar", "recommended solar", "solar installers wrexham", "solar installers chester"], answer: "We are professional local solar installers based in Wrexham serving homes and businesses in Wrexham, Chester, Mold, Oswestry and all of North Wales. NICEIC and TrustMark accredited with premium DAS 450W panels, full project management, 10-year workmanship warranty and free site surveys." },
+    { keywords: ["solar installers", "solar wrexham", "solar chester", "best solar", "recommended solar", "solar installers wrexham", "solar installers chester"], answer: "We are local solar installers based in Wrexham. We fit quality products to a high installation standard, with a calm service from the first visit to switch-on, for homes and businesses in Wrexham, Chester, Mold, Oswestry and North Wales. NICEIC and TrustMark. Free site survey, and no pressure to go ahead." },
     { keywords: ["solar cost", "how much solar", "solar price", "solar wrexham cost", "solar chester price"], answer: "Our Silver package starts from £8,000 (3.6kWp solar + 5.1kWh battery). Most 4-6kWp systems with battery land between £9k-£14k after 0% VAT. We always do a free site survey for an accurate fixed quote tailored to your roof and usage." },
-    { keywords: ["choose installer", "best installer", "how to pick", "mcs important", "why choose you"], answer: "Look for NICEIC, TrustMark, a local base (we are in Wrexham Industrial Estate) and transparent quotes listing exact equipment (DAS panels, BYD/Tesla batteries). MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote." },
+    { keywords: ["choose installer", "best installer", "how to pick", "mcs important", "why choose you", "why reload", "mission", "installation standard", "unsafe"], answer: "We set Reload up to fit solar properly: quality products, a high installation standard, and a calm, friendly service from the first visit to switch-on. We hold NICEIC and TrustMark. MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote. There is no pressure to sign on the day." },
     { keywords: ["grant solar", "eco4", "bus solar", "free solar", "funding wrexham"], answer: "The main grant for heat pumps is the Boiler Upgrade Scheme (BUS) up to £7,500. Solar PV itself has 0% VAT on residential installs and Smart Export Guarantee payments. We can advise on ECO4 / GBIS schemes for eligible homes in Wrexham and Chester — ask during your survey." }
   ];
 
-  function addMessage(text, isBot = true, container) {
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `flex ${isBot ? 'justify-start' : 'justify-end'} mb-3`;
-    
-    const bubble = document.createElement('div');
-    bubble.className = `max-w-[80%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
-      isBot ? 'bg-slate-100 text-slate-800 rounded-bl-none' : 'bg-[#00A3E0] text-white rounded-br-none'
-    }`;
+  function quoteHref() {
+    var path = window.location.pathname || "";
+    if (path.endsWith("/contact.html") || path.endsWith("contact.html")) return "#quote";
+    return "contact.html#quote";
+  }
+
+  function addMessage(text, isBot, container) {
+    const messageDiv = document.createElement("div");
+    messageDiv.className = "flex " + (isBot ? "justify-start" : "justify-end") + " mb-3";
+    const bubble = document.createElement("div");
+    bubble.className = "max-w-[80%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed " +
+      (isBot ? "bg-slate-100 text-slate-800 rounded-bl-none" : "bg-[#00A3E0] text-white rounded-br-none");
     bubble.textContent = text;
-    
     messageDiv.appendChild(bubble);
     container.appendChild(messageDiv);
     container.scrollTop = container.scrollHeight;
+  }
 
-    conversation.push({ role: isBot ? 'bot' : 'user', message: text });
+  function offerSurvey(container) {
+    addMessage("Request a survey on the quotation form. No pressure to go ahead. Weekdays, usually within 2 hours.", true, container);
+    const wrap = document.createElement("div");
+    wrap.className = "mb-3";
+    const link = document.createElement("a");
+    link.href = quoteHref();
+    link.className = "inline-block text-xs px-3 py-1.5 bg-[#00A3E0] text-white rounded-full";
+    link.textContent = "Request a survey";
+    wrap.appendChild(link);
+    container.appendChild(wrap);
+    container.scrollTop = container.scrollHeight;
   }
 
   function showQuickReplies(replies, container, onReply) {
-    const wrap = document.createElement('div');
-    wrap.className = 'flex flex-wrap gap-2 mt-2 mb-3';
-    
-    replies.forEach(reply => {
-      const btn = document.createElement('button');
-      btn.className = 'text-xs px-3 py-1.5 bg-white border border-slate-300 hover:bg-slate-50 rounded-full transition-colors';
+    const wrap = document.createElement("div");
+    wrap.className = "flex flex-wrap gap-2 mt-2 mb-3";
+    replies.forEach(function (reply) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "text-xs px-3 py-1.5 bg-white border border-slate-300 hover:bg-slate-50 rounded-full transition-colors";
       btn.textContent = reply;
-      btn.onclick = () => {
+      btn.onclick = function () {
         wrap.remove();
         addMessage(reply, false, container);
-        setTimeout(() => onReply(reply), 400);
+        setTimeout(function () { onReply(reply); }, 400);
       };
       wrap.appendChild(btn);
     });
@@ -62,65 +73,53 @@
   function handleUserMessage(message, container) {
     const lowerMsg = message.toLowerCase();
     let answered = false;
-
-    for (let item of knowledgeBase) {
-      if (item.keywords.some(kw => lowerMsg.includes(kw))) {
-        setTimeout(() => {
-          addMessage(item.answer, true, container);
-        }, 500);
+    for (let i = 0; i < knowledgeBase.length; i++) {
+      const item = knowledgeBase[i];
+      if (item.keywords.some(function (kw) { return lowerMsg.includes(kw); })) {
+        setTimeout(function () { addMessage(item.answer, true, container); }, 500);
         answered = true;
         break;
       }
     }
-
     if (!answered) {
-      setTimeout(() => {
-        addMessage("Thanks for the question. I don't have specific details on that yet, but one of our team can give you a precise answer. Would you like to send your details through?", true, container);
+      setTimeout(function () {
+        addMessage("Thanks for the question. I don't have that detail here.", true, container);
+        offerSurvey(container);
       }, 500);
     }
   }
 
-  // Expose a global function to initialise the chatbot on any page
-  window.initPrimeChatbot = function() {
-    const chatButton = document.getElementById('chat-button');
-    const chatModal = document.getElementById('chat-modal');
-    const closeChat = document.getElementById('close-chat');
-    const chatMessages = document.getElementById('chat-messages');
-    const chatInput = document.getElementById('chat-input');
-    const sendBtn = document.getElementById('chat-send');
-    const leadForm = document.getElementById('lead-form');
-
-    if (!chatButton || !chatModal) return;
-
-    let localConversation = [];
-
-    function addLocalMessage(text, isBot = true) {
-      addMessage(text, isBot, chatMessages);
-    }
+  window.initPrimeChatbot = function () {
+    const chatButton = document.getElementById("chat-button");
+    const chatModal = document.getElementById("chat-modal");
+    const closeChat = document.getElementById("close-chat");
+    const chatMessages = document.getElementById("chat-messages");
+    const chatInput = document.getElementById("chat-input");
+    const sendBtn = document.getElementById("chat-send");
+    if (!chatButton || !chatModal || !chatMessages || !chatInput || !sendBtn || !closeChat) return;
 
     function sendMessage() {
       const text = chatInput.value.trim();
       if (!text) return;
-      addLocalMessage(text, false);
-      chatInput.value = '';
+      addMessage(text, false, chatMessages);
+      chatInput.value = "";
       handleUserMessage(text, chatMessages);
     }
 
-    sendBtn.addEventListener('click', sendMessage);
-    chatInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') sendMessage();
+    sendBtn.addEventListener("click", sendMessage);
+    chatInput.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") sendMessage();
     });
 
-    chatButton.addEventListener('click', () => {
-      chatModal.classList.remove('hidden');
-      chatModal.classList.add('flex');
-
+    chatButton.addEventListener("click", function () {
+      chatModal.classList.remove("hidden");
+      chatModal.classList.add("flex");
       if (!window.primeChatHasGreeted) {
-        setTimeout(() => {
-          addLocalMessage("Hi. Questions about solar installation and battery storage in Wrexham and Chester — weekdays, usually within 2 hours if you leave details. Remote look first, free survey second.");
-          setTimeout(() => {
-            addLocalMessage("What would you like to know?");
-            showQuickReplies(["Do you cover my area?", "0% finance details", "Battery only options", "How much does it cost?"], chatMessages, (reply) => {
+        setTimeout(function () {
+          addMessage("Hi. Questions about solar and battery storage in Wrexham and Chester. We fit to a high standard, and there is no pressure to go ahead. Weekdays, usually within 2 hours.", true, chatMessages);
+          setTimeout(function () {
+            addMessage("What would you like to know?", true, chatMessages);
+            showQuickReplies(["Do you cover my area?", "0% finance details", "Battery only options", "How much does it cost?"], chatMessages, function (reply) {
               handleUserMessage(reply, chatMessages);
             });
           }, 700);
@@ -129,55 +128,9 @@
       }
     });
 
-    closeChat.addEventListener('click', () => {
-      chatModal.classList.add('hidden');
-      chatModal.classList.remove('flex');
+    closeChat.addEventListener("click", function () {
+      chatModal.classList.add("hidden");
+      chatModal.classList.remove("flex");
     });
-
-    // Lead form
-    const leadFormEl = document.getElementById('lead-form-element');
-    if (leadFormEl) {
-      leadFormEl.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const val = (id) => (document.getElementById(id) || {}).value || '';
-        const formData = {
-          name: val('lead-name'),
-          phone: val('lead-phone'),
-          email: val('lead-email'),
-          property: val('lead-property'),
-          postcode: val('lead-postcode'),
-          interest: val('lead-interest'),
-          roof: val('lead-roof'),
-          kwh: val('lead-kwh'),
-          window: val('lead-window'),
-          summary: val('chat-summary'),
-          source: "Website Chatbot - " + window.location.pathname
-        };
-
-        const subject = 'Survey request from ' + formData.name;
-        const body = [
-          'Name: ' + formData.name,
-          'Phone: ' + formData.phone,
-          'Email: ' + formData.email,
-          'Postcode: ' + formData.postcode,
-          'Home or commercial: ' + formData.property,
-          'Solar / battery / both: ' + formData.interest,
-          'Roof type: ' + formData.roof,
-          'Annual kWh (optional): ' + formData.kwh,
-          'Preferred survey window: ' + formData.window,
-          'Source: ' + formData.source,
-          '',
-          formData.summary || ''
-        ].join('\n');
-        window.location.href = 'mailto:hello@reloadrenewables.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        leadForm.innerHTML = `
-          <div class="text-center py-8">
-            <h3 class="font-semibold text-lg">Open your email app</h3>
-            <p class="text-sm text-slate-600 mt-2">This does not send a quote from the website. Remote look first, free survey second. If nothing opens, email hello@reloadrenewables.com or call (01978) 809 500. Weekdays, usually within 2 hours.</p>
-          </div>
-        `;
-      });
-    }
   };
 })();
