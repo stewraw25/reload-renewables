@@ -35,7 +35,7 @@ British English. £ not $.
 
 ## Honesty
 
-Do not invent testimonials, star ratings, named customer jobs, or project photos. Reviews and real install photos go up only when real, permissioned material is added. MCS certification for Reload is in progress. NICEIC and TrustMark only. No MCS, HIES, or RECC logos.
+Do not invent testimonials, star ratings, named customer jobs, or project photos. Reviews and real install photos go up only when real, permissioned material is added. Do not name a certification scheme, or show its logo, unless it has been confirmed for Reload Renewables Ltd.
 
 ## Quotes
 
@@ -62,6 +62,6 @@ Serve the folder (paths are relative so they also work at `/reload-renewables/`)
 - Real customer photos and permissioned reviews
 - Privacy wording with an adviser if needed, and a data-processing arrangement with OpenSolar
 - Live domain (then swap canonicals, sitemap and schema)
-- Confirmed: NICEIC and TrustMark. MCS for Reload is in progress (qualifying jobs certified by an MCS contractor named on the quote). RECC/HIES not claimed. Tesla is a product (Powerwall 3), not a trust-row award. F-Gas is held for AC/heat-pump refrigerant work.
+- Do not add accreditation logos. Tesla Powerwall 3 is a product, not a trust-row award. F-Gas is held for AC and heat-pump refrigerant work.
 - Package prices and any stats beyond ~980 kWh/kWp
 - Analytics and Search Console only after the domain cutover
