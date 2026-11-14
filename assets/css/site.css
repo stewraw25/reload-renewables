@@ -88,3 +88,109 @@ body.has-cookie-notice #chat-button {
     bottom: 5.75rem;
   }
 }
+
+/* Photo heroes used a fixed height and overflow:hidden, which clipped the
+   heading against the sticky header and the last lines at the bottom. */
+main > header.overflow-hidden.flex {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  padding-top: 1.75rem;
+  padding-bottom: 2rem;
+}
+main [id] {
+  scroll-margin-top: 5.5rem;
+}
+@media (max-width: 430px) {
+  nav > div > .flex > a.flex-shrink-0 {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+  nav .heading-font.whitespace-nowrap {
+    font-size: clamp(0.72rem, 3.5vw, 1.25rem);
+    line-height: 1.1;
+  }
+  main h1 {
+    font-size: clamp(1.45rem, 7.2vw, 2.25rem) !important;
+    line-height: 1.1 !important;
+  }
+  main > header .pt-16 { padding-top: 1.25rem !important; }
+  main > header .max-w-\[min\(500px\2c 60vw\)\] { max-width: min(220px, 52vw); }
+  main > header .mb-6 { margin-bottom: 0.65rem !important; }
+  main > header .mb-9 { margin-bottom: 0.75rem !important; }
+  main > header .text-xl {
+    font-size: 1rem !important;
+    line-height: 1.35 !important;
+  }
+  main > header.overflow-hidden.flex {
+    padding-top: 1rem;
+    padding-bottom: 1.15rem;
+  }
+  main > header.overflow-hidden.flex .mb-4 {
+    margin-bottom: 0.5rem;
+  }
+  main > header.overflow-hidden.flex .mb-8 {
+    margin-bottom: 0.75rem;
+  }
+  main > header.overflow-hidden.flex .mt-5,
+  main > header.overflow-hidden.flex .mt-6 {
+    margin-top: 0.55rem;
+  }
+  main > header.overflow-hidden.flex .text-xl {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  main > header.overflow-hidden.flex .h-14 {
+    height: 2.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+  }
+  body.has-cookie-notice #chat-button {
+    bottom: 14.75rem;
+  }
+}
+@media (max-width: 360px) {
+  main > header p:has(a[href="#ac-video"]),
+  main > header p:has(a[href="#ac-video"]) + div {
+    padding-right: 4.25rem;
+    text-align: left;
+  }
+}
+/* The full link row is wider than the header until the window is wide,
+   which scrolled the page sideways. Keep the menu button until it fits. */
+@media (max-width: 1279px) {
+  nav .md\:flex {
+    display: none !important;
+  }
+  #mobile-menu-btn {
+    display: flex !important;
+  }
+  #mobile-menu:not(.hidden) {
+    display: block !important;
+  }
+}
+@media (min-width: 1280px) {
+  nav .heading-font.whitespace-nowrap {
+    font-size: 1.15rem;
+  }
+  nav .nav-link {
+    padding: 0.35rem 0.3rem;
+    font-size: 0.8125rem;
+  }
+  nav a[href^="tel:"] {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+  nav a.accent-btn.rounded-full {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+}
+footer .grid > div,
+footer a[href^="mailto:"] {
+  min-width: 0;
+}
+footer a[href^="mailto:"] span {
+  overflow-wrap: anywhere;
+}
