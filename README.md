@@ -62,6 +62,6 @@ Serve the folder (paths are relative so they also work at `/reload-renewables/`)
 - Real customer photos and permissioned reviews
 - Privacy wording with an adviser if needed, and a data-processing arrangement with OpenSolar
 - Live domain (then swap canonicals, sitemap and schema)
-- Do not add accreditation logos. Tesla Powerwall 3 is a product, not a trust-row award. F-Gas is held for AC and heat-pump refrigerant work.
+- Do not add accreditation logos. Tesla Powerwall 3 is a product, not a trust-row award. Do not claim F-Gas certification unless it has been confirmed for Reload Renewables Ltd.
 - Package prices and any stats beyond ~980 kWh/kWp
 - Analytics and Search Console only after the domain cutover
