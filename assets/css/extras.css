@@ -47,14 +47,21 @@ summary:focus-visible {
   bottom: 4.5rem;
   z-index: 70;
   display: flex;
-  gap: 0.75rem;
+  gap: 0.5rem;
   align-items: center;
   justify-content: space-between;
   background: #0f172a;
   color: #fff;
-  padding: 0.75rem 1rem;
-  font-size: 0.875rem;
-  line-height: 1.4;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+}
+.cookie-notice p {
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .cookie-notice[hidden] {
   display: none !important;
@@ -67,25 +74,27 @@ summary:focus-visible {
   background: #00a3e0;
   color: #fff;
   border-radius: 999px;
-  padding: 0.45rem 1rem;
+  padding: 0.35rem 0.85rem;
   font-weight: 600;
   flex-shrink: 0;
 }
 body.has-cookie-notice {
-  padding-bottom: 12rem !important;
+  padding-bottom: 10.5rem !important;
 }
 body.has-cookie-notice #chat-button {
-  bottom: 10.5rem;
+  bottom: 7.35rem;
 }
 @media (min-width: 768px) {
   .cookie-notice {
     bottom: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
   body.has-cookie-notice {
-    padding-bottom: 4.5rem !important;
+    padding-bottom: 6.5rem !important;
   }
   body.has-cookie-notice #chat-button {
-    bottom: 5.75rem;
+    bottom: 3.25rem;
   }
 }
 
@@ -101,6 +110,12 @@ main > header.overflow-hidden.flex {
 main [id] {
   scroll-margin-top: 5.5rem;
 }
+@media (max-width: 900px) {
+  main > header:not(.flex) h1 {
+    font-size: clamp(1.7rem, 4.5vw, 2.75rem) !important;
+    line-height: 1.08 !important;
+  }
+}
 @media (max-width: 430px) {
   nav > div > .flex > a.flex-shrink-0 {
     min-width: 0;
@@ -111,6 +126,10 @@ main [id] {
     line-height: 1.1;
   }
   main h1 {
+    font-size: clamp(1.45rem, 7.2vw, 2.25rem) !important;
+    line-height: 1.1 !important;
+  }
+  main > header:not(.flex) h1 {
     font-size: clamp(1.45rem, 7.2vw, 2.25rem) !important;
     line-height: 1.1 !important;
   }
@@ -146,15 +165,24 @@ main [id] {
     padding-right: 1rem;
     font-size: 1rem;
   }
-  body.has-cookie-notice #chat-button {
-    bottom: 14.75rem;
+  main > header:not(.flex) .pt-16 { padding-top: 0.6rem !important; }
+  main > header:not(.flex) .max-w-\[min\(500px\2c 60vw\)\] { max-width: min(180px, 46vw); }
+  main > header:not(.flex) .mb-6 { margin-bottom: 0.4rem !important; }
+  main > header:not(.flex) .mb-9 { margin-bottom: 0.4rem !important; }
+  main > header:not(.flex) .mt-8 {
+    margin-top: 0 !important;
+    font-size: 0.75rem !important;
+    width: calc(100% - 1.6rem);
   }
-}
-@media (max-width: 360px) {
-  main > header p:has(a[href="#ac-video"]),
-  main > header p:has(a[href="#ac-video"]) + div {
-    padding-right: 4.25rem;
-    text-align: left;
+  main > header:not(.flex) .gap-x-8 { column-gap: 0.45rem !important; }
+  main > header:not(.flex) .tracking-wider { letter-spacing: 0.01em !important; }
+  main > header:not(.flex) .text-xs { line-height: 1.05; font-size: 0.65rem; }
+  main > header:not(.flex) .gap-4 { gap: 0.4rem !important; }
+  main > header:not(.flex) .h-14 {
+    height: 2.55rem !important;
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+    font-size: 0.95rem !important;
   }
 }
 /* The full link row is wider than the header until the window is wide,
@@ -193,4 +221,27 @@ footer a[href^="mailto:"] {
 }
 footer a[href^="mailto:"] span {
   overflow-wrap: anywhere;
+}
+
+/* Keep the phone chat button in the right-hand gutter so it does not sit on
+   text, buttons or form fields. The cookie line stays above the call bar. */
+@media (max-width: 1023px) {
+  #chat-button {
+    right: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 !important;
+    justify-content: center;
+  }
+  #chat-button span {
+    display: none !important;
+  }
+  #chat-button i {
+    font-size: 1rem;
+  }
+  main > header .relative,
+  main > :not(header),
+  footer > div {
+    padding-right: 3.75rem !important;
+  }
 }
