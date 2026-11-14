@@ -1,0 +1,247 @@
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  transform: translateY(-150%);
+  background: #0f172a;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  z-index: 100;
+  border-radius: 0 0 0.75rem 0.75rem;
+  font-weight: 600;
+}
+.skip-link:focus {
+  transform: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #00a3e0 !important;
+  outline-offset: 3px !important;
+}
+
+#quote {
+  scroll-margin-top: 5.5rem;
+}
+
+#hero-video {
+  opacity: 0;
+}
+#hero-video.is-ready {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  #hero-video {
+    display: none !important;
+  }
+}
+
+.cookie-notice {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 4.5rem;
+  z-index: 70;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f172a;
+  color: #fff;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+}
+.cookie-notice p {
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cookie-notice[hidden] {
+  display: none !important;
+}
+.cookie-notice a {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+.cookie-notice button {
+  background: #00a3e0;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+body.has-cookie-notice {
+  padding-bottom: 10.5rem !important;
+}
+body.has-cookie-notice #chat-button {
+  bottom: 7.35rem;
+}
+@media (min-width: 768px) {
+  .cookie-notice {
+    bottom: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  body.has-cookie-notice {
+    padding-bottom: 6.5rem !important;
+  }
+  body.has-cookie-notice #chat-button {
+    bottom: 3.25rem;
+  }
+}
+
+/* Photo heroes used a fixed height and overflow:hidden, which clipped the
+   heading against the sticky header and the last lines at the bottom. */
+main > header.overflow-hidden.flex {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  padding-top: 1.75rem;
+  padding-bottom: 2rem;
+}
+main [id] {
+  scroll-margin-top: 5.5rem;
+}
+@media (max-width: 900px) {
+  main > header:not(.flex) h1 {
+    font-size: clamp(1.7rem, 4.5vw, 2.75rem) !important;
+    line-height: 1.08 !important;
+  }
+}
+@media (max-width: 430px) {
+  nav > div > .flex > a.flex-shrink-0 {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+  nav .heading-font.whitespace-nowrap {
+    font-size: clamp(0.72rem, 3.5vw, 1.25rem);
+    line-height: 1.1;
+  }
+  main h1 {
+    font-size: clamp(1.45rem, 7.2vw, 2.25rem) !important;
+    line-height: 1.1 !important;
+  }
+  main > header:not(.flex) h1 {
+    font-size: clamp(1.45rem, 7.2vw, 2.25rem) !important;
+    line-height: 1.1 !important;
+  }
+  main > header .pt-16 { padding-top: 1.25rem !important; }
+  main > header .max-w-\[min\(500px\2c 60vw\)\] { max-width: min(220px, 52vw); }
+  main > header .mb-6 { margin-bottom: 0.65rem !important; }
+  main > header .mb-9 { margin-bottom: 0.75rem !important; }
+  main > header .text-xl {
+    font-size: 1rem !important;
+    line-height: 1.35 !important;
+  }
+  main > header.overflow-hidden.flex {
+    padding-top: 1rem;
+    padding-bottom: 1.15rem;
+  }
+  main > header.overflow-hidden.flex .mb-4 {
+    margin-bottom: 0.5rem;
+  }
+  main > header.overflow-hidden.flex .mb-8 {
+    margin-bottom: 0.75rem;
+  }
+  main > header.overflow-hidden.flex .mt-5,
+  main > header.overflow-hidden.flex .mt-6 {
+    margin-top: 0.55rem;
+  }
+  main > header.overflow-hidden.flex .text-xl {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  main > header.overflow-hidden.flex .h-14 {
+    height: 2.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+  }
+  main > header:not(.flex) .pt-16 { padding-top: 0.6rem !important; }
+  main > header:not(.flex) .max-w-\[min\(500px\2c 60vw\)\] { max-width: min(180px, 46vw); }
+  main > header:not(.flex) .mb-6 { margin-bottom: 0.4rem !important; }
+  main > header:not(.flex) .mb-9 { margin-bottom: 0.4rem !important; }
+  main > header:not(.flex) .mt-8 {
+    margin-top: 0 !important;
+    font-size: 0.75rem !important;
+    width: calc(100% - 1.6rem);
+  }
+  main > header:not(.flex) .gap-x-8 { column-gap: 0.45rem !important; }
+  main > header:not(.flex) .tracking-wider { letter-spacing: 0.01em !important; }
+  main > header:not(.flex) .text-xs { line-height: 1.05; font-size: 0.65rem; }
+  main > header:not(.flex) .gap-4 { gap: 0.4rem !important; }
+  main > header:not(.flex) .h-14 {
+    height: 2.55rem !important;
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+    font-size: 0.95rem !important;
+  }
+}
+/* The full link row is wider than the header until the window is wide,
+   which scrolled the page sideways. Keep the menu button until it fits. */
+@media (max-width: 1279px) {
+  nav .md\:flex {
+    display: none !important;
+  }
+  #mobile-menu-btn {
+    display: flex !important;
+  }
+  #mobile-menu:not(.hidden) {
+    display: block !important;
+  }
+}
+@media (min-width: 1280px) {
+  nav .heading-font.whitespace-nowrap {
+    font-size: 1.15rem;
+  }
+  nav .nav-link {
+    padding: 0.35rem 0.3rem;
+    font-size: 0.8125rem;
+  }
+  nav a[href^="tel:"] {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+  nav a.accent-btn.rounded-full {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+}
+footer .grid > div,
+footer a[href^="mailto:"] {
+  min-width: 0;
+}
+footer a[href^="mailto:"] span {
+  overflow-wrap: anywhere;
+}
+
+/* Keep the phone chat button in the right-hand gutter so it does not sit on
+   text, buttons or form fields. The cookie line stays above the call bar. */
+@media (max-width: 1023px) {
+  #chat-button {
+    right: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 !important;
+    justify-content: center;
+  }
+  #chat-button span {
+    display: none !important;
+  }
+  #chat-button i {
+    font-size: 1rem;
+  }
+  main > header .relative,
+  main > :not(header),
+  footer > div {
+    padding-right: 3.75rem !important;
+  }
+}
