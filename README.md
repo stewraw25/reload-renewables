@@ -39,7 +39,7 @@ Do not invent testimonials, star ratings, named customer jobs, or project photos
 
 ## Quotes
 
-The only lead path is the OpenSolar **Quotation Request** form (Embed In Page). Its script is loaded with `defer` inside `contact.html#quote` and is not included on other pages. Quote buttons and the on-site chatbot link to that section. Do not add a second form backend.
+The only lead path is the OpenSolar **Quotation Request** form (Embed In Page, org 126178, form 2479). The exact lead-capture script sits inside `contact.html#quote` and is not included on other pages. Quote buttons and the on-site chatbot link to that section. If the script does not load, the page shows the phone number and email. Do not add a second form backend.
 
 Enquiry records are kept for 1 year. See `privacy.html`.
 

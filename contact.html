@@ -211,10 +211,94 @@
         <div id="quote" class="mt-8">
           <h2 class="heading-font text-2xl tracking-tight text-slate-900">Request a survey</h2>
           <p class="text-slate-600 mt-2">The quotation form is provided by OpenSolar. Tell us about the property in your own time. We reply and arrange a survey, and there is no pressure to sign on the day. Weekdays, usually within 2 hours.</p>
-          <script id="opensolar_lead_capture" type="text/javascript" defer src="https://api.opensolar.com/api/lead_capture_widget/38f468f7182545438797f9d86219ea5f"></script>
+          <div class="quote-embed mt-6">
+            <p id="quote-fallback" class="quote-fallback" hidden>The quotation form did not load. Call <a href="tel:01978809500">(01978) 809 500</a> or email <a href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a>.</p>
+            <noscript><p class="quote-fallback">The quotation form needs JavaScript. Call <a href="tel:01978809500">(01978) 809 500</a> or email <a href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a>.</p></noscript>
+            <script>
+              window.addEventListener("error", function (event) {
+                var target = event.target;
+                var loadFailed = target && target.id === "opensolar_lead_capture";
+                var crossOrigin = event.message === "Script error.";
+                if (!loadFailed && !crossOrigin) return;
+                if (document.querySelector("#quote .widget-form-os")) return;
+                var fallback = document.getElementById("quote-fallback");
+                if (fallback) fallback.hidden = false;
+              }, true);
+            </script>
+            <script id="opensolar_lead_capture" type="text/javascript" src="https://api.opensolar.com/api/lead_capture_widget/38f468f7182545438797f9d86219ea5f"></script>
+            <script>
+              (function () {
+                var fallback = document.getElementById("quote-fallback");
+                if (!fallback) return;
+                var tries = 0;
+                var timer = window.setInterval(function () {
+                  var ready = !!document.querySelector("#quote .widget-form-os");
+                  tries += 1;
+                  if (ready) {
+                    fallback.hidden = true;
+                    window.clearInterval(timer);
+                  } else if (tries >= 24) {
+                    fallback.hidden = false;
+                    window.clearInterval(timer);
+                  }
+                }, 500);
+              })();
+            </script>
+          </div>
           <p class="text-sm text-slate-600 mt-4">Or call <a class="underline" href="tel:01978809500">(01978) 809 500</a> or email <a class="underline" href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a>.</p>
           <p class="text-xs text-slate-500 mt-2"><a class="underline" href="privacy.html">Privacy</a> — Reload Renewables Ltd keeps enquiry records for 1 year. OpenSolar processes the form.</p>
         </div>
+        <style>
+          #quote .quote-embed { max-width: 100%; }
+          #quote .quote-fallback {
+            margin: 0 0 1rem;
+            padding: 1.25rem 1.5rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 1.5rem;
+            background: #fff;
+            color: #334155;
+            font-size: 0.95rem;
+            line-height: 1.5;
+          }
+          #quote .quote-fallback a { color: #00a3e0; font-weight: 600; }
+          #quote #widget-form-placeholder-os.fixed-widget-wrapper { width: 100%; padding: 0; }
+          #quote .widget-heading-wrapper-os,
+          #quote .widget-form-os {
+            width: 100%;
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+            box-sizing: border-box;
+            border: 1px solid #e2e8f0;
+            border-radius: 1.5rem;
+            box-shadow: none;
+          }
+          #quote .widget-form-os .input-container-os { width: 100%; }
+          #quote .widget-form-inputs { padding-left: 0; padding-right: 0; }
+          #quote #widget-family-name-os,
+          #quote #widget-first-name-os,
+          #quote #widget-email-os,
+          #quote #widget-phone-os,
+          #quote #widget-notes-os,
+          #quote .widget-address-os,
+          #quote .widget-form-os input,
+          #quote .widget-form-os textarea,
+          #quote .widget-form-os .custom-select-os {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+          }
+          #quote button.widget {
+            width: 100%;
+            max-width: 16rem;
+            margin-left: 0;
+            margin-right: auto;
+            border-radius: 1rem;
+            background-color: #00a3e0;
+          }
+          #quote button.widget:hover { background-color: #0088c2; }
+        </style>
       </div>
 
       <!-- Contact Info -->
