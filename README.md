@@ -16,7 +16,7 @@ Reload Renewables was set up after years of seeing badly fitted, unsafe solar sy
 - Trading name: Reload Renewables & AC
 - Phone: 01978 809 500
 - Email: hello@reloadrenewables.com
-- Address: Unit 4, Wrexham Industrial Estate, Wrexham, LL13 9XS
+- Address: Jubilee Manor, Sun Lane, Wrexham, LL13 9RW
 - Hours: Mon–Fri 8am–6pm; Sat 9am–1pm by appointment
 - Colours: primary `#00A3E0`, dark `#0F172A`
 - Area: Wrexham, Chester, Mold, Oswestry, Flintshire, Denbighshire, North Wales

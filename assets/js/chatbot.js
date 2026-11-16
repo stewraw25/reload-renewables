@@ -1,7 +1,7 @@
 // Reload Renewables & AC — on-site answers. Quote hand-off goes to the contact page embed.
 (function () {
   const knowledgeBase = [
-    { keywords: ["area", "cover", "wrexham", "chester", "mold", "oswestry", "north wales", "where", "serve"], answer: "We cover Wrexham, Chester, Mold, Oswestry, Flint, Deeside, Flintshire, Denbighshire and North Wales. If you are not sure, send your postcode with the quotation form." },
+    { keywords: ["area", "cover", "wrexham", "chester", "mold", "oswestry", "north wales", "where", "serve", "address", "office", "based", "postcode"], answer: "We are based at Jubilee Manor, Sun Lane, Wrexham, LL13 9RW. We cover Wrexham, Chester, Mold, Oswestry, Flint, Deeside, Flintshire, Denbighshire and North Wales. If you are not sure, send your postcode with the quotation form." },
     { keywords: ["finance", "0%", "zero", "interest", "payment", "pay monthly"], answer: "Three ways to pay, on the Gold from £10,000 package: pay in full; 0% via an authorised broker (subject to status; illustration if approved with no deposit 120 × £83 — Reload is not the lender); or a separate representative example at 9.9% APR, 120 months, £10,000, no deposit, 120 × £132, total amount payable £15,840. Do not mix 0% and 9.9% — they are different products." },
     { keywords: ["warranty", "guarantee", "how long"], answer: "We give a 6-year warranty on the labour for the complete job, and on most equipment. Aftercare does not stop at handover." },
     { keywords: ["battery only", "no solar", "just battery", "arbitrage", "off peak", "octopus go"], answer: "Battery storage can be fitted on its own, including on tariffs such as Octopus Go. You can charge overnight at cheap rates and use the power during the day." },
