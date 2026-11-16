@@ -58,7 +58,7 @@
       "legalName": "Reload Renewables Ltd",
       "additionalType": "https://schema.org/HomeAndConstructionBusiness",
       "accreditation": [
-        "NICEIC",
+
         "TrustMark"
       ]
     },
@@ -244,7 +244,7 @@
 
   <div class="max-w-7xl mx-auto px-6 pt-8">
     <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-slate-600 py-4 border-b">
-      <div class="flex items-center gap-x-2"><i class="fas fa-check-circle text-emerald-500"></i> <span>NICEIC &amp; TrustMark</span></div>
+      <div class="flex items-center gap-x-2"><i class="fas fa-check-circle text-emerald-500"></i> <span>TrustMark</span></div>
       <div class="flex items-center gap-x-2"><i class="fas fa-check-circle text-emerald-500"></i> <span>With or without solar</span></div>
       <div class="flex items-center gap-x-2"><i class="fas fa-check-circle text-emerald-500"></i> <span>10-12 Year Warranties</span></div>
       <div class="flex items-center gap-x-2"><i class="fas fa-check-circle text-emerald-500"></i> <span>Whole-Home Backup</span></div>
@@ -308,10 +308,10 @@
           </div>
           <p class="mt-2 text-xs text-white/70">Two separate products. Do not add them together. Same figures as the homepage advert.</p>
           <div class="mt-4 flex flex-wrap items-center gap-5">
-            <img src="assets/images/accreditations/niceic-approved.png" alt="NICEIC Approved Contractor" class="h-8 w-auto bg-white rounded-md p-1" width="129" height="72" loading="lazy">
+            <!-- NICEIC badge: enable once registration confirmed -->
             <img src="assets/images/accreditations/trustmark.png" alt="TrustMark" class="h-8 w-auto bg-white rounded-md p-1" width="144" height="72" loading="lazy">
           </div>
-          <p class="mt-3 text-xs text-white/80">MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote.</p>
+          <p class="mt-3 text-xs text-white/80">Every qualifying installation is signed off and MCS certified through an MCS-certified installer partner, named on your quote. Reload's own MCS certification is awaiting approval.</p>
           
           <p class="mt-3 text-sm text-white/90">Installed to a high standard by qualified electricians.</p>
           <div class="mt-4 flex flex-wrap gap-3">
@@ -407,7 +407,7 @@
         <div class="mt-6 grid md:grid-cols-3 gap-6 text-sm">
           <div><span class="font-semibold">1. Survey &amp; Sizing</span><br>We assess your solar (or future solar), usage profile, tariff and backup requirements. We model exact savings for your Wrexham or Chester postcode.</div>
           <div><span class="font-semibold">2. Choose &amp; Quote</span><br>A clear comparison of Pylontech, BYD and Tesla, then a written price. There is no pressure to choose on the day.</div>
-          <div><span class="font-semibold">3. Install &amp; Commission</span><br>1-2 day install by our NICEIC engineers. Full system test, app setup, Octopus integration and warranty registration.</div>
+          <div><span class="font-semibold">3. Install &amp; Commission</span><br>1-2 day install by qualified electricians. Full system test, app setup, Octopus integration and warranty registration.</div>
         </div>
       </div>
     </section>
@@ -457,21 +457,17 @@
   <section class="max-w-7xl mx-auto px-6 py-10" id="trust">
     <div class="text-center mb-6">
       <div class="text-xs tracking-[2px] font-semibold text-slate-500">CERTIFIED &amp; TRUSTED BY</div>
-      <p class="mt-2 text-sm text-slate-600 max-w-2xl mx-auto">NICEIC and TrustMark. Certificates on request.</p>
+      <p class="mt-2 text-sm text-slate-600 max-w-2xl mx-auto">TrustMark. Certificates on request.</p>
     </div>
-    <div class="grid sm:grid-cols-2 gap-4 text-sm max-w-3xl mx-auto">
-      <div class="bg-white border border-slate-200 rounded-2xl p-4">
-        <img src="assets/images/accreditations/niceic-approved.png" alt="NICEIC Approved Contractor" class="h-10 w-auto mx-auto mb-3" width="129" height="72" loading="lazy">
-        <div class="font-semibold text-center">NICEIC</div>
-        <p class="text-xs text-slate-600 mt-1">Electrical competence for the installation — wiring, isolation and testing to UK standards.</p>
-      </div>
-      <div class="bg-white border border-slate-200 rounded-2xl p-4">
+    <div class="badge-row">
+      <!-- NICEIC badge: enable once registration confirmed -->
+      <div class="badge-slot">
         <img src="assets/images/accreditations/trustmark.png" alt="TrustMark" class="h-10 w-auto mx-auto mb-3" width="144" height="72" loading="lazy">
         <div class="font-semibold text-center">TrustMark</div>
         <p class="text-xs text-slate-600 mt-1">Government-endorsed quality mark for trades that meet a recognised standard.</p>
       </div>
     </div>
-    <p class="text-center text-sm text-slate-700 mt-6 max-w-2xl mx-auto">MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote.</p>
+    <p class="text-center text-sm text-slate-700 mt-6 max-w-2xl mx-auto">Every qualifying installation is signed off and MCS certified through an MCS-certified installer partner, named on your quote. Reload's own MCS certification is awaiting approval.</p>
     <p class="text-center text-xs text-slate-500 mt-4">Tesla Powerwall 3 is a product we specify on Platinum, not an installer award listed here. Consumer protection and deposit protection are explained on the quote.</p>
   </section>
 
@@ -485,13 +481,20 @@
         </a>
         <p class="max-w-xs">Quality products, a high installation standard, and a calm service from the first visit to switch-on. Solar, battery, heat pumps and air conditioning in Wrexham, Chester and North Wales.</p>
         <div class="care-marks">
-          <img class="care-seal" src="assets/images/gold-care-standard.svg" alt="Reload Gold Care Standard: quality products · 6-year warranty · aftercare" width="440" height="78">
-          <div class="trustmark-mark">
+          <div class="care-lockup badge-slot">
+          <img class="care-seal" src="assets/images/gold-care-standard.svg" alt="Reload Gold Care Standard: quality products · 6-year warranty · aftercare" width="320" height="340">
+          <div class="care-lockup-copy">
+            <div class="care-lockup-title">Reload Gold Care Standard</div>
+            <div class="care-lockup-sub">quality products · 6-year warranty · aftercare</div>
+          </div>
+        </div>
+          <div class="trustmark-mark badge-slot">
             <img src="assets/images/accreditations/trustmark.png" alt="TrustMark Registered" width="144" height="72">
             <span>TrustMark Registered</span>
           </div>
           <!-- TRUSTMARK LICENCE: registration number goes here when Stewart supplies it. Do not invent a number. -->
           <!-- TRUSTMARK PROFILE: the TrustMark find-a-tradesperson profile URL goes here when Stewart supplies it. -->
+          <!-- NICEIC badge: enable once registration confirmed -->
         </div>
         <p class="mt-6 text-xs tracking-wider">© 2026 Reload Renewables Ltd. All rights reserved.</p>
       </div>

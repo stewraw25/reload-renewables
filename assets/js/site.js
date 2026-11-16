@@ -27,13 +27,19 @@
   function marksHtml() {
     return ''
       + '<div class="care-marks">'
-      + '<img class="care-seal" src="assets/images/gold-care-standard.svg" alt="' + PHRASE + '" width="440" height="78">'
-      + '<div class="trustmark-mark">'
+      + '<div class="care-lockup badge-slot">'
+      + '<img class="care-seal" src="assets/images/gold-care-standard.svg" alt="Reload Gold Care Standard: quality products · 6-year warranty · aftercare" width="320" height="340">'
+      + '<div class="care-lockup-copy">'
+      + '<div class="care-lockup-title">Reload Gold Care Standard</div>'
+      + '<div class="care-lockup-sub">quality products · 6-year warranty · aftercare</div>'
+      + '</div></div>'
+      + '<div class="trustmark-mark badge-slot">'
       + '<img src="assets/images/accreditations/trustmark.png" alt="TrustMark Registered" width="144" height="72">'
       + '<span>TrustMark Registered</span>'
       + '</div>'
       + '<!-- TRUSTMARK LICENCE: registration number goes here when Stewart supplies it. Do not invent a number. -->'
       + '<!-- TRUSTMARK PROFILE: the TrustMark find-a-tradesperson profile URL goes here when Stewart supplies it. -->'
+      + '<!-- NICEIC badge: enable once registration confirmed -->'
       + '</div>';
   }
 

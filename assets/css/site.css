@@ -197,14 +197,34 @@ main [id] {
   #mobile-menu:not(.hidden) {
     display: block !important;
   }
+  nav a.flex img.rounded-full {
+    width: 3rem;
+    height: 3rem;
+  }
+  nav .heading-font.whitespace-nowrap {
+    font-size: clamp(0.95rem, 2.4vw, 1.2rem);
+  }
 }
 @media (min-width: 1280px) {
+  nav > div > .flex.items-center {
+    height: 5.25rem;
+  }
+  nav a.flex img.rounded-full {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
   nav .heading-font.whitespace-nowrap {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
   }
   nav .nav-link {
     padding: 0.35rem 0.3rem;
     font-size: 0.8125rem;
+    white-space: nowrap;
+  }
+  nav .md\:flex.flex-1 {
+    margin-left: 2rem;
+    justify-content: flex-start;
+    min-width: 0;
   }
   nav a[href^="tel:"] {
     padding-left: 0.65rem;
@@ -213,6 +233,15 @@ main [id] {
   nav a.accent-btn.rounded-full {
     padding-left: 0.85rem;
     padding-right: 0.85rem;
+  }
+}
+@media (min-width: 1440px) {
+  nav a.flex img.rounded-full {
+    width: 4rem;
+    height: 4rem;
+  }
+  nav .heading-font.whitespace-nowrap {
+    font-size: 1.35rem;
   }
 }
 footer .grid > div,
@@ -246,17 +275,122 @@ footer a[href^="mailto:"] span {
   }
 }
 
-/* Desktop nav: keep a gap after the logo, and keep each label on one line. */
-@media (min-width: 1280px) {
-  nav .md\:flex.flex-1 {
-    margin-left: 2rem;
-    justify-content: flex-start;
-    min-width: 0;
-  }
-  nav .nav-link {
-    white-space: nowrap;
-  }
+/* Gap after the logo. Labels stay on one line. */
+.site-nav {
+  margin-left: 0.85rem;
+  gap: 0.35rem;
+  min-width: 0;
+  justify-content: flex-start;
 }
+@media (min-width: 1280px) {
+  .site-nav { margin-left: 2rem; gap: 0.5rem; }
+}
+.site-nav .nav-link {
+  white-space: nowrap;
+  font-weight: 600;
+  text-underline-offset: 0.28em;
+  line-height: 1.2;
+}
+.nav-products,
+.nav-who {
+  display: flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.1rem 0.2rem;
+}
+.nav-products { background: rgba(0, 163, 224, 0.1); }
+.nav-who { background: rgba(15, 118, 110, 0.1); }
+.nav-products .nav-link,
+.nav-who .nav-link,
+.nav-servicing,
+.nav-mission,
+.nav-contact {
+  font-size: 0.75rem;
+  padding: 0.32rem 0.38rem;
+}
+@media (min-width: 1280px) {
+  .nav-products .nav-link,
+  .nav-who .nav-link,
+  .nav-servicing,
+  .nav-mission,
+  .nav-contact { font-size: 0.8125rem; padding: 0.36rem 0.48rem; }
+}
+.nav-products .nav-link { color: #00A3E0; }
+.nav-products .nav-link:hover,
+.nav-products .nav-link[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: #00A3E0;
+  text-decoration-thickness: 1.5px;
+}
+.nav-divider {
+  width: 1px;
+  align-self: stretch;
+  margin: 0.4rem 0.1rem;
+  background: #cbd5e1;
+  flex: none;
+}
+.nav-servicing { color: #334155; }
+.nav-servicing:hover,
+.nav-servicing[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: #334155;
+  text-decoration-thickness: 1.5px;
+}
+.nav-who .nav-link { color: #0F766E; }
+.nav-who .nav-link:hover,
+.nav-who .nav-link[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: #0F766E;
+  text-decoration-thickness: 1.5px;
+}
+.nav-mission {
+  font-weight: 650;
+  color: #8B6914;
+  background-image: linear-gradient(100deg, #8B6914 0%, #C9A227 42%, #E8C872 58%, #8B6914 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-mission:hover,
+.nav-mission[aria-current="page"] {
+  border-bottom: 1.5px solid #C9A227;
+}
+.nav-contact {
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+}
+.nav-contact:hover,
+.nav-contact[aria-current="page"] {
+  border-color: #0f172a;
+  text-decoration: underline;
+  text-decoration-color: #0f172a;
+}
+.mobile-nav-label {
+  margin: 0.9rem 0.2rem 0.2rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 650;
+  color: #64748b;
+}
+.mobile-nav-label:first-child { margin-top: 0; }
+.mobile-nav-link {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.85rem;
+  font-weight: 600;
+}
+.mobile-nav-link:hover { background: #f8fafc; }
+.mobile-nav-link--product { color: #00A3E0; }
+.mobile-nav-link--service { color: #334155; }
+.mobile-nav-link--who { color: #0F766E; }
+.mobile-nav-link--mission { color: #8B6914; }
+.mobile-nav-link--contact { color: #0f172a; }
+.mobile-nav-link[aria-current="page"] { background: #f1f5f9; }
+.eyebrow-stamp { width: 3.5rem; height: 3.5rem; flex: none; }
+.accent-btn { background-color: #00A3E0; color: #fff; }
+.accent-btn:hover { background-color: #0088C2; }
 
 #home-hero > .relative {
   padding-top: 1.15rem !important;
@@ -272,36 +406,100 @@ footer a[href^="mailto:"] span {
   max-width: 38rem;
 }
 
-.care-marks {
+.care-marks,
+.badge-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem 1rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 1rem;
 }
-.care-seal {
-  width: min(100%, 22.5rem);
-  height: auto;
-  background: #fff;
-  border-radius: 1rem;
+@media (min-width: 900px) {
+  #trust-band .care-marks,
+  #trust .badge-row {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
-.trustmark-mark {
-  display: inline-flex;
+.badge-slot {
+  display: flex;
   align-items: center;
-  gap: 0.55rem;
+  justify-content: flex-start;
+  gap: 0.9rem;
+  flex: 1 1 18rem;
+  max-width: 28rem;
+  min-height: 8.25rem;
+  margin: 0;
+  padding: 0.85rem 1.15rem;
   background: #fff;
   color: #0f172a;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e7e5e4;
   border-radius: 1rem;
-  padding: 0.3rem 0.75rem 0.3rem 0.35rem;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+  box-sizing: border-box;
 }
-.trustmark-mark img {
-  width: 5.75rem;
-  height: auto;
+@media (min-width: 900px) {
+  #trust-band .badge-slot,
+  #trust .badge-slot {
+    flex: 1 1 0;
+    max-width: 26rem;
+  }
 }
-.trustmark-mark span {
-  font-size: 0.8rem;
+.care-seal {
+  width: auto;
+  height: 6.35rem;
+  max-width: none;
+  background: transparent;
+  border-radius: 0;
+  flex: none;
+}
+.care-lockup-copy { min-width: 0; }
+.care-lockup-title {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: #0f172a;
+}
+.care-lockup-sub {
+  margin-top: 0.2rem;
+  font-size: 0.84rem;
+  line-height: 1.35;
+  color: #475569;
+}
+.trustmark-mark img,
+.badge-row .badge-slot img {
+  width: auto;
+  height: 4.25rem;
+  max-width: none;
+  margin: 0;
+  background: transparent;
+  padding: 0;
+}
+.trustmark-mark span,
+.badge-row .badge-slot .font-semibold {
+  font-size: 1rem;
   font-weight: 650;
   line-height: 1.2;
+  text-align: left;
+}
+.badge-row .badge-slot {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 0.45rem;
+}
+.badge-row .badge-slot p,
+.badge-row .badge-slot .font-semibold {
+  text-align: center;
+}
+footer .badge-slot { box-shadow: none; }
+.niceic-slot span { font-weight: 650; line-height: 1.2; }
+.trust-mcs {
+  margin: 0.9rem 0 0;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 650;
+  color: #0f172a;
 }
 .pillar-grid {
   display: grid;
