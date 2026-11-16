@@ -1,5 +1,5 @@
 (function () {
-  var PHRASE = "Reload Gold Care Standard: quality products · 6-year warranty · aftercare";
+  var PHRASE = "RELOAD Gold Care Standard: quality products · 6-year warranty · aftercare";
   var lastFocus = null;
 
   function pageName() {
@@ -27,13 +27,19 @@
   function marksHtml() {
     return ''
       + '<div class="care-marks">'
-      + '<img class="care-seal" src="assets/images/gold-care-standard.svg" alt="' + PHRASE + '" width="440" height="78">'
-      + '<div class="trustmark-mark">'
+      + '<div class="care-lockup badge-slot">'
+      + '<img class="care-seal" src="assets/images/gold-care-standard.svg" alt="RELOAD Gold Care Standard: quality products · 6-year warranty · aftercare" width="320" height="340">'
+      + '<div class="care-lockup-copy">'
+      + '<div class="care-lockup-title">RELOAD Gold Care Standard</div>'
+      + '<div class="care-lockup-sub">quality products · 6-year warranty · aftercare</div>'
+      + '</div></div>'
+      + '<div class="trustmark-mark badge-slot">'
       + '<img src="assets/images/accreditations/trustmark.png" alt="TrustMark Registered" width="144" height="72">'
       + '<span>TrustMark Registered</span>'
       + '</div>'
       + '<!-- TRUSTMARK LICENCE: registration number goes here when Stewart supplies it. Do not invent a number. -->'
       + '<!-- TRUSTMARK PROFILE: the TrustMark find-a-tradesperson profile URL goes here when Stewart supplies it. -->'
+      + '<!-- NICEIC badge: enable once registration confirmed -->'
       + '</div>';
   }
 
@@ -51,12 +57,15 @@
       + '<h2 id="quote-picker-title">What would you like a quote for?</h2>'
       + marksHtml()
       + '<div class="quote-picker-choices">'
-      + '<a class="quote-choice" data-quote-go="solar" href="contact.html#quote"><strong>Solar &amp; battery</strong><span>Open the quotation form</span></a>'
+      + '<a class="quote-choice" data-quote-go="solar" href="contact.html#quote"><strong>Solar</strong><span>Open the quotation form</span></a>'
+      + '<a class="quote-choice" data-quote-go="solar" href="contact.html#quote"><strong>Battery</strong><span>Open the quotation form</span></a>'
       + '<a class="quote-choice" data-quote-go="ac" href="ac.html#ac-video"><strong>Air conditioning</strong><span>Guide price from a room video</span></a>'
-      + '<button type="button" class="quote-choice" data-quote-go="heat"><strong>Heat pump</strong><span>Coming soon</span></button>'
+      + '<button type="button" class="quote-choice" data-quote-go="heat"><strong>Heat pump</strong><span>Call or email for a survey</span></button>'
+      + '<button type="button" class="quote-choice" data-quote-go="service"><strong>Servicing</strong><span>Call or email</span></button>'
       + '</div>'
       + '<div class="quote-picker-soon" hidden>'
-      + '<p>Heat pump quotes are coming soon. Call <a href="tel:01978809500">(01978) 809 500</a> or email <a href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a> and we\'ll talk you through it.</p>'
+      + '<p data-soon="heat">There is no separate online form for heat pumps yet. Call <a href="tel:01978809500">(01978) 809 500</a> or email <a href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a> and we will arrange a survey. There is no pressure to go ahead.</p>'
+      + '<p data-soon="service" hidden>For servicing, call <a href="tel:01978809500">(01978) 809 500</a> or email <a href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a>. The <a href="services.html">servicing page</a> lists what we cover.</p>'
       + '<button type="button" class="quote-picker-back" data-quote-back>Other quote options</button>'
       + '</div>'
       + '</div>';
@@ -86,9 +95,13 @@
     closeChat();
     var choices = root.querySelector(".quote-picker-choices");
     var soon = root.querySelector(".quote-picker-soon");
-    var heatFirst = mode === "heat";
-    choices.hidden = heatFirst;
-    soon.hidden = !heatFirst;
+    var direct = mode === "heat" || mode === "service" ? mode : "";
+    choices.hidden = !!direct;
+    soon.hidden = !direct;
+    var notes = root.querySelectorAll("[data-soon]");
+    Array.prototype.forEach.call(notes, function (note) {
+      note.hidden = note.getAttribute("data-soon") !== (direct || "heat");
+    });
     root.hidden = false;
     document.body.classList.add("quote-picker-open");
     var dialog = root.querySelector(".quote-picker-dialog");
@@ -163,12 +176,16 @@
     var choice = event.target.closest("[data-quote-go]");
     if (choice && choice.closest("#quote-picker")) {
       var dest = choice.getAttribute("data-quote-go");
-      if (dest === "heat") {
+      if (dest === "heat" || dest === "service") {
         event.preventDefault();
         var picker = document.getElementById("quote-picker");
         picker.querySelector(".quote-picker-choices").hidden = true;
         picker.querySelector(".quote-picker-soon").hidden = false;
-        var phone = picker.querySelector(".quote-picker-soon a");
+        var notes = picker.querySelectorAll("[data-soon]");
+        Array.prototype.forEach.call(notes, function (note) {
+          note.hidden = note.getAttribute("data-soon") !== dest;
+        });
+        var phone = picker.querySelector(".quote-picker-soon [data-soon=\"" + dest + "\"] a");
         if (phone) phone.focus();
         return;
       }
@@ -253,6 +270,37 @@
         localStorage.setItem(KEY, "1");
       } catch (err) {}
       hideNotice();
+    });
+  }
+
+  var serviceRoute = document.getElementById("service-route");
+  if (serviceRoute) {
+    serviceRoute.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var choice = document.getElementById("service-choice");
+      var note = document.getElementById("service-route-note");
+      var value = choice ? choice.value : "solar";
+      if (value === "ac") {
+        location.href = "ac.html#ac-video";
+        return;
+      }
+      if (value === "solar" || value === "battery") {
+        if (note) note.hidden = true;
+        var quote = document.getElementById("quote");
+        if (quote) quote.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      if (!note) return;
+      var phone = '<a href="tel:01978809500">(01978) 809 500</a>';
+      var email = '<a href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a>';
+      if (value === "heat") {
+        note.innerHTML = "There is no separate online form for heat pumps yet. Call " + phone + " or email " + email + " and we will arrange a survey. There is no pressure to go ahead. The <a href=\"heat-pumps.html\">heat pump page</a> explains the work.";
+      } else if (value === "servicing") {
+        note.innerHTML = "For servicing, call " + phone + " or email " + email + ". The <a href=\"services.html\">servicing page</a> lists what we cover.";
+      } else {
+        note.innerHTML = "Call " + phone + " or email " + email + " and tell us what you need. Solar and battery quotes use the form on this page. Air conditioning quotes start from a room video.";
+      }
+      note.hidden = false;
     });
   }
 

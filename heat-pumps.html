@@ -58,7 +58,7 @@
       "legalName": "Reload Renewables Ltd",
       "additionalType": "https://schema.org/HomeAndConstructionBusiness",
       "accreditation": [
-        "NICEIC",
+
         "TrustMark"
       ]
     },
@@ -129,7 +129,7 @@
           "name": "Are you MCS certified?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote."
+            "text": "Every qualifying installation is signed off and MCS certified through an MCS-certified installer partner, named on your quote. Reload's own MCS certification is awaiting approval."
           }
         }
       ]
@@ -173,20 +173,7 @@
           <img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-10 w-10 md:h-11 md:w-11 rounded-full object-contain" width="1024" height="1024">
           <div class="font-semibold text-xl md:text-2xl lg:text-2xl tracking-tighter heading-font whitespace-nowrap flex-shrink-0">Reload Renewables <span class="text-[#00A3E0]">&amp; AC</span></div>
         </a>
-        <div class="hidden md:flex flex-1 justify-center">
-          <div class="flex items-center gap-x-1.5 lg:gap-x-2.5 text-sm font-medium">
-                        <a href="solar.html" class="nav-link text-slate-700 hover:text-[#00A3E0]">Solar</a>
-            <a href="battery.html" class="nav-link text-slate-700 hover:text-[#00A3E0]">Battery</a>
-            <a href="heat-pumps.html" class="nav-link text-[#00A3E0] font-semibold">Heat Pumps</a>
-            <a href="ac.html" class="nav-link text-slate-700 hover:text-[#00A3E0]">AC</a>
-            <a href="services.html" class="nav-link text-slate-700 hover:text-[#00A3E0]">Servicing</a>
-            <a href="domestic.html" class="nav-link text-slate-700 hover:text-[#00A3E0]">Domestic</a>
-            <a href="commercial.html" class="nav-link text-slate-700 hover:text-[#00A3E0]">Commercial</a>
-            <a href="our-work.html" class="nav-link text-slate-700 hover:text-[#00A3E0]">Our Work</a>
-            <a href="about.html" class="nav-link text-slate-700 hover:text-[#00A3E0]">About</a>
-            <a href="contact.html" class="nav-link text-slate-700 hover:text-[#00A3E0]">Contact</a>
-          </div>
-        </div>
+        <div class="hidden md:flex flex-1 site-nav" aria-label="Primary"><div class="nav-products"><a href="solar.html" class="nav-link">Solar</a><a href="battery.html" class="nav-link">Battery</a><a href="heat-pumps.html" class="nav-link" aria-current="page">Heat Pumps</a><a href="ac.html" class="nav-link">AC</a></div><span class="nav-divider" aria-hidden="true"></span><a href="services.html" class="nav-link nav-servicing">Servicing</a><span class="nav-divider" aria-hidden="true"></span><div class="nav-who"><a href="domestic.html" class="nav-link">Domestic</a><a href="commercial.html" class="nav-link">Commercial</a><a href="our-work.html" class="nav-link">Our Work</a><a href="about.html" class="nav-link">About</a></div><span class="nav-divider" aria-hidden="true"></span><a href="mission.html" class="nav-link nav-mission">Mission</a><a href="contact.html" class="nav-link nav-contact">Contact</a></div>
         <div class="hidden md:flex items-center gap-x-2 flex-shrink-0">
           <a href="tel:01978809500" class="flex items-center gap-x-1.5 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:border-slate-300 rounded-full transition-all border border-slate-200 whitespace-nowrap" title="Call us now">
             <i class="fas fa-phone text-[#00A3E0]"></i> <span>(01978) 809 500</span>
@@ -202,16 +189,21 @@
 
     <div id="mobile-menu" class="hidden md:hidden border-t bg-white px-6 py-6">
       <div class="flex flex-col gap-y-1 text-base font-medium">
-        <a href="solar.html" class="px-4 py-3 hover:bg-slate-100 rounded-2xl">Solar</a>
-        <a href="battery.html" class="px-4 py-3 hover:bg-slate-100 rounded-2xl">Battery</a>
-        <a href="heat-pumps.html" class="px-4 py-3 hover:bg-slate-100 rounded-2xl font-semibold text-[#00A3E0]">Heat Pumps</a>
-        <a href="ac.html" class="px-4 py-3 hover:bg-slate-100 rounded-2xl">AC</a>
-        <a href="services.html" class="px-4 py-3 hover:bg-slate-100 rounded-2xl">Servicing</a>
-        <a href="domestic.html" class="px-4 py-3 hover:bg-slate-100 rounded-2xl">Domestic</a>
-        <a href="commercial.html" class="px-4 py-3 hover:bg-slate-100 rounded-2xl">Commercial</a>
-        <a href="our-work.html" class="px-4 py-3 hover:bg-slate-100 rounded-2xl">Our Work</a>
-        <a href="about.html" class="px-4 py-3 hover:bg-slate-100 rounded-2xl">About</a>
-        <a href="contact.html" class="px-4 py-3 hover:bg-slate-100 rounded-2xl">Contact</a>
+        <p class="mobile-nav-label">Products</p>
+        <a href="solar.html" class="mobile-nav-link mobile-nav-link--product">Solar</a>
+        <a href="battery.html" class="mobile-nav-link mobile-nav-link--product">Battery</a>
+        <a href="heat-pumps.html" class="mobile-nav-link mobile-nav-link--product" aria-current="page">Heat Pumps</a>
+        <a href="ac.html" class="mobile-nav-link mobile-nav-link--product">AC</a>
+        <p class="mobile-nav-label">Servicing</p>
+        <a href="services.html" class="mobile-nav-link mobile-nav-link--service">Servicing</a>
+        <p class="mobile-nav-label">Who it is for</p>
+        <a href="domestic.html" class="mobile-nav-link mobile-nav-link--who">Domestic</a>
+        <a href="commercial.html" class="mobile-nav-link mobile-nav-link--who">Commercial</a>
+        <a href="our-work.html" class="mobile-nav-link mobile-nav-link--who">Our Work</a>
+        <a href="about.html" class="mobile-nav-link mobile-nav-link--who">About</a>
+        <p class="mobile-nav-label">Company</p>
+        <a href="mission.html" class="mobile-nav-link mobile-nav-link--mission">Mission</a>
+        <a href="contact.html" class="mobile-nav-link mobile-nav-link--contact">Contact</a>
         <div class="pt-4 mt-3 border-t flex flex-col gap-y-3">
           <a href="tel:01978809500" class="flex items-center justify-center gap-x-2 px-4 py-3 border border-slate-300 rounded-2xl font-semibold"><i class="fas fa-phone"></i> <span>(01978) 809 500</span></a>
           <a href="contact.html#quote" class="accent-btn text-white text-center px-4 py-3.5 rounded-2xl font-semibold" data-quote="picker">Get Quote</a>
@@ -225,7 +217,7 @@
     <div class="absolute inset-0 bg-cover bg-center" style="background-image: image-set(url('assets/images/custom/heatpump-hero-1.webp') type('image/webp'), url('assets/images/custom/heatpump-hero-1.jpg') type('image/jpeg'))"></div>
     <div class="absolute inset-0 bg-gradient-to-r from-[#0F172A]/80 via-[#0F172A]/70 to-[#0F172A]/60"></div>
     <div class="relative max-w-5xl mx-auto px-6 text-center text-white">
-      <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur px-4 py-1 rounded-full text-sm mb-4 border border-white/20"><i class="fas fa-leaf"></i> <span>NICEIC &amp; TrustMark • Heat pump design</span></div>
+      <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur px-4 py-1 rounded-full text-sm mb-4 border border-white/20"><i class="fas fa-leaf"></i> <span>TrustMark • Heat pump design</span></div>
       <h1 class="heading-font text-4xl md:text-6xl font-semibold tracking-tighter mb-4">Heat Pump Installers<br>Wrexham &amp; Chester</h1>
       <p class="max-w-2xl mx-auto text-xl text-slate-200 mb-8">Designed properly, then fitted without rushing you. Air source heat pumps for homes and businesses in Wrexham, Chester and North Wales.</p>
       <div class="flex flex-wrap gap-4 justify-center">
@@ -238,7 +230,7 @@
 
   <div class="max-w-7xl mx-auto px-6 pt-8">
     <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-slate-600 py-4 border-b">
-      <div class="flex items-center gap-x-2"><i class="fas fa-check-circle text-emerald-500"></i> <span>NICEIC &amp; TrustMark</span></div>
+      <div class="flex items-center gap-x-2"><i class="fas fa-check-circle text-emerald-500"></i> <span>TrustMark</span></div>
       <div class="flex items-center gap-x-2"><i class="fas fa-check-circle text-emerald-500"></i> <span>Full System Design</span></div>
       <div class="flex items-center gap-x-2"><i class="fas fa-check-circle text-emerald-500"></i> <span>Radiator &amp; UFH Upgrades</span></div>
     </div>
@@ -281,7 +273,7 @@
               <li>BUS paperwork for qualifying jobs</li>
               <li>Clear fixed price for the whole project including any radiator upgrades</li>
             </ul>
-            <div class="mt-4 text-xs">Subject to government scheme rules. We confirm current eligibility during survey.</div>
+            <div class="mt-4 text-xs">Subject to government scheme rules. We confirm current eligibility during survey. <a href="funding.html" class="underline">Funding</a>.</div>
           </div>
         </div>
       </div>
@@ -337,7 +329,7 @@
         </div>
         <div>
           <div class="font-semibold">Are you MCS certified?</div>
-          <div class="text-slate-600 mt-1">MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote.</div>
+          <div class="text-slate-600 mt-1">Every qualifying installation is signed off and MCS certified through an MCS-certified installer partner, named on your quote. Reload's own MCS certification is awaiting approval.</div>
         </div>
       </div>
     </section>
@@ -345,21 +337,17 @@
   <section class="max-w-7xl mx-auto px-6 py-10">
     <div class="text-center mb-6">
       <div class="text-xs tracking-[2px] font-semibold text-slate-500">CERTIFIED &amp; TRUSTED BY</div>
-      <p class="mt-2 text-sm text-slate-600 max-w-2xl mx-auto">NICEIC and TrustMark. Certificates on request.</p>
+      <p class="mt-2 text-sm text-slate-600 max-w-2xl mx-auto">TrustMark. Certificates on request.</p>
     </div>
-    <div class="grid sm:grid-cols-2 gap-4 text-sm max-w-3xl mx-auto">
-      <div class="bg-white border border-slate-200 rounded-2xl p-4">
-        <img src="assets/images/accreditations/niceic-approved.png" alt="NICEIC Approved Contractor" class="h-10 w-auto mx-auto mb-3" width="129" height="72" loading="lazy">
-        <div class="font-semibold text-center">NICEIC</div>
-        <p class="text-xs text-slate-600 mt-1">Electrical competence for the installation — wiring, isolation and testing to UK standards.</p>
-      </div>
-      <div class="bg-white border border-slate-200 rounded-2xl p-4">
+    <div class="badge-row">
+      <!-- NICEIC badge: enable once registration confirmed -->
+      <div class="badge-slot">
         <img src="assets/images/accreditations/trustmark.png" alt="TrustMark" class="h-10 w-auto mx-auto mb-3" width="144" height="72" loading="lazy">
         <div class="font-semibold text-center">TrustMark</div>
         <p class="text-xs text-slate-600 mt-1">Government-endorsed quality mark for trades that meet a recognised standard.</p>
       </div>
     </div>
-    <p class="text-center text-sm text-slate-700 mt-6 max-w-2xl mx-auto">MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote.</p>
+    <p class="text-center text-sm text-slate-700 mt-6 max-w-2xl mx-auto">Every qualifying installation is signed off and MCS certified through an MCS-certified installer partner, named on your quote. Reload's own MCS certification is awaiting approval.</p>
     
   </section>
 
@@ -373,13 +361,20 @@
         </a>
         <p class="max-w-xs">Quality products, a high installation standard, and a calm service from the first visit to switch-on. Solar, battery, heat pumps and air conditioning in Wrexham, Chester and North Wales.</p>
         <div class="care-marks">
-          <img class="care-seal" src="assets/images/gold-care-standard.svg" alt="Reload Gold Care Standard: quality products · 6-year warranty · aftercare" width="440" height="78">
-          <div class="trustmark-mark">
+          <div class="care-lockup badge-slot">
+          <img class="care-seal" src="assets/images/gold-care-standard.svg" alt="RELOAD Gold Care Standard: quality products · 6-year warranty · aftercare" width="320" height="340">
+          <div class="care-lockup-copy">
+            <div class="care-lockup-title">RELOAD Gold Care Standard</div>
+            <div class="care-lockup-sub">quality products · 6-year warranty · aftercare</div>
+          </div>
+        </div>
+          <div class="trustmark-mark badge-slot">
             <img src="assets/images/accreditations/trustmark.png" alt="TrustMark Registered" width="144" height="72">
             <span>TrustMark Registered</span>
           </div>
           <!-- TRUSTMARK LICENCE: registration number goes here when Stewart supplies it. Do not invent a number. -->
           <!-- TRUSTMARK PROFILE: the TrustMark find-a-tradesperson profile URL goes here when Stewart supplies it. -->
+          <!-- NICEIC badge: enable once registration confirmed -->
         </div>
         <p class="mt-6 text-xs tracking-wider">© 2026 Reload Renewables Ltd. All rights reserved.</p>
       </div>
@@ -398,6 +393,12 @@
           <a href="about.html" class="hover:text-white">About</a>
           <a href="contact.html" class="hover:text-white">Contact</a>
           <a href="privacy.html" class="hover:text-white">Privacy</a>
+          <a href="mission.html" class="hover:text-white">Mission</a>
+          <a href="wrexham.html" class="hover:text-white">Wrexham</a>
+          <a href="chester.html" class="hover:text-white">Chester</a>
+          <a href="north-wales.html" class="hover:text-white">North Wales</a>
+          <a href="funding.html" class="hover:text-white">Funding</a>
+          <a href="warranty.html" class="hover:text-white">Warranty</a>
         </div>
       </div>
       <div class="md:col-span-3">
