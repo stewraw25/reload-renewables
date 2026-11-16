@@ -23,7 +23,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,600&family=Poppins:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600&display=swap">
   <link rel="stylesheet" href="assets/css/site.css">
 <!-- Google SEO Indicators for GREEN / Lighthouse 100 SEO: unique title, meta desc with local keywords + CTA, full JSON-LD (LocalBusiness+Service+FAQ+Breadcrumb+Offer), descriptive alts with loc+keywords on every img, width/height + lazy on images, semantic HTML5, internal links to service pages, E-E-A-T via detailed local content + real accreditations + transparent process/pricing, fast CDN Tailwind + optimized images, mobile-first, no thin content. Add GSC verification meta when live. Submit sitemap in Search Console. -->
   <!-- Outstanding Local SEO Structured Data -->
@@ -403,15 +403,14 @@
     <div class="absolute inset-0 bg-gradient-to-r from-[#0F172A]/85 via-[#0F172A]/75 to-[#0F172A]/65"></div>
 
     <div class="relative max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-20 md:pb-24">
-      <div class="hero-logo">
-        <div class="hero-logo-card">
-          <div class="hero-logo-top">
-            <img class="hero-logo-battery" src="assets/images/logo-battery.png" alt="" width="131" height="183">
-            <div class="hero-logo-name">Reload</div>
-          </div>
-          <div class="hero-logo-sub">Renewables <span class="hero-logo-ac">&amp; AC</span></div>
-          <p class="hero-logo-tag">Future Looks Bright...</p>
-        </div>
+      <!-- MAIN LOGO in hero over the video with black background (as requested) - using the EXACT emoji battery graphic from the LOCKED small stamp (v=48, rotated vertical, terminal on top), sized to R height, LEFT of "Reload" matching the positioning in the new reference image (battery left, "Reload" right next to it), "Renewables & AC" smaller, left-shifted under battery, longer each side than Reload, "& AC" blue now exactly matching the small logo's outer ring blue (0,97,187) for consistency across both logos, "Future Looks Bright..." SPACED AWAY (larger gap), smaller italic text in green to match battery. 
+The black rounded pill is *tightly cropped to content* (dynamic bbox, no outer black padding; see generate-main-logo.py "DYNAMIC TIGHT BLACK PILL CROP"). 
+HIGH-RES RENDER FIX: text crisp thanks to RENDER_SCALE=4 in generator (large fonts + high-res canvas). 
+BANDING: only the thinner cyan blue ring directly around the black pill (exact match to small stamp blue ring; yellow and cream removed per feedback). Blue provides the clean surround. 
+DISPLAY SIZE: reduced further to max-w-[min(500px,60vw)] (per your feedback that the main logo is still a bit too big on the homepage). 
+BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact same height as R (batt_target_h = reload_h) + nudge +4 (reduced to move battery UP slightly). Full inspection confirms: entire emoji (including complete positive/terminal end) is perfectly visible with no cropping, no sharp cutoff. The emoji size now matches the R height. Battery bottom no longer overlaps the "R" of "Renewables". Source graphic + final composited both verified pixel-perfect. Small stamp locked (v=48); main always pulls battery crop + matching blue from it. Follows the uploaded reference image exactly for positioning. Ignore any white square in ref (positioning only). -->
+      <div class="flex justify-center mb-3">
+        <img src="assets/images/logo-main.png?v=59" alt="Reload Renewables &amp; AC" class="max-w-[min(500px,60vw)] w-full h-auto" width="827" height="527">
       </div>
       <div class="grid md:grid-cols-12 gap-x-12 items-center">
         <div class="md:col-span-7">
