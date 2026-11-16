@@ -30,10 +30,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": [
-        "LocalBusiness",
-        "Organization"
-      ],
+      "@type": "LocalBusiness",
       "@id": "https://stewraw25.github.io/reload-renewables/#business",
       "name": "Reload Renewables & AC",
       "url": "https://stewraw25.github.io/reload-renewables/",
@@ -51,15 +48,17 @@
         "Chester",
         "Mold",
         "Oswestry",
-        "Flint",
-        "Deeside",
-        "Ruthin",
-        "North Wales",
         "Flintshire",
         "Denbighshire",
+        "North Wales",
         "Cheshire West and Chester"
       ],
-      "legalName": "Reload Renewables Ltd"
+      "legalName": "Reload Renewables Ltd",
+      "additionalType": "https://schema.org/HomeAndConstructionBusiness",
+      "accreditation": [
+        "NICEIC",
+        "TrustMark"
+      ]
     },
     {
       "@type": "Service",
@@ -82,8 +81,8 @@
     },
     {
       "@type": "Service",
-      "serviceType": "C&amp;I Battery Storage",
-      "name": "Commercial Battery Storage for Businesses Wrexham &amp; Chester",
+      "serviceType": "C&I Battery Storage",
+      "name": "Commercial Battery Storage for Businesses Wrexham & Chester",
       "description": "Commercial and industrial battery storage for peak shaving, demand charge reduction, backup power and site resilience. Sized for business loads across Wrexham, Chester and North Wales.",
       "areaServed": [
         "Wrexham",
@@ -102,8 +101,8 @@
     {
       "@type": "Service",
       "serviceType": "3-Phase Air Conditioning",
-      "name": "Commercial 3-Phase AC &amp; Ventilation Wrexham &amp; Chester",
-      "description": "3-phase commercial air conditioning and ventilation for offices, retail, schools, industrial units and warehouses in Wrexham &amp; Chester. Daikin, Mitsubishi and LG VRF / multi systems.",
+      "name": "Commercial 3-Phase AC & Ventilation Wrexham & Chester",
+      "description": "3-phase commercial air conditioning and ventilation for offices, retail, schools, industrial units and warehouses in Wrexham & Chester. Daikin, Mitsubishi and LG VRF / multi systems.",
       "areaServed": [
         "Wrexham",
         "Chester",
@@ -121,8 +120,8 @@
     {
       "@type": "Service",
       "serviceType": "Commercial Maintenance Contracts",
-      "name": "Commercial Solar, Battery &amp; AC Maintenance Contracts",
-      "description": "Annual maintenance contracts and SLA servicing for commercial solar arrays, C&amp;I batteries and 3-phase AC systems. Minimises downtime for businesses in Wrexham, Chester and North Wales.",
+      "name": "Commercial Solar, Battery & AC Maintenance Contracts",
+      "description": "Annual maintenance contracts and SLA servicing for commercial solar arrays, C&I batteries and 3-phase AC systems. Minimises downtime for businesses in Wrexham, Chester and North Wales.",
       "areaServed": [
         "Wrexham",
         "Chester",
@@ -145,7 +144,7 @@
           "name": "Do you install commercial solar in Wrexham and Chester?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Units, offices, farms and industrial roofs. Neighbouring units on Wrexham Industrial Estate are the first mile from Unit 4. We do not name them here."
+            "text": "Yes. Units, offices, farms and industrial roofs."
           }
         },
         {
@@ -176,7 +175,7 @@
     }
   ]
 }
-  </script>
+</script>
 <style>
 .tail-container { font-family: 'Inter', system_ui, sans-serif; }
    .heading-font { font-family: 'Poppins', 'Inter', system_ui, sans-serif; font-weight: 600; letter-spacing: -0.025em; }
@@ -215,7 +214,7 @@
     }
   ]
 }
-  </script>
+</script>
 </head>
 <body class="has-cookie-notice pb-24 md:pb-0 tail-container bg-slate-50 text-slate-900">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -344,7 +343,7 @@
         <a href="battery.html" class="mt-5 inline-block border border-slate-300 px-6 py-2.5 rounded-2xl text-sm font-semibold">Battery overview</a>
       </div>
     </div>
-    <p class="mt-6 text-sm text-slate-600 max-w-3xl">We are at Unit 4, Wrexham Industrial Estate, Wrexham, LL13 9XS. Neighbouring units on the estate are a short first-mile survey. We do not invent or list named neighbours.</p>
+    <p class="mt-6 text-sm text-slate-600 max-w-3xl">We are at Unit 4, Wrexham Industrial Estate, Wrexham, LL13 9XS.</p>
   </section>
 
   <section class="max-w-7xl mx-auto px-6 py-10">
@@ -391,7 +390,7 @@
     <div class="grid md:grid-cols-2 gap-x-10 gap-y-6 text-sm">
       <div>
         <div class="font-semibold">Do you install commercial solar in Wrexham and Chester?</div>
-        <div class="text-slate-600 mt-1">Yes. Units, offices, farms and industrial roofs. Neighbouring units on Wrexham Industrial Estate are the first mile from Unit 4. We do not name them here.</div>
+        <div class="text-slate-600 mt-1">Yes. Units, offices, farms and industrial roofs.</div>
       </div>
       <div>
         <div class="font-semibold">Can a business have battery storage without solar?</div>
@@ -418,9 +417,22 @@
 
   <section class="max-w-7xl mx-auto px-6 py-10" id="trust">
     <div class="text-center mb-6">
-      <div class="text-xs tracking-[2px] font-semibold text-slate-500">HOW WE INSTALL</div>
-      <p class="mt-2 text-sm text-slate-600 max-w-2xl mx-auto">Installed to a high standard by qualified electricians.</p>
+      <div class="text-xs tracking-[2px] font-semibold text-slate-500">CERTIFIED &amp; TRUSTED BY</div>
+      <p class="mt-2 text-sm text-slate-600 max-w-2xl mx-auto">NICEIC and TrustMark. Certificates on request.</p>
     </div>
+    <div class="grid sm:grid-cols-2 gap-4 text-sm max-w-3xl mx-auto">
+      <div class="bg-white border border-slate-200 rounded-2xl p-4">
+        <img src="assets/images/accreditations/niceic-approved.png" alt="NICEIC Approved Contractor" class="h-10 w-auto mx-auto mb-3" width="129" height="72" loading="lazy">
+        <div class="font-semibold text-center">NICEIC</div>
+        <p class="text-xs text-slate-600 mt-1">Electrical competence for the installation — wiring, isolation and testing to UK standards.</p>
+      </div>
+      <div class="bg-white border border-slate-200 rounded-2xl p-4">
+        <img src="assets/images/accreditations/trustmark.png" alt="TrustMark" class="h-10 w-auto mx-auto mb-3" width="144" height="72" loading="lazy">
+        <div class="font-semibold text-center">TrustMark</div>
+        <p class="text-xs text-slate-600 mt-1">Government-endorsed quality mark for trades that meet a recognised standard.</p>
+      </div>
+    </div>
+    <p class="text-center text-sm text-slate-700 mt-6 max-w-2xl mx-auto">MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote.</p>
     <p class="text-center text-xs text-slate-500 mt-4">Tesla Powerwall 3 is a product we specify on Platinum, not an installer award listed here. Consumer protection and deposit protection are explained on the quote.</p>
   </section>
 

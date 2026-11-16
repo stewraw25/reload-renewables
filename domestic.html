@@ -30,10 +30,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": [
-        "LocalBusiness",
-        "Organization"
-      ],
+      "@type": "LocalBusiness",
       "@id": "https://stewraw25.github.io/reload-renewables/#business",
       "name": "Reload Renewables & AC",
       "url": "https://stewraw25.github.io/reload-renewables/",
@@ -51,15 +48,17 @@
         "Chester",
         "Mold",
         "Oswestry",
-        "Flint",
-        "Deeside",
-        "Ruthin",
-        "North Wales",
         "Flintshire",
         "Denbighshire",
+        "North Wales",
         "Cheshire West and Chester"
       ],
-      "legalName": "Reload Renewables Ltd"
+      "legalName": "Reload Renewables Ltd",
+      "additionalType": "https://schema.org/HomeAndConstructionBusiness",
+      "accreditation": [
+        "NICEIC",
+        "TrustMark"
+      ]
     },
     {
       "@type": "Service",
@@ -138,7 +137,7 @@
     }
   ]
 }
-  </script>
+</script>
 <style>
 .tail-container { font-family: 'Inter', system_ui, sans-serif; }
    .heading-font { font-family: 'Poppins', 'Inter', system_ui, sans-serif; font-weight: 600; letter-spacing: -0.025em; }
@@ -177,7 +176,7 @@
     }
   ]
 }
-  </script>
+</script>
 </head>
 <body class="has-cookie-notice pb-24 md:pb-0 tail-container bg-slate-50 text-slate-900">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -339,7 +338,7 @@
         <a href="contact.html#quote" class="mt-7 inline-block accent-btn text-white px-8 py-3 rounded-2xl font-semibold">Get Quote</a>
       </div>
       <div class="md:col-span-7 mt-8 md:mt-0">
-        <picture class="block w-full"><source type="image/webp" srcset="assets/images/custom/solar-roof.webp 1600w, assets/images/custom/solar-roof-640.webp 640w" sizes="(min-width: 1024px) 40vw, 100vw"><img src="assets/images/custom/solar-roof.jpg?v=6" alt="Close-up of solar panels on a residential roof with UK-style tiles - professional DAS solar PV installation for homes in Wrexham and Chester" class="w-full h-80 object-cover rounded-3xl shadow-lg" width="1600" height="900" loading="lazy"></picture>
+        <picture class="block w-full"><source type="image/webp" srcset="assets/images/custom/solar-roof.webp 1600w, assets/images/custom/solar-roof-640.webp 640w" sizes="(min-width: 1024px) 40vw, 100vw"><img src="assets/images/custom/solar-roof.jpg?v=6" alt="Typical roof-mounted solar array (illustration, not a named customer job)" class="w-full h-80 object-cover rounded-3xl shadow-lg" width="1600" height="900" loading="lazy"></picture>
         <div class="mt-4 bg-white border border-slate-200 rounded-3xl p-6 text-sm grid sm:grid-cols-2 gap-x-6">
           <div>
             <div class="font-semibold mb-2 text-base">What we install</div>
@@ -380,7 +379,7 @@
         <a href="contact.html#quote" class="mt-6 accent-btn text-white px-8 py-3 rounded-2xl text-sm font-semibold">Get Domestic Quote</a>
       </div>
       <div class="md:col-span-7 mt-8 md:mt-0">
-        <picture class="block w-full"><source type="image/webp" srcset="assets/images/custom/gold-battery.webp 1200w, assets/images/custom/gold-battery-640.webp 640w" sizes="(min-width: 1024px) 40vw, 100vw"><img src="assets/images/custom/gold-battery.jpg?v=7" alt="Tesla Powerwall 3 battery installed on wall in UK home garage - domestic battery storage Wrexham Chester" class="w-full h-72 object-cover rounded-3xl shadow" width="1200" height="380" loading="lazy"></picture>
+        <picture class="block w-full"><source type="image/webp" srcset="assets/images/custom/gold-battery.webp 1200w, assets/images/custom/gold-battery-640.webp 640w" sizes="(min-width: 1024px) 40vw, 100vw"><img src="assets/images/custom/gold-battery.jpg?v=7" alt="Typical home battery graphic (illustration, not a named customer job)" class="w-full h-72 object-cover rounded-3xl shadow" width="1200" height="380" loading="lazy"></picture>
       </div>
     </div>
   </section>
@@ -402,8 +401,8 @@
 
     <div class="grid md:grid-cols-2 gap-5 text-sm">
       <div class="bg-white border border-slate-200 rounded-2xl p-6">
-        <div class="font-semibold mb-2 flex items-center gap-x-2"><img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-5 w-5 rounded-full object-contain" width="1024" height="1024" loading="lazy"> <i class="fas fa-certificate text-[#00A3E0]"></i> Installation standard</div>
-        <div class="text-slate-600">Installed to a high standard by qualified electricians.</div>
+        <div class="font-semibold mb-2 flex items-center gap-x-2"><img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-5 w-5 rounded-full object-contain" width="1024" height="1024" loading="lazy"> <i class="fas fa-certificate text-[#00A3E0]"></i> NICEIC</div>
+        <div class="text-slate-600">NICEIC registration covers electrical competence for the installation. Certificates on request. MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote.</div>
       </div>
       <div class="bg-white border border-slate-200 rounded-2xl p-6">
         <div class="font-semibold mb-2 flex items-center gap-x-2"><img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-5 w-5 rounded-full object-contain" width="1024" height="1024" loading="lazy"> <i class="fas fa-hard-hat text-[#00A3E0]"></i> Qualified electricians</div>
@@ -464,9 +463,22 @@
   <!-- Footer -->
   <section class="max-w-7xl mx-auto px-6 py-10" id="trust">
     <div class="text-center mb-6">
-      <div class="text-xs tracking-[2px] font-semibold text-slate-500">HOW WE INSTALL</div>
-      <p class="mt-2 text-sm text-slate-600 max-w-2xl mx-auto">Installed to a high standard by qualified electricians.</p>
+      <div class="text-xs tracking-[2px] font-semibold text-slate-500">CERTIFIED &amp; TRUSTED BY</div>
+      <p class="mt-2 text-sm text-slate-600 max-w-2xl mx-auto">NICEIC and TrustMark. Certificates on request.</p>
     </div>
+    <div class="grid sm:grid-cols-2 gap-4 text-sm max-w-3xl mx-auto">
+      <div class="bg-white border border-slate-200 rounded-2xl p-4">
+        <img src="assets/images/accreditations/niceic-approved.png" alt="NICEIC Approved Contractor" class="h-10 w-auto mx-auto mb-3" width="129" height="72" loading="lazy">
+        <div class="font-semibold text-center">NICEIC</div>
+        <p class="text-xs text-slate-600 mt-1">Electrical competence for the installation — wiring, isolation and testing to UK standards.</p>
+      </div>
+      <div class="bg-white border border-slate-200 rounded-2xl p-4">
+        <img src="assets/images/accreditations/trustmark.png" alt="TrustMark" class="h-10 w-auto mx-auto mb-3" width="144" height="72" loading="lazy">
+        <div class="font-semibold text-center">TrustMark</div>
+        <p class="text-xs text-slate-600 mt-1">Government-endorsed quality mark for trades that meet a recognised standard.</p>
+      </div>
+    </div>
+    <p class="text-center text-sm text-slate-700 mt-6 max-w-2xl mx-auto">MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote.</p>
     <p class="text-center text-xs text-slate-500 mt-4">Tesla Powerwall 3 is a product we specify on Platinum, not an installer award listed here. Consumer protection and deposit protection are explained on the quote.</p>
   </section>
 
