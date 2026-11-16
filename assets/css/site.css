@@ -262,11 +262,6 @@ footer a[href^="mailto:"] span {
   padding-top: 1.15rem !important;
   padding-bottom: 1.6rem !important;
 }
-@media (min-width: 431px) {
-  #home-hero .max-w-\[min\(500px\2c 60vw\)\] {
-    max-width: min(280px, 32vw);
-  }
-}
 #home-hero h1 {
   font-size: clamp(1.7rem, 2.5vw, 2.65rem) !important;
   line-height: 1.12 !important;
