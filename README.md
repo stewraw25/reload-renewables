@@ -65,3 +65,5 @@ Serve the folder (paths are relative so they also work at `/reload-renewables/`)
 - TrustMark is on the site. The NICEIC name and logo stay off until registration is confirmed. Tesla Powerwall 3 is a product, not a trust-row award. Do not claim F-Gas certification unless it has been confirmed for Reload Renewables Ltd. Do not add MCS, RECC or HIES logos.
 - Package prices and any stats beyond ~980 kWh/kWp
 - Analytics and Search Console only after the domain cutover
+
+Local pages are `wrexham.html`, `chester.html` and `north-wales.html`. `funding.html` only repeats the Boiler Upgrade Scheme line, domestic 0% VAT and Smart Export Guarantee help. `warranty.html` repeats the 6-year workmanship line and the manufacturer warranty lines already on the solar and battery pages. Do not add grant amounts, reviews or job counts to those pages.
