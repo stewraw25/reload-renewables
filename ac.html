@@ -185,7 +185,7 @@
           <a href="tel:01978809500" class="flex items-center gap-x-1.5 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:border-slate-300 rounded-full transition-all border border-slate-200 whitespace-nowrap" title="Call us now">
             <i class="fas fa-phone text-[#00A3E0]"></i> <span>(01978) 809 500</span>
           </a>
-          <a href="contact.html#quote" class="accent-btn text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-sm transition-all">Get Quote</a>
+          <a href="contact.html#quote" class="accent-btn text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-sm transition-all" data-quote="picker">Get Quote</a>
         </div>
         <button id="mobile-menu-btn" class="md:hidden w-11 h-11 flex items-center justify-center text-2xl text-slate-700 hover:bg-slate-100 rounded-xl active:bg-slate-200 transition-colors ml-1" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
       </div>
@@ -208,7 +208,7 @@
         <a href="contact.html" class="px-4 py-3 hover:bg-slate-100 rounded-2xl">Contact</a>
         <div class="pt-4 mt-3 border-t flex flex-col gap-y-3">
           <a href="tel:01978809500" class="flex items-center justify-center gap-x-2 px-4 py-3 border border-slate-300 rounded-2xl font-semibold"><i class="fas fa-phone"></i> <span>(01978) 809 500</span></a>
-          <a href="contact.html#quote" class="accent-btn text-white text-center px-4 py-3.5 rounded-2xl font-semibold">Get Quote</a>
+          <a href="contact.html#quote" class="accent-btn text-white text-center px-4 py-3.5 rounded-2xl font-semibold" data-quote="picker">Get Quote</a>
         </div>
       </div>
     </div>
@@ -223,7 +223,7 @@
       <h1 class="heading-font text-4xl md:text-6xl font-semibold tracking-tighter mb-4">Air Conditioning<br>Installers Wrexham &amp; Chester</h1>
       <p class="max-w-2xl mx-auto text-xl text-slate-200 mb-8">Mitsubishi, Daikin and LG, fitted to a high standard with a calm service from survey to handover. Homes and businesses across North Wales and the border.</p>
       <div class="flex flex-wrap gap-4 justify-center">
-        <a href="contact.html#quote" class="accent-btn inline-flex items-center gap-x-3 px-9 h-14 rounded-2xl text-lg font-semibold">Get AC Quote</a>
+        <a href="#ac-video" class="accent-btn inline-flex items-center gap-x-3 px-9 h-14 rounded-2xl text-lg font-semibold" data-quote="ac">Get AC Quote</a>
         <a href="#services" class="inline-flex items-center gap-x-3 px-8 h-14 rounded-2xl text-lg font-semibold border-2 border-white/70 hover:bg-white/10 transition">Domestic &amp; Commercial</a>
       </div>
       <p class="mt-5 text-sm"><a href="#ac-video" class="text-white/80 underline">Get a guide price from a short room video</a></p>
@@ -254,6 +254,38 @@
       </div>
     </section>
 
+    <section id="brands" class="pb-4">
+      <div class="uppercase tracking-[2px] text-xs font-semibold text-[#00A3E0]">BRANDS WE INSTALL</div>
+      <h2 class="text-2xl font-semibold tracking-tight mt-2">Brands we install</h2>
+      <p class="mt-3 max-w-3xl text-slate-600">We'll recommend the right unit for the room after the video survey.</p>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <article class="p-5 bg-white border border-slate-200 rounded-2xl">
+          <h3 class="font-semibold">Bosch</h3>
+          <p class="text-sm text-slate-600 mt-1">Wall-mounted split and multi-split systems.</p>
+        </article>
+        <article class="p-5 bg-white border border-slate-200 rounded-2xl">
+          <h3 class="font-semibold">Daikin</h3>
+          <p class="text-sm text-slate-600 mt-1">Wall-mounted split, multi-split and ceiling cassette systems.</p>
+        </article>
+        <article class="p-5 bg-white border border-slate-200 rounded-2xl">
+          <h3 class="font-semibold">Mitsubishi Electric</h3>
+          <p class="text-sm text-slate-600 mt-1">Wall-mounted split and multi-split systems.</p>
+        </article>
+        <article class="p-5 bg-white border border-slate-200 rounded-2xl">
+          <h3 class="font-semibold">Fujitsu</h3>
+          <p class="text-sm text-slate-600 mt-1">Wall-mounted split and multi-split systems.</p>
+        </article>
+        <article class="p-5 bg-white border border-slate-200 rounded-2xl">
+          <h3 class="font-semibold">Panasonic</h3>
+          <p class="text-sm text-slate-600 mt-1">Wall-mounted split and multi-split systems.</p>
+        </article>
+        <article class="p-5 bg-white border border-slate-200 rounded-2xl">
+          <h3 class="font-semibold">LG</h3>
+          <p class="text-sm text-slate-600 mt-1">Wall-mounted split, multi-split and cassette systems.</p>
+        </article>
+      </div>
+    </section>
+
     <section id="services" class="py-8 scroll-mt-16">
       <h2 class="text-2xl font-semibold tracking-tight mb-6">Domestic and commercial air conditioning</h2>
       <div class="grid md:grid-cols-2 gap-6">
@@ -265,7 +297,7 @@
             <li>• Garden office and annexe cooling/heating</li>
             <li>• Full design, installation and aftercare from local engineers</li>
           </ul>
-          <a href="contact.html#quote" class="mt-6 accent-btn text-white px-6 py-2.5 rounded-2xl text-sm font-semibold">Get Domestic Quote</a>
+          <a href="?type=domestic#ac-video" class="mt-6 inline-flex items-center accent-btn text-white px-6 py-2.5 rounded-2xl text-sm font-semibold" data-quote="ac" data-ac-type="domestic">Get Domestic Quote</a>
         </div>
         <div class="bg-white border rounded-3xl p-7">
           <div class="font-semibold text-lg">Commercial &amp; Light Industrial</div>
@@ -275,8 +307,85 @@
             <li>• Multi-zone VRF / VRV for bigger premises</li>
             <li>• Annual servicing and repairs</li>
           </ul>
-          <a href="contact.html#quote" class="mt-6 border border-slate-300 hover:bg-slate-50 px-6 py-2.5 rounded-2xl text-sm font-semibold">Get Commercial Quote</a>
+          <a href="?type=commercial#ac-video" class="mt-6 inline-flex items-center border border-slate-300 hover:bg-slate-50 px-6 py-2.5 rounded-2xl text-sm font-semibold" data-quote="ac" data-ac-type="commercial">Get Commercial Quote</a>
         </div>
+      </div>
+    </section>
+
+    <section id="ac-size" class="py-10 scroll-mt-16">
+      <div class="max-w-3xl">
+        <div class="uppercase tracking-[2px] text-xs font-semibold text-[#00A3E0]">SIZE GUIDE</div>
+        <h2 class="text-2xl font-semibold tracking-tight mt-2">AC size calculator</h2>
+        <p class="mt-3 text-slate-600">A rough cooling size from the room measurements. It uses a standard volume rule of thumb, not a heat-loss survey.</p>
+        <form id="ac-size-form" class="mt-6 bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-5">
+          <fieldset>
+            <legend class="text-sm font-semibold mb-2">How do you want to enter the floor size?</legend>
+            <div class="flex flex-wrap gap-4 text-sm">
+              <label class="inline-flex items-center gap-x-2"><input type="radio" name="size-mode" value="dimensions" checked class="accent-[#00A3E0]"> Length and width</label>
+              <label class="inline-flex items-center gap-x-2"><input type="radio" name="size-mode" value="area" class="accent-[#00A3E0]"> Floor area</label>
+            </div>
+          </fieldset>
+          <div id="ac-size-dimensions" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="ac-size-length" class="block text-sm font-semibold mb-1">Room length (metres)</label>
+              <input id="ac-size-length" name="length" type="number" inputmode="decimal" min="0.5" max="40" step="0.1" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-base focus:outline-none focus:border-[#00A3E0]">
+            </div>
+            <div>
+              <label for="ac-size-width" class="block text-sm font-semibold mb-1">Room width (metres)</label>
+              <input id="ac-size-width" name="width" type="number" inputmode="decimal" min="0.5" max="40" step="0.1" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-base focus:outline-none focus:border-[#00A3E0]">
+            </div>
+          </div>
+          <div id="ac-size-area-wrap" class="hidden">
+            <label for="ac-size-area" class="block text-sm font-semibold mb-1">Floor area (m²)</label>
+            <input id="ac-size-area" name="area" type="number" inputmode="decimal" min="1" max="500" step="0.1" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-base focus:outline-none focus:border-[#00A3E0]">
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="ac-size-height" class="block text-sm font-semibold mb-1">Ceiling height (metres)</label>
+              <input id="ac-size-height" name="height" type="number" inputmode="decimal" min="2" max="6" step="0.1" value="2.4" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-base focus:outline-none focus:border-[#00A3E0]">
+            </div>
+            <div>
+              <label for="ac-size-room" class="block text-sm font-semibold mb-1">Room type</label>
+              <select id="ac-size-room" name="room" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-base bg-white focus:outline-none focus:border-[#00A3E0]">
+                <option value="bedroom">Bedroom</option>
+                <option value="living">Living room</option>
+                <option value="kitchen">Kitchen</option>
+                <option value="office">Home office</option>
+                <option value="conservatory">Conservatory</option>
+              </select>
+            </div>
+            <div>
+              <label for="ac-size-sun" class="block text-sm font-semibold mb-1">Sun exposure</label>
+              <select id="ac-size-sun" name="sun" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-base bg-white focus:outline-none focus:border-[#00A3E0]">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High (south-facing / large windows)</option>
+              </select>
+            </div>
+            <div>
+              <label for="ac-size-insulation" class="block text-sm font-semibold mb-1">Insulation</label>
+              <select id="ac-size-insulation" name="insulation" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-base bg-white focus:outline-none focus:border-[#00A3E0]">
+                <option value="good">Good</option>
+                <option value="average" selected>Average</option>
+                <option value="poor">Poor (older property)</option>
+              </select>
+            </div>
+          </div>
+          <fieldset>
+            <legend class="text-sm font-semibold mb-2">Usage</legend>
+            <div class="flex flex-wrap gap-4 text-sm">
+              <label class="inline-flex items-center gap-x-2"><input type="radio" name="usage" value="cooling" checked class="accent-[#00A3E0]"> Cooling</label>
+              <label class="inline-flex items-center gap-x-2"><input type="radio" name="usage" value="heating" class="accent-[#00A3E0]"> Heating</label>
+              <label class="inline-flex items-center gap-x-2"><input type="radio" name="usage" value="both" class="accent-[#00A3E0]"> Both</label>
+            </div>
+          </fieldset>
+          <button type="button" id="ac-size-calc" class="accent-btn text-white px-8 py-3 rounded-2xl text-sm font-semibold">Show suggested size</button>
+          <div id="ac-size-result" class="rounded-2xl border border-slate-200 bg-slate-50 p-4" aria-live="polite">
+            <p class="text-sm text-slate-600">Enter the room size to see a suggested unit.</p>
+          </div>
+          <p class="text-sm text-slate-600">This is a rough guide only. We confirm the right size after a room video or survey.</p>
+          <a id="ac-size-quote" href="#ac-video" class="inline-flex items-center accent-btn text-white px-6 py-3 rounded-2xl text-sm font-semibold">Get an exact AC quote</a>
+        </form>
       </div>
     </section>
 
@@ -286,6 +395,15 @@
         <h2 class="section-title mt-2">Get a guide AC price from a quick room video</h2>
         <p class="mt-4 text-slate-600">Record a short walk-round video, or photos, of the room where the air conditioning will go. Show the windows, the wall where you would like the indoor unit, and the outside wall or space for the outdoor unit. Tell us the room's rough size, and whether you also want heating from it.</p>
         <p class="mt-4 text-slate-600">We use AI to suggest a system size and a guide price. A member of the team checks that before we send it to you. A site visit confirms the final price.</p>
+        <div class="care-marks">
+          <img class="care-seal" src="assets/images/gold-care-standard.svg" alt="Reload Gold Care Standard: quality products · 6-year warranty · aftercare" width="440" height="78">
+          <div class="trustmark-mark">
+            <img src="assets/images/accreditations/trustmark.png" alt="TrustMark Registered" width="144" height="72">
+            <span>TrustMark Registered</span>
+          </div>
+          <!-- TRUSTMARK LICENCE: registration number goes here when Stewart supplies it. Do not invent a number. -->
+          <!-- TRUSTMARK PROFILE: the TrustMark find-a-tradesperson profile URL goes here when Stewart supplies it. -->
+        </div>
         <!-- FORM SERVICE (Tally) ENDPOINT GOES HERE - sends to hello@reloadrenewables.com -->
         <form id="ac-video-form" action="" method="post" enctype="multipart/form-data" class="mt-6 bg-white border border-slate-300 rounded-3xl p-6 space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -297,6 +415,14 @@
               <label for="ac-video-email" class="block text-sm font-semibold mb-1">Email</label>
               <input id="ac-video-email" name="email" type="email" autocomplete="email" required class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-base focus:outline-none focus:border-[#00A3E0]">
             </div>
+          </div>
+          <div>
+            <label for="ac-video-type" class="block text-sm font-semibold mb-1">Property type</label>
+            <select id="ac-video-type" name="property_type" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-base bg-white focus:outline-none focus:border-[#00A3E0]">
+              <option value="">Please choose</option>
+              <option value="domestic">Domestic</option>
+              <option value="commercial">Commercial</option>
+            </select>
           </div>
           <div>
             <label for="ac-video-phone" class="block text-sm font-semibold mb-1">Phone</label>
@@ -314,6 +440,10 @@
             <div>
               <label for="ac-video-size" class="block text-sm font-semibold mb-1">Rough room size</label>
               <input id="ac-video-size" name="room_size" type="text" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-base focus:outline-none focus:border-[#00A3E0]">
+            </div>
+            <div class="md:col-span-2">
+              <label for="ac-video-suggested" class="block text-sm font-semibold mb-1">Suggested size from the calculator (optional)</label>
+              <input id="ac-video-suggested" name="suggested_size" type="text" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-base focus:outline-none focus:border-[#00A3E0]">
             </div>
           </div>
           <fieldset>
@@ -360,6 +490,110 @@
             });
           })();
         </script>
+        <script>
+          (function () {
+            /*
+              AC size guide — standard rule-of-thumb volume method.
+              base kW = floor area (m²) × 0.1 × (ceiling height in m / 2.4)
+              Then multiply by:
+                sun:        low ×1.0, medium ×1.1, high ×1.2
+                insulation: good ×0.9, average ×1.0, poor ×1.2
+                room type:  kitchen ×1.15, conservatory ×1.5, others ×1.0
+                usage:      heating-only or both ×1.1, cooling ×1.0
+              Round the result up to the next standard size:
+              2.0 / 2.5 / 3.5 / 5.0 / 6.0 / 7.1 kW.
+              BTU/h ≈ suggested kW × 3,412.
+            */
+            var STANDARD = [2, 2.5, 3.5, 5, 6, 7.1];
+            var SUN = { low: 1, medium: 1.1, high: 1.2 };
+            var INSULATION = { good: 0.9, average: 1, poor: 1.2 };
+            var ROOM = { bedroom: 1, living: 1, kitchen: 1.15, office: 1, conservatory: 1.5 };
+            var form = document.getElementById("ac-size-form");
+            var result = document.getElementById("ac-size-result");
+            var quote = document.getElementById("ac-size-quote");
+            if (!form || !result) return;
+            var latest = "";
+
+            function numberValue(id) {
+              var el = document.getElementById(id);
+              if (!el) return NaN;
+              var value = parseFloat(String(el.value).replace(",", "."));
+              return value;
+            }
+
+            function mode() {
+              var chosen = form.querySelector('input[name="size-mode"]:checked');
+              return chosen ? chosen.value : "dimensions";
+            }
+
+            function roundUp(kw) {
+              var i;
+              for (i = 0; i < STANDARD.length; i += 1) {
+                if (kw <= STANDARD[i] + 0.0001) return STANDARD[i];
+              }
+              return null;
+            }
+
+            function formatKw(kw) {
+              return kw.toFixed(1);
+            }
+
+            function formatBtu(kw) {
+              return Math.round(kw * 3412).toLocaleString("en-GB");
+            }
+
+            function calculate() {
+              var areaMode = mode() === "area";
+              document.getElementById("ac-size-dimensions").classList.toggle("hidden", areaMode);
+              document.getElementById("ac-size-area-wrap").classList.toggle("hidden", !areaMode);
+              var area = areaMode ? numberValue("ac-size-area") : numberValue("ac-size-length") * numberValue("ac-size-width");
+              var height = numberValue("ac-size-height");
+              if (!isFinite(area) || area <= 0 || !isFinite(height) || height <= 0) {
+                latest = "";
+                result.innerHTML = '<p class="text-sm text-slate-600">Enter the room size to see a suggested unit.</p>';
+                return;
+              }
+              var sun = SUN[document.getElementById("ac-size-sun").value] || 1;
+              var insulation = INSULATION[document.getElementById("ac-size-insulation").value] || 1;
+              var room = ROOM[document.getElementById("ac-size-room").value] || 1;
+              var usageEl = form.querySelector('input[name="usage"]:checked');
+              var usage = usageEl ? usageEl.value : "cooling";
+              var usageFactor = usage === "cooling" ? 1 : 1.1;
+              var raw = area * 0.1 * (height / 2.4) * sun * insulation * room * usageFactor;
+              var size = roundUp(raw);
+              if (!size) {
+                latest = "Above 7.1 kW";
+                result.innerHTML = '<p class="font-semibold text-slate-900">Above 7.1 kW</p><p class="mt-1 text-sm text-slate-600">This room is above the largest single size on this list. We confirm the right size after a room video or survey.</p>';
+                return;
+              }
+              var btu = formatBtu(size);
+              latest = formatKw(size) + " kW (about " + btu + " BTU/h)";
+              result.innerHTML = '<p class="text-xs font-semibold tracking-wide text-[#00A3E0]">SUGGESTED UNIT</p><p class="mt-1 text-2xl font-semibold text-slate-900">' + formatKw(size) + ' kW</p><p class="mt-1 text-sm text-slate-600">About ' + btu + ' BTU/h. The working figure before rounding was ' + raw.toFixed(2) + ' kW.</p>';
+            }
+
+            form.addEventListener("input", calculate);
+            form.addEventListener("change", calculate);
+            document.getElementById("ac-size-calc").addEventListener("click", calculate);
+            if (quote) {
+              quote.addEventListener("click", function () {
+                calculate();
+                var field = document.getElementById("ac-video-suggested");
+                var roomSize = document.getElementById("ac-video-size");
+                if (field && latest) field.value = latest;
+                if (roomSize && !roomSize.value) {
+                  if (mode() === "area") {
+                    var area = numberValue("ac-size-area");
+                    if (isFinite(area)) roomSize.value = area + " m²";
+                  } else {
+                    var length = numberValue("ac-size-length");
+                    var width = numberValue("ac-size-width");
+                    if (isFinite(length) && isFinite(width)) roomSize.value = length + " m × " + width + " m";
+                  }
+                }
+              });
+            }
+          })();
+        </script>
       </div>
     </section>
 
@@ -381,7 +615,7 @@
         <div class="text-3xl font-semibold tracking-tight mt-1">Air conditioning quote from local Wrexham &amp; Chester engineers</div>
       </div>
       <div class="flex gap-3">
-        <a href="contact.html#quote" class="accent-btn px-8 h-14 rounded-2xl font-semibold whitespace-nowrap">Get Quote</a>
+        <a href="contact.html#quote" class="accent-btn px-8 h-14 rounded-2xl font-semibold whitespace-nowrap" data-quote="picker">Get Quote</a>
         <a href="tel:01978809500" class="inline-flex items-center px-7 h-14 rounded-2xl border border-white/40 hover:bg-white/5 font-semibold">Call (01978) 809 500</a>
       </div>
     </div>
@@ -417,6 +651,15 @@
           <div class="font-semibold text-white text-xl tracking-tight">Reload Renewables &amp; AC</div>
         </a>
         <p class="max-w-xs">Quality products, a high installation standard, and a calm service from the first visit to switch-on. Solar, battery, heat pumps and air conditioning in Wrexham, Chester and North Wales.</p>
+        <div class="care-marks">
+          <img class="care-seal" src="assets/images/gold-care-standard.svg" alt="Reload Gold Care Standard: quality products · 6-year warranty · aftercare" width="440" height="78">
+          <div class="trustmark-mark">
+            <img src="assets/images/accreditations/trustmark.png" alt="TrustMark Registered" width="144" height="72">
+            <span>TrustMark Registered</span>
+          </div>
+          <!-- TRUSTMARK LICENCE: registration number goes here when Stewart supplies it. Do not invent a number. -->
+          <!-- TRUSTMARK PROFILE: the TrustMark find-a-tradesperson profile URL goes here when Stewart supplies it. -->
+        </div>
         <p class="mt-6 text-xs tracking-wider">© 2026 Reload Renewables Ltd. All rights reserved.</p>
       </div>
       <div class="md:col-span-5">
@@ -490,14 +733,14 @@
         <label for="chat-input" class="w-full text-xs font-semibold text-slate-600">Message</label>
         <input type="text" id="chat-input" class="flex-1 border border-slate-300 rounded-2xl px-4 py-2.5 text-sm focus:outline-none focus:border-[#00A3E0]" placeholder="Ask a question...">
         <button type="button" id="chat-send" class="px-5 bg-[#00A3E0] text-white rounded-2xl text-sm font-semibold">Send</button>
-        <a id="chat-quote" href="contact.html#quote" class="px-4 border border-slate-300 rounded-2xl text-sm font-semibold inline-flex items-center">Get quote</a>
+        <a id="chat-quote" href="contact.html#quote" class="px-4 border border-slate-300 rounded-2xl text-sm font-semibold inline-flex items-center" data-quote="picker">Get quote</a>
       </div>
     </div>
   </div>
 
   <div id="call-bar" class="md:hidden fixed bottom-0 inset-x-0 z-[60] bg-white border-t border-slate-200 px-3 py-2 flex gap-2" style="padding-bottom: max(0.5rem, env(safe-area-inset-bottom));">
     <a href="tel:01978809500" class="flex-1 text-center border border-slate-300 rounded-xl py-3 text-sm font-semibold">Call (01978) 809 500</a>
-    <a href="contact.html#quote" class="flex-1 accent-btn text-white text-center rounded-xl py-3 text-sm font-semibold">Get quote</a>
+    <a href="contact.html#quote" class="flex-1 accent-btn text-white text-center rounded-xl py-3 text-sm font-semibold" data-quote="picker">Get quote</a>
   </div>
   <div id="cookie-notice" class="cookie-notice" role="region" aria-label="Cookies">
     <p>Quote form cookies only. <a href="privacy.html#cookies">Privacy</a></p>

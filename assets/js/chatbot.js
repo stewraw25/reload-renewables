@@ -3,7 +3,7 @@
   const knowledgeBase = [
     { keywords: ["area", "cover", "wrexham", "chester", "mold", "oswestry", "north wales", "where", "serve"], answer: "We cover Wrexham, Chester, Mold, Oswestry, Flint, Deeside, Flintshire, Denbighshire and North Wales. If you are not sure, send your postcode with the quotation form." },
     { keywords: ["finance", "0%", "zero", "interest", "payment", "pay monthly"], answer: "Three ways to pay, on the Gold from £10,000 package: pay in full; 0% via an authorised broker (subject to status; illustration if approved with no deposit 120 × £83 — Reload is not the lender); or a separate representative example at 9.9% APR, 120 months, £10,000, no deposit, 120 × £132, total amount payable £15,840. Do not mix 0% and 9.9% — they are different products." },
-    { keywords: ["warranty", "guarantee", "how long"], answer: "We provide 6-year workmanship warranties on all installations. Panels typically come with 25–30 year performance warranties, and batteries (BYD/Tesla) usually have 10-year warranties." },
+    { keywords: ["warranty", "guarantee", "how long"], answer: "We give a 6-year warranty on the labour for the complete job, and on most equipment. Aftercare does not stop at handover." },
     { keywords: ["battery only", "no solar", "just battery", "arbitrage", "off peak", "octopus go"], answer: "Battery storage can be fitted on its own, including on tariffs such as Octopus Go. You can charge overnight at cheap rates and use the power during the day." },
     { keywords: ["heat pump", "grant", "bus", "air source"], answer: "Yes, we install air source heat pumps and can help with the Boiler Upgrade Scheme (BUS). The grant may be available on qualifying jobs. MCS certification for Reload is in progress. Until then, qualifying jobs are certified by an MCS contractor we name on the quote." },
     { keywords: ["air conditioning", "ac", "cooling", "mitsubishi", "daikin"], answer: "We install high-quality air conditioning systems from Mitsubishi, Daikin, and LG for both homes and commercial properties." },
@@ -99,6 +99,32 @@
     const sendBtn = document.getElementById("chat-send");
     if (!chatButton || !chatModal || !chatMessages || !chatInput || !sendBtn || !closeChat) return;
     window.primeChatInitDone = true;
+    chatButton.setAttribute("role", "button");
+    chatButton.setAttribute("tabindex", "0");
+
+    function openChat() {
+      chatModal.classList.remove("hidden");
+      chatModal.classList.add("flex");
+      chatModal.style.display = "flex";
+      if (!window.primeChatHasGreeted) {
+        setTimeout(function () {
+          addMessage("Hi. Questions about solar and battery storage in Wrexham and Chester. We fit to a high standard, and there is no pressure to go ahead. We'll get back to you quickly.", true, chatMessages);
+          setTimeout(function () {
+            addMessage("What would you like to know?", true, chatMessages);
+            showQuickReplies(["Do you cover my area?", "0% finance details", "Battery only options", "How much does it cost?"], chatMessages, function (reply) {
+              handleUserMessage(reply, chatMessages);
+            });
+          }, 700);
+        }, 400);
+        window.primeChatHasGreeted = true;
+      }
+    }
+
+    function closeChatModal() {
+      chatModal.classList.add("hidden");
+      chatModal.classList.remove("flex");
+      chatModal.style.display = "";
+    }
 
     function sendMessage() {
       const text = chatInput.value.trim();
@@ -113,27 +139,15 @@
       if (e.key === "Enter") sendMessage();
     });
 
-    chatButton.addEventListener("click", function () {
-      chatModal.classList.remove("hidden");
-      chatModal.classList.add("flex");
-      if (!window.primeChatHasGreeted) {
-        setTimeout(function () {
-          addMessage("Hi. Questions about solar and battery storage in Wrexham and Chester. We fit to a high standard, and there is no pressure to go ahead. We'll get back to you quickly.", true, chatMessages);
-          setTimeout(function () {
-            addMessage("What would you like to know?", true, chatMessages);
-            showQuickReplies(["Do you cover my area?", "0% finance details", "Battery only options", "How much does it cost?"], chatMessages, function (reply) {
-              handleUserMessage(reply, chatMessages);
-            });
-          }, 700);
-        }, 400);
-        window.primeChatHasGreeted = true;
+    chatButton.addEventListener("click", openChat);
+    chatButton.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openChat();
       }
     });
 
-    closeChat.addEventListener("click", function () {
-      chatModal.classList.add("hidden");
-      chatModal.classList.remove("flex");
-    });
+    closeChat.addEventListener("click", closeChatModal);
   };
   // Start the chat on every page, even ones that don't call initPrimeChatbot themselves.
   if (document.readyState === "loading") {

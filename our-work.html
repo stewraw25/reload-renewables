@@ -126,7 +126,7 @@
           <a href="tel:01978809500" class="flex items-center gap-x-1.5 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:border-slate-300 rounded-full transition-all border border-slate-200 whitespace-nowrap" title="Call us now">
             <i class="fas fa-phone text-[#00A3E0]"></i> <span>(01978) 809 500</span>
           </a>
-          <a href="contact.html#quote" class="accent-btn text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-sm transition-all">Get Quote</a>
+          <a href="contact.html#quote" class="accent-btn text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-sm transition-all" data-quote="picker">Get Quote</a>
         </div>
         <button id="mobile-menu-btn" class="md:hidden w-11 h-11 flex items-center justify-center text-2xl text-slate-700 hover:bg-slate-100 rounded-xl active:bg-slate-200 transition-colors ml-1" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
       </div>
@@ -149,7 +149,7 @@
         <a href="contact.html" class="px-4 py-3 hover:bg-slate-100 rounded-2xl">Contact</a>
         <div class="pt-4 mt-3 border-t flex flex-col gap-y-3">
           <a href="tel:01978809500" class="flex items-center justify-center gap-x-2 px-4 py-3 border border-slate-300 rounded-2xl font-semibold"><i class="fas fa-phone"></i> <span>(01978) 809 500</span></a>
-          <a href="contact.html#quote" class="accent-btn text-white text-center px-4 py-3.5 rounded-2xl font-semibold">Get Quote</a>
+          <a href="contact.html#quote" class="accent-btn text-white text-center px-4 py-3.5 rounded-2xl font-semibold" data-quote="picker">Get Quote</a>
         </div>
       </div>
     </div>
@@ -238,6 +238,15 @@
           <div class="font-semibold text-white text-xl tracking-tight">Reload Renewables &amp; AC</div>
         </a>
         <p class="max-w-xs">Quality products, a high installation standard, and a calm service from the first visit to switch-on. Solar, battery, heat pumps and air conditioning in Wrexham, Chester and North Wales.</p>
+        <div class="care-marks">
+          <img class="care-seal" src="assets/images/gold-care-standard.svg" alt="Reload Gold Care Standard: quality products · 6-year warranty · aftercare" width="440" height="78">
+          <div class="trustmark-mark">
+            <img src="assets/images/accreditations/trustmark.png" alt="TrustMark Registered" width="144" height="72">
+            <span>TrustMark Registered</span>
+          </div>
+          <!-- TRUSTMARK LICENCE: registration number goes here when Stewart supplies it. Do not invent a number. -->
+          <!-- TRUSTMARK PROFILE: the TrustMark find-a-tradesperson profile URL goes here when Stewart supplies it. -->
+        </div>
         <p class="mt-6 text-xs tracking-wider">© 2026 Reload Renewables Ltd. All rights reserved.</p>
       </div>
       <div class="md:col-span-5">
@@ -311,14 +320,14 @@
         <label for="chat-input" class="w-full text-xs font-semibold text-slate-600">Message</label>
         <input type="text" id="chat-input" class="flex-1 border border-slate-300 rounded-2xl px-4 py-2.5 text-sm focus:outline-none focus:border-[#00A3E0]" placeholder="Ask a question...">
         <button type="button" id="chat-send" class="px-5 bg-[#00A3E0] text-white rounded-2xl text-sm font-semibold">Send</button>
-        <a id="chat-quote" href="contact.html#quote" class="px-4 border border-slate-300 rounded-2xl text-sm font-semibold inline-flex items-center">Get quote</a>
+        <a id="chat-quote" href="contact.html#quote" class="px-4 border border-slate-300 rounded-2xl text-sm font-semibold inline-flex items-center" data-quote="picker">Get quote</a>
       </div>
     </div>
   </div>
 
   <div id="call-bar" class="md:hidden fixed bottom-0 inset-x-0 z-[60] bg-white border-t border-slate-200 px-3 py-2 flex gap-2" style="padding-bottom: max(0.5rem, env(safe-area-inset-bottom));">
     <a href="tel:01978809500" class="flex-1 text-center border border-slate-300 rounded-xl py-3 text-sm font-semibold">Call (01978) 809 500</a>
-    <a href="contact.html#quote" class="flex-1 accent-btn text-white text-center rounded-xl py-3 text-sm font-semibold">Get quote</a>
+    <a href="contact.html#quote" class="flex-1 accent-btn text-white text-center rounded-xl py-3 text-sm font-semibold" data-quote="picker">Get quote</a>
   </div>
   <div id="cookie-notice" class="cookie-notice" role="region" aria-label="Cookies">
     <p>Quote form cookies only. <a href="privacy.html#cookies">Privacy</a></p>

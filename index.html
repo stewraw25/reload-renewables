@@ -360,7 +360,7 @@
             <i class="fas fa-phone text-[#00A3E0]"></i>
             <span>(01978) 809 500</span>
           </a>
-          <a href="contact.html#quote" class="accent-btn text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-sm transition-all">
+          <a href="contact.html#quote" class="accent-btn text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-sm transition-all" data-quote="picker">
             Get Quote
           </a>
         </div>
@@ -395,7 +395,7 @@
             <i class="fas fa-phone"></i>
             <span>(01978) 809 500</span>
           </a>
-          <a href="contact.html#quote" class="accent-btn text-white text-center px-4 py-3.5 rounded-2xl font-semibold">Get Quote</a>
+          <a href="contact.html#quote" class="accent-btn text-white text-center px-4 py-3.5 rounded-2xl font-semibold" data-quote="picker">Get Quote</a>
         </div>
       </div>
     </div>
@@ -403,7 +403,7 @@
 <main id="main" tabindex="-1">
 
   <!-- Hero Section -->
-  <header class="relative text-white overflow-hidden">
+  <header id="home-hero" class="relative text-white overflow-hidden">
     <!-- Video Background -->
     <picture class="absolute inset-0">
       <source type="image/webp" srcset="assets/images/custom/solar-roof-poster.webp">
@@ -421,31 +421,24 @@ HIGH-RES RENDER FIX: text crisp thanks to RENDER_SCALE=4 in generator (large fon
 BANDING: only the thinner cyan blue ring directly around the black pill (exact match to small stamp blue ring; yellow and cream removed per feedback). Blue provides the clean surround. 
 DISPLAY SIZE: reduced further to max-w-[min(500px,60vw)] (per your feedback that the main logo is still a bit too big on the homepage). 
 BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact same height as R (batt_target_h = reload_h) + nudge +4 (reduced to move battery UP slightly). Full inspection confirms: entire emoji (including complete positive/terminal end) is perfectly visible with no cropping, no sharp cutoff. The emoji size now matches the R height. Battery bottom no longer overlaps the "R" of "Renewables". Source graphic + final composited both verified pixel-perfect. Small stamp locked (v=48); main always pulls battery crop + matching blue from it. Follows the uploaded reference image exactly for positioning. Ignore any white square in ref (positioning only). -->
-      <div class="flex justify-center mb-6">
+      <div class="flex justify-center mb-3">
         <img src="assets/images/logo-main.png?v=59" alt="Reload Renewables &amp; AC" class="max-w-[min(500px,60vw)] w-full h-auto" width="827" height="527">
       </div>
       <div class="grid md:grid-cols-12 gap-x-12 items-center">
         <div class="md:col-span-7">
           <!-- Trust badge -->
-          <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 text-sm mb-6">
-            <div class="flex -space-x-1">
-              <div class="w-5 h-5 bg-[#00A3E0] rounded-full ring-2 ring-[#0F172A]"></div>
-              <div class="w-5 h-5 bg-white rounded-full ring-2 ring-[#0F172A]"></div>
-              <div class="w-5 h-5 bg-slate-400 rounded-full ring-2 ring-[#0F172A]"></div>
-            </div>
-            <span class="font-medium tracking-wide">NICEIC &amp; TrustMark • Based in Wrexham</span>
-          </div>
+          <p class="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 text-sm mb-4 font-medium tracking-wide">Quality products · 6-year warranty · Aftercare</p>
 
-          <h1 class="heading-font text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tighter font-semibold mb-6">
-            Solar installation and battery storage in Wrexham and Chester
+          <h1 class="heading-font font-semibold mb-4">
+            Quality products, a 6-year warranty and aftercare that doesn't stop at handover.
           </h1>
           
-          <p class="max-w-lg text-xl text-slate-300 mb-9">
-            Solar and battery storage for <a href="domestic.html" class="underline decoration-white/40 hover:decoration-white">homes</a> and <a href="commercial.html" class="underline decoration-white/40 hover:decoration-white">businesses</a> in Wrexham, Chester, Mold, Oswestry and nearby North Wales. Quality products, a high installation standard, and a calm service from the first visit to switch-on.
+          <p class="hero-sub text-xl text-slate-300 mb-5">
+            6 years on the labour for the complete job, and on most equipment. High-class service from the first visit to switch-on. Wrexham, Chester and North Wales.
           </p>
 
           <div class="flex flex-wrap gap-4">
-            <a href="contact.html#quote" class="accent-btn inline-flex items-center justify-center gap-x-3 px-8 h-14 rounded-2xl text-lg font-semibold shadow-lg shadow-[#00A3E0]/30">
+            <a href="contact.html#quote" class="accent-btn inline-flex items-center justify-center gap-x-3 px-8 h-14 rounded-2xl text-lg font-semibold shadow-lg shadow-[#00A3E0]/30" data-quote="picker">
               Get Quote
               <i class="fas fa-arrow-right"></i>
             </a>
@@ -478,33 +471,27 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
         </div>
 
         <!-- Hero visual / trust panel -->
-        <div class="md:col-span-5 mt-12 md:mt-0">
+        <div class="hidden md:block md:col-span-5 mt-0">
           <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-7">
-            <div class="flex items-center gap-x-4 mb-6">
-              <div>
-                <div class="text-sm font-semibold tracking-wide">A calm quote, with no pressure</div>
-                <div class="text-sm mt-1 text-white/80">Call (01978) 809 500 or email hello@reloadrenewables.com</div>
-              </div>
-            </div>
-            
-            <div class="space-y-4 text-sm">
+            <div class="text-sm font-semibold tracking-wide">Three things we stand behind</div>
+            <div class="space-y-4 text-sm mt-5">
               <div class="flex gap-3">
                 <div class="shrink-0 w-6 h-6 rounded-full bg-[#00A3E0]/20 flex items-center justify-center mt-0.5">
                   <i class="fas fa-check text-[#00A3E0] text-xs"></i>
                 </div>
-                <div class="text-white/90">No pressure to decide on the day of the survey</div>
+                <div class="text-white/90"><strong class="text-white">Quality products.</strong> Chosen for the property, and fitted to a high standard.</div>
               </div>
               <div class="flex gap-3">
                 <div class="shrink-0 w-6 h-6 rounded-full bg-[#00A3E0]/20 flex items-center justify-center mt-0.5">
                   <i class="fas fa-check text-[#00A3E0] text-xs"></i>
                 </div>
-                <div class="text-white/90">Tesla Powerwall 3 on the Platinum package</div>
+                <div class="text-white/90"><strong class="text-white">6-year warranty backing.</strong> 6 years on the labour for the complete job, and on most equipment.</div>
               </div>
               <div class="flex gap-3">
                 <div class="shrink-0 w-6 h-6 rounded-full bg-[#00A3E0]/20 flex items-center justify-center mt-0.5">
                   <i class="fas fa-check text-[#00A3E0] text-xs"></i>
                 </div>
-                <div class="text-white/90">Air conditioning for homes and businesses</div>
+                <div class="text-white/90"><strong class="text-white">High-class service and aftercare.</strong> A calm visit, and aftercare that doesn't stop at handover.</div>
               </div>
             </div>
           </div>
@@ -512,6 +499,55 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
       </div>
     </div>
   </header>
+
+  <section id="trust-band" class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 py-8">
+      <div class="care-marks">
+        <img class="care-seal" src="assets/images/gold-care-standard.svg" alt="Reload Gold Care Standard: quality products · 6-year warranty · aftercare" width="440" height="78">
+        <div class="trustmark-mark">
+          <img src="assets/images/accreditations/trustmark.png" alt="TrustMark Registered" width="144" height="72">
+          <span>TrustMark Registered</span>
+        </div>
+        <!-- TRUSTMARK LICENCE: registration number goes here when Stewart supplies it. Do not invent a number. -->
+        <!-- TRUSTMARK PROFILE: the TrustMark find-a-tradesperson profile URL goes here when Stewart supplies it. -->
+      </div>
+      <div class="pillar-grid mt-6">
+        <article class="pillar-card">
+          <strong>Quality products</strong>
+          <p>Equipment chosen for the property, and fitted to a high standard.</p>
+        </article>
+        <article class="pillar-card">
+          <strong>6-year warranty backing</strong>
+          <p>6 years on the labour for the complete job, and on most equipment.</p>
+        </article>
+        <article class="pillar-card">
+          <strong>High-class service and aftercare</strong>
+          <p>A calm service from the first visit, and aftercare that doesn't stop at handover.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-quality" class="bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+      <div class="text-xs font-semibold tracking-[2px] text-[#00A3E0]">HOW WE WORK</div>
+      <h2 class="heading-font text-2xl md:text-3xl tracking-tight mt-1">Why quality installation matters</h2>
+      <div class="pillar-grid mt-6">
+        <article class="pillar-card">
+          <strong>Neat workmanship</strong>
+          <p>Cable runs, fixings and finishes that look tidy and stay safe. The job is fitted carefully, from the first visit to switch-on.</p>
+        </article>
+        <article class="pillar-card">
+          <strong>The right kit for the property</strong>
+          <p>Products are chosen for the roof, the rooms and how the building is used. We specify what the property needs.</p>
+        </article>
+        <article class="pillar-card">
+          <strong>6-year warranty and aftercare</strong>
+          <p>6 years on the labour for the complete job, and on most equipment. Aftercare does not stop at handover.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <section id="process" class="bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6 py-10">
@@ -566,7 +602,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
           <p class="mt-4 text-sm text-white/90">Installed to a high standard by qualified electricians.</p>
           <div class="mt-6 flex flex-wrap gap-3">
             <a href="tel:01978809500" class="inline-flex items-center justify-center px-6 h-12 rounded-2xl border border-white/50 font-semibold hover:bg-white/10">Call (01978) 809 500</a>
-            <a href="contact.html#quote" class="inline-flex items-center justify-center px-6 h-12 rounded-2xl bg-[#00A3E0] hover:bg-[#0088C2] font-semibold">Get quote</a>
+            <a href="contact.html#quote" class="inline-flex items-center justify-center px-6 h-12 rounded-2xl bg-[#00A3E0] hover:bg-[#0088C2] font-semibold" data-quote="picker">Get quote</a>
           </div>
         </div>
       </article>
@@ -642,7 +678,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             <li class="flex gap-2"><img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-4 w-4 rounded-full object-contain mt-1 flex-shrink-0" width="1024" height="1024" loading="lazy"> DNO applications</li>
             <li class="flex gap-2"><img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-4 w-4 rounded-full object-contain mt-1 flex-shrink-0" width="1024" height="1024" loading="lazy"> 25 year manufacturer panel warranty</li>
           </ul>
-          <a href="contact.html#quote" class="block w-full text-center border border-slate-300 hover:bg-slate-50 font-semibold py-3.5 rounded-2xl transition-colors">Get Quote</a>
+          <a href="contact.html#quote" class="block w-full text-center border border-slate-300 hover:bg-slate-50 font-semibold py-3.5 rounded-2xl transition-colors" data-quote="picker">Get Quote</a>
         </div>
       </div>
 
@@ -707,7 +743,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             <li class="flex gap-2"><img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-4 w-4 rounded-full object-contain mt-1 flex-shrink-0" width="1024" height="1024" loading="lazy"> Octopus Energy compatible</li>
             <li class="flex gap-2"><img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-4 w-4 rounded-full object-contain mt-1 flex-shrink-0" width="1024" height="1024" loading="lazy"> 12 year manufacturer battery warranty</li>
           </ul>
-          <a href="contact.html#quote" class="block w-full text-center accent-btn text-white font-semibold py-3.5 rounded-2xl transition-all">Get Quote</a>
+          <a href="contact.html#quote" class="block w-full text-center accent-btn text-white font-semibold py-3.5 rounded-2xl transition-all" data-quote="picker">Get Quote</a>
         </div>
       </div>
 
@@ -761,10 +797,10 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
           <ul class="space-y-2 text-sm text-white/80 mb-8">
             <li class="flex gap-2"><img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-4 w-4 rounded-full object-contain mt-1 flex-shrink-0" width="1024" height="1024" loading="lazy"> Tesla Powerwall 3 included</li>
             <li class="flex gap-2"><img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-4 w-4 rounded-full object-contain mt-1 flex-shrink-0" width="1024" height="1024" loading="lazy"> Whole-home backup power</li>
-            <li class="flex gap-2"><img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-4 w-4 rounded-full object-contain mt-1 flex-shrink-0" width="1024" height="1024" loading="lazy"> 10 year Tesla warranty</li>
+            <li class="flex gap-2"><img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-4 w-4 rounded-full object-contain mt-1 flex-shrink-0" width="1024" height="1024" loading="lazy"> 6-year warranty on most equipment</li>
             <li class="flex gap-2"><img src="assets/images/logo-reload-stamp.png?v=47" alt="Reload Renewables &amp; AC" class="h-4 w-4 rounded-full object-contain mt-1 flex-shrink-0" width="1024" height="1024" loading="lazy"> Off-grid capability</li>
           </ul>
-          <a href="contact.html#quote" class="block w-full text-center bg-white text-slate-900 hover:bg-slate-100 font-semibold py-3.5 rounded-2xl transition-colors">Get Quote</a>
+          <a href="contact.html#quote" class="block w-full text-center bg-white text-slate-900 hover:bg-slate-100 font-semibold py-3.5 rounded-2xl transition-colors" data-quote="picker">Get Quote</a>
         </div>
       </div>
     </div>
@@ -900,32 +936,36 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
         </a>
 
         <!-- 3. Air Conditioning -->
-        <a href="services.html#ac" class="service-card group bg-white border border-slate-200 rounded-3xl overflow-hidden flex flex-col">
-          <div class="h-48  bg-cover bg-center relative" style="background-image: image-set(url('assets/images/custom/ac-unit.webp') type('image/webp'), url('assets/images/custom/ac-unit.jpg?v=6') type('image/jpeg'));">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/15"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col">
-            <div class="font-semibold text-xl tracking-tight group-hover:text-[#00A3E0] transition-colors">Air Conditioning</div>
-            <div class="text-sm text-slate-600 mt-2 flex-1">Mitsubishi, Daikin and LG air conditioning installed and serviced by qualified electricians. New installs, replacements and repairs for homes and businesses in Wrexham, Chester and North Wales.</div>
-            <div class="mt-auto pt-4 flex items-center text-xs font-semibold text-[#00A3E0]">
-              <span>Get AC Quote</span> <i class="fas fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-0.5"></i>
+        <div class="service-card group bg-white border border-slate-200 rounded-3xl overflow-hidden flex flex-col">
+          <a href="ac.html" class="block flex-1 flex flex-col">
+            <div class="h-48  bg-cover bg-center relative" style="background-image: image-set(url('assets/images/custom/ac-unit.webp') type('image/webp'), url('assets/images/custom/ac-unit.jpg?v=6') type('image/jpeg'));">
+              <div class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/15"></div>
             </div>
+            <div class="p-6 pb-2 flex-1 flex flex-col">
+              <div class="font-semibold text-xl tracking-tight group-hover:text-[#00A3E0] transition-colors">Air Conditioning</div>
+              <div class="text-sm text-slate-600 mt-2 flex-1">Mitsubishi, Daikin and LG air conditioning installed and serviced by qualified electricians. New installs, replacements and repairs for homes and businesses in Wrexham, Chester and North Wales.</div>
+            </div>
+          </a>
+          <div class="px-6 pb-6">
+            <a href="ac.html#ac-video" data-quote="ac" class="inline-flex items-center text-xs font-semibold text-[#00A3E0]">Get AC Quote <i class="fas fa-arrow-right ml-1.5"></i></a>
           </div>
-        </a>
+        </div>
 
         <!-- 4. Heat Pumps -->
-        <a href="services.html#heatpumps" class="service-card group bg-white border border-slate-200 rounded-3xl overflow-hidden flex flex-col">
-          <div class="h-48  bg-cover bg-center relative" style="background-image: image-set(url('assets/images/custom/heat-pump.webp') type('image/webp'), url('assets/images/custom/heat-pump.jpg?v=6') type('image/jpeg'));">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/15"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col">
-            <div class="font-semibold text-xl tracking-tight group-hover:text-[#00A3E0] transition-colors">Heat Pumps</div>
-            <div class="text-sm text-slate-600 mt-2 flex-1">Air source heat pumps for efficient whole-home low-carbon heating in Wrexham, Chester and surrounding areas. Grant-ready designs for the Boiler Upgrade Scheme (BUS) with full installation by our local team.</div>
-            <div class="mt-auto pt-4 flex items-center text-xs font-semibold text-emerald-500">
-              <span>Heat Pump Quote</span> <i class="fas fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-0.5"></i>
+        <div class="service-card group bg-white border border-slate-200 rounded-3xl overflow-hidden flex flex-col">
+          <a href="heat-pumps.html" class="block flex-1 flex flex-col">
+            <div class="h-48  bg-cover bg-center relative" style="background-image: image-set(url('assets/images/custom/heat-pump.webp') type('image/webp'), url('assets/images/custom/heat-pump.jpg?v=6') type('image/jpeg'));">
+              <div class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/15"></div>
             </div>
+            <div class="p-6 pb-2 flex-1 flex flex-col">
+              <div class="font-semibold text-xl tracking-tight group-hover:text-[#00A3E0] transition-colors">Heat Pumps</div>
+              <div class="text-sm text-slate-600 mt-2 flex-1">Air source heat pumps for efficient whole-home low-carbon heating in Wrexham, Chester and surrounding areas. Grant-ready designs for the Boiler Upgrade Scheme (BUS) with full installation by our local team.</div>
+            </div>
+          </a>
+          <div class="px-6 pb-6">
+            <a href="contact.html#quote" data-quote="heat" class="inline-flex items-center text-xs font-semibold text-emerald-500">Heat Pump Quote <i class="fas fa-arrow-right ml-1.5"></i></a>
           </div>
-        </a>
+        </div>
 
         <!-- 5. Servicing & Maintenance (wide bar spanning full width of the 2x2 above) -->
         <a href="services.html#maintenance" class="service-card group bg-white border border-slate-200 rounded-3xl overflow-hidden flex flex-col sm:col-span-2">
@@ -1295,7 +1335,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
         <p class="mt-4 text-lg text-white/80">Tell us about the property on the quotation form. We'll get back to you quickly, then book a survey when you are ready.</p>
         
         <div class="flex flex-wrap gap-4 mt-8">
-          <a href="contact.html#quote" class="accent-btn inline-flex h-14 items-center px-9 rounded-2xl font-semibold text-base">Get Quote</a>
+          <a href="contact.html#quote" class="accent-btn inline-flex h-14 items-center px-9 rounded-2xl font-semibold text-base" data-quote="picker">Get Quote</a>
           <a href="tel:01978809500" class="inline-flex h-14 items-center px-8 rounded-2xl font-semibold text-base border border-white/70 hover:bg-white/10">Call (01978) 809 500</a>
         </div>
         <div class="text-xs text-white/60 mt-5">We'll get back to you quickly</div>
@@ -1313,6 +1353,15 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
           <div class="font-semibold text-white text-xl tracking-tight">Reload Renewables &amp; AC</div>
         </a>
         <p class="max-w-xs">Quality products, a high installation standard, and a calm service from the first visit to switch-on. Solar, battery, heat pumps and air conditioning in Wrexham, Chester and North Wales.</p>
+        <div class="care-marks mt-5">
+          <img class="care-seal" src="assets/images/gold-care-standard.svg" alt="Reload Gold Care Standard: quality products · 6-year warranty · aftercare" width="440" height="78">
+          <div class="trustmark-mark">
+            <img src="assets/images/accreditations/trustmark.png" alt="TrustMark Registered" width="144" height="72">
+            <span>TrustMark Registered</span>
+          </div>
+          <!-- TRUSTMARK LICENCE: registration number goes here when Stewart supplies it. Do not invent a number. -->
+          <!-- TRUSTMARK PROFILE: the TrustMark find-a-tradesperson profile URL goes here when Stewart supplies it. -->
+        </div>
         <p class="mt-6 text-xs tracking-wider">© 2026 Reload Renewables Ltd. All rights reserved.</p>
       </div>
       <div class="md:col-span-5">
@@ -1664,7 +1713,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
                 class="px-5 bg-[#00A3E0] text-white rounded-2xl text-sm font-semibold">
           Send
         </button>
-        <a id="chat-quote" href="contact.html#quote" class="px-4 border border-slate-300 rounded-2xl text-sm font-semibold inline-flex items-center">Get quote</a>
+        <a id="chat-quote" href="contact.html#quote" class="px-4 border border-slate-300 rounded-2xl text-sm font-semibold inline-flex items-center" data-quote="picker">Get quote</a>
       </div>
 
     </div>
@@ -1674,7 +1723,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
 
   <div id="call-bar" class="md:hidden fixed bottom-0 inset-x-0 z-[60] bg-white border-t border-slate-200 px-3 py-2 flex gap-2" style="padding-bottom: max(0.5rem, env(safe-area-inset-bottom));">
     <a href="tel:01978809500" class="flex-1 text-center border border-slate-300 rounded-xl py-3 text-sm font-semibold">Call (01978) 809 500</a>
-    <a href="contact.html#quote" class="flex-1 accent-btn text-white text-center rounded-xl py-3 text-sm font-semibold">Get quote</a>
+    <a href="contact.html#quote" class="flex-1 accent-btn text-white text-center rounded-xl py-3 text-sm font-semibold" data-quote="picker">Get quote</a>
   </div>
   <div id="cookie-notice" class="cookie-notice" role="region" aria-label="Cookies">
     <p>Quote form cookies only. <a href="privacy.html#cookies">Privacy</a></p>
