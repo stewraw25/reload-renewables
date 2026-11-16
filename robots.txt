@@ -1,5 +1,5 @@
 # Reload Renewables & AC — draft GitHub Pages site.
-# Keep this sitemap until Stewart names the live domain. Do not add a CNAME here.
+# Keep this sitemap until the live domain is chosen. Do not add a CNAME here.
 
 User-agent: *
 Allow: /
