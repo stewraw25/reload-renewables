@@ -392,6 +392,73 @@ footer a[href^="mailto:"] span {
 .accent-btn { background-color: #00A3E0; color: #fff; }
 .accent-btn:hover { background-color: #0088C2; }
 
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 0.55rem;
+}
+.hero-logo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.12rem;
+  width: max-content;
+  max-width: min(24rem, 90vw);
+  padding: 0.55rem 0.85rem 0.5rem;
+  background: #000;
+  border: 3px solid #0061bb;
+  border-radius: 1.05rem;
+  box-sizing: border-box;
+  overflow: visible;
+}
+.hero-logo-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.38rem;
+}
+.hero-logo-battery {
+  display: block;
+  height: 3.65rem;
+  width: auto;
+  flex: none;
+}
+.hero-logo-name {
+  margin: 0;
+  color: #fff;
+  font-family: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+  font-weight: 700;
+  font-size: 4.05rem;
+  line-height: 0.78;
+  letter-spacing: -0.015em;
+}
+.hero-logo-sub {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+  font-weight: 600;
+  font-size: 2.05rem;
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.hero-logo-ac { color: #0061bb; }
+.hero-logo-tag {
+  margin: 0.18rem 0 0;
+  text-align: center;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.55rem;
+  line-height: 1;
+  background-image: linear-gradient(100deg, #178a3c 0%, #34c759 42%, #d6f56e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #34c759;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 6px rgba(52, 199, 89, 0.45));
+}
 #home-hero > .relative {
   padding-top: 1.15rem !important;
   padding-bottom: 1.6rem !important;
