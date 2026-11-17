@@ -389,7 +389,7 @@ footer a[href^="mailto:"] span {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 650;
-  color: #64748b;
+  color: #475569;
 }
 .mobile-nav-label:first-child { margin-top: 0; }
 .mobile-nav-link {
@@ -902,7 +902,7 @@ footer .trust-check {
   text-transform: uppercase;
   font-weight: 650;
   margin: 0.2rem 0 0.45rem;
-  color: #64748b;
+  color: #475569;
 }
 .bg-slate-900 .included-label { color: rgba(255, 255, 255, 0.65); }
 .package-note {
@@ -911,7 +911,7 @@ footer .trust-check {
   text-align: center;
   font-size: 0.78rem;
   line-height: 1.5;
-  color: #64748b;
+  color: #475569;
 }
 .package-note a { color: #0077a8; }
 
@@ -1078,7 +1078,12 @@ footer .footer-col address { margin-top: 0.7rem; font-style: normal; font-size: 
 #home-hero .text-\[\#00A3E0\],
 .bg-\[\#0F172A\] .text-\[\#00A3E0\] { color: #00A3E0; }
 .text-slate-400 { color: #475569; }
+/* #64748b is about 4.6:1 on white and about 4.3:1 on slate-100. Small labels use it. */
+.text-slate-500 { color: #475569; }
 #home-hero .text-slate-400 { color: #cbd5e1; }
+#home-hero .text-slate-500,
+.bg-\[\#0F172A\] .text-slate-500,
+.bg-slate-900 .text-slate-500 { color: #cbd5e1; }
 /* Gold package label. #ca8a04 on white is about 2.9:1. */
 .text-yellow-600 { color: #854d0e; }
 .text-emerald-500 { color: #047857; }
