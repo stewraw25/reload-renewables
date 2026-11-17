@@ -968,9 +968,6 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
         <!-- 3. Air Conditioning -->
         <div class="service-card group bg-white border border-slate-200 rounded-3xl overflow-hidden flex flex-col">
           <a href="ac.html" class="block flex-1 flex flex-col">
-            <div class="h-48 relative overflow-hidden"><picture class="absolute inset-0"><source type="image/webp" srcset="assets/images/custom/ac-unit-640.webp 640w, assets/images/custom/ac-unit.webp 1600w" sizes="(min-width: 640px) 50vw, 100vw"><img src="assets/images/custom/ac-unit.jpg?v=6" alt="" class="w-full h-full object-cover" width="1600" height="900" loading="lazy" decoding="async"></picture>
-              <div class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/15"></div>
-            </div>
             <div class="p-6 pb-2 flex-1 flex flex-col">
               <div class="font-semibold text-xl tracking-tight group-hover:text-[#00A3E0] transition-colors">Air Conditioning</div>
               <div class="text-sm text-slate-600 mt-2 flex-1">Bosch, Daikin, Mitsubishi Electric, Fujitsu and Panasonic air conditioning installed and serviced by qualified electricians. New installs, replacements and repairs for homes and businesses in Wrexham, Chester and North Wales.</div>
@@ -987,9 +984,6 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
         <!-- 4. Heat Pumps -->
         <div class="service-card group bg-white border border-slate-200 rounded-3xl overflow-hidden flex flex-col">
           <a href="heat-pumps.html" class="block flex-1 flex flex-col">
-            <div class="h-48 relative overflow-hidden"><picture class="absolute inset-0"><source type="image/webp" srcset="assets/images/custom/heat-pump-640.webp 640w, assets/images/custom/heat-pump.webp 1600w" sizes="(min-width: 640px) 50vw, 100vw"><img src="assets/images/custom/heat-pump.jpg?v=6" alt="" class="w-full h-full object-cover" width="1600" height="900" loading="lazy" decoding="async"></picture>
-              <div class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/15"></div>
-            </div>
             <div class="p-6 pb-2 flex-1 flex flex-col">
               <div class="font-semibold text-xl tracking-tight group-hover:text-[#00A3E0] transition-colors">Heat Pumps</div>
               <div class="text-sm text-slate-600 mt-2 flex-1">Air source heat pumps are coming soon. The page explains how they work and how to register interest. The Boiler Upgrade Scheme exists for eligible homes. We do not publish a grant amount.</div>
@@ -1042,14 +1036,14 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             <div class="md:col-span-2">
               <label class="block text-sm font-semibold text-slate-700 mb-1.5" for="tariff-select">Your energy tariff</label>
               <select id="tariff-select" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-lg focus:outline-none focus:border-[#00A3E0]">
-                <option value="octopus-go">Octopus Go (7p off-peak 00:30–05:30)</option>
+                <option value="octopus-go">Octopus Go (illustration: 7.5p off-peak, 5 hours)</option>
                 <option value="intelligent-go">Intelligent Octopus Go</option>
                 <option value="flux">Octopus Flux</option>
-                <option value="standard">Standard Variable (~29p flat rate)</option>
+                <option value="standard">Standard Variable (illustration: 29p flat)</option>
                 <option value="economy7">Economy 7 / Other TOU</option>
                 <option value="custom">Custom rates (enter your own)</option>
               </select>
-              <p class="text-xs text-slate-500 mt-1">Off-peak tariffs such as Octopus Go can be entered here. The result is a model, not a quote.</p>
+              <p class="text-xs text-slate-500 mt-1">The pence figures in this list are illustration rates, not a live tariff. The result is a model, not a quote.</p>
             </div>
 
             <!-- Custom rates (hidden by default) -->
@@ -1107,9 +1101,9 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             <div>
               <label class="block text-sm font-semibold text-slate-700 mb-1.5" for="package-select">Choose system size</label>
               <select id="package-select" class="w-full border border-slate-300 rounded-2xl px-4 py-3 text-lg focus:outline-none focus:border-[#00A3E0]">
-                <option value="silver">Silver – 3.6kWp + 5.1kWh (£8,000)</option>
-                <option value="gold" selected>Gold – 5.4kWp + 9.6kWh (£10,000)</option>
-                <option value="platinum">Platinum – 6.3kWp + 13.5kWh (£14,000)</option>
+                <option value="silver">Silver – 3.6 kWp + 5.1 kWh (from £8,000)</option>
+                <option value="gold" selected>Gold – 5.4 kWp + 9.6 kWh (from £10,000)</option>
+                <option value="platinum">Platinum – 6.3 kWp + 13.5 kWh (from £14,000)</option>
               </select>
             </div>
 
@@ -1632,8 +1626,8 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             annualSavings = Math.round(arbitrageSavings);
             breakdown = `Mainly from charging ${Math.round(dailyArbitrage)} kWh/day on ${tariff.name} off-peak and discharging during peak hours.`;
           } else {
-            annualSavings = 120; // small fallback
-            breakdown = 'Limited savings without meaningful off-peak window or battery.';
+            annualSavings = 0;
+            breakdown = 'The model needs a battery size and an off-peak rate before it can illustrate battery-only use.';
           }
         } else {
           // === SOLAR + BATTERY ===
