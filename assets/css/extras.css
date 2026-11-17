@@ -292,7 +292,7 @@ footer a[href^="mailto:"] span {
   justify-content: flex-start;
 }
 @media (min-width: 1280px) {
-  .site-nav { margin-left: 2rem; gap: 0.5rem; }
+  .site-nav { margin-left: 2rem; gap: 0.4rem; }
 }
 .site-nav .nav-link {
   white-space: nowrap;
@@ -322,7 +322,7 @@ footer a[href^="mailto:"] span {
   .nav-who .nav-link,
   .nav-servicing,
   .nav-mission,
-  .nav-contact { font-size: 0.8125rem; padding: 0.36rem 0.32rem; }
+  .nav-contact { font-size: 0.8125rem; padding: 0.36rem 0.26rem; }
 }
 .nav-products .nav-link { color: #0077a8; }
 .nav-products .nav-link:hover,

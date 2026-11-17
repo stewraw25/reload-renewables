@@ -320,7 +320,7 @@
      Get Quote links open the quotation form on the contact page.
      Contact form on contact.html is for AC / Heat Pumps / Servicing / general enquiries. -->
   <!-- Navigation (clean single bar - professional symmetrical layout with centered menu, forced single-line brand, and clear button styling/hovers per feedback) -->
-  <nav class="bg-white sticky top-0 z-50">
+  <nav class="bg-white sticky top-0 z-50" aria-label="Primary">
     <div class="max-w-7xl mx-auto px-4 md:px-6">
       <div class="flex items-center h-20">
         <!-- Logo + brand (LOCKED stamp v=47; smaller logo + responsive text to guarantee one line; flex-shrink to protect from menu pressure) -->
@@ -330,14 +330,14 @@
         </a>
 
         <!-- Desktop Menu - centered in the space between left brand and right CTAs for true symmetry. Subtle padded bg on hover makes links feel like interactive buttons. -->
-        <div class="hidden md:flex flex-1 site-nav" aria-label="Primary"><div class="nav-products"><a href="solar.html" class="nav-link">Solar</a><a href="battery.html" class="nav-link">Battery</a><a href="heat-pumps.html" class="nav-link">Heat Pumps</a><a href="ac.html" class="nav-link">AC</a></div><span class="nav-divider" aria-hidden="true"></span><a href="services.html" class="nav-link nav-servicing">Servicing</a><span class="nav-divider" aria-hidden="true"></span><div class="nav-who"><a href="domestic.html" class="nav-link">Domestic</a><a href="commercial.html" class="nav-link">Commercial</a><a href="about.html" class="nav-link">About</a></div><span class="nav-divider" aria-hidden="true"></span><a href="mission.html" class="nav-link nav-mission">Mission</a><a href="contact.html" class="nav-link nav-contact">Contact</a></div>
+        <div class="hidden md:flex flex-1 site-nav"><div class="nav-products"><a href="solar.html" class="nav-link">Solar</a><a href="battery.html" class="nav-link">Battery</a><a href="heat-pumps.html" class="nav-link">Heat Pumps</a><a href="ac.html" class="nav-link">AC</a></div><span class="nav-divider" aria-hidden="true"></span><a href="services.html" class="nav-link nav-servicing">Servicing</a><span class="nav-divider" aria-hidden="true"></span><div class="nav-who"><a href="domestic.html" class="nav-link">Domestic</a><a href="commercial.html" class="nav-link">Commercial</a><a href="about.html" class="nav-link">About</a></div><span class="nav-divider" aria-hidden="true"></span><a href="mission.html" class="nav-link nav-mission">Mission</a><a href="contact.html" class="nav-link nav-contact">Contact</a></div>
 
         <!-- CTA Buttons - clearly styled as buttons (bordered pill for quick Call, filled accent rounded for Get Quote). Professional and tappable. -->
         <div class="hidden md:flex items-center gap-x-2 flex-shrink-0">
           <a href="tel:01978809500" 
              class="flex items-center gap-x-1.5 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:border-slate-300 rounded-full transition-all border border-slate-200 whitespace-nowrap"
              title="Call us now">
-            <i class="fas fa-phone text-[#00A3E0]"></i>
+            <i class="fas fa-phone text-[#00A3E0]" aria-hidden="true"></i>
             <span>(01978) 809 500</span>
           </a>
           <a href="contact.html#quote" class="accent-btn text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-sm transition-all" data-quote="picker">
@@ -348,8 +348,8 @@
         <!-- Mobile Menu Button -->
         <button id="mobile-menu-btn"
                 class="md:hidden w-11 h-11 flex items-center justify-center text-2xl text-slate-700 hover:bg-slate-100 rounded-xl active:bg-slate-200 transition-colors ml-1"
-                aria-label="Toggle menu">
-          <i class="fas fa-bars"></i>
+                aria-label="Open menu" aria-expanded="false">
+          <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
       </div>
     </div>
@@ -377,7 +377,7 @@
         <a href="contact.html" class="mobile-nav-link mobile-nav-link--contact">Contact</a>
         <div class="pt-4 mt-3 border-t flex flex-col gap-y-3">
           <a href="tel:01978809500" class="flex items-center justify-center gap-x-2 px-4 py-3 border border-slate-300 rounded-2xl font-semibold">
-            <i class="fas fa-phone"></i>
+            <i class="fas fa-phone" aria-hidden="true"></i>
             <span>(01978) 809 500</span>
           </a>
           <a href="contact.html#quote" class="accent-btn text-white text-center px-4 py-3.5 rounded-2xl font-semibold" data-quote="picker">Get Quote</a>
@@ -394,7 +394,7 @@
       <source type="image/webp" srcset="assets/images/custom/solar-roof-poster.webp">
       <img id="hero-poster" src="assets/images/custom/solar-roof-poster.jpg" alt="Solar panels on a tiled roof" fetchpriority="high" class="w-full h-full object-cover" width="1200" height="676">
     </picture>
-    <video id="hero-video" class="absolute inset-0 w-full h-full object-cover" muted playsinline preload="none" poster="assets/images/custom/solar-roof-poster.webp" aria-hidden="true"></video>
+    <video id="hero-video" class="absolute inset-0 w-full h-full object-cover" muted playsinline preload="none" fetchpriority="low" poster="assets/images/custom/solar-roof-poster.webp" aria-hidden="true"></video>
 
     <!-- Dark overlay for text readability -->
     <div class="absolute inset-0 bg-gradient-to-r from-[#0F172A]/85 via-[#0F172A]/75 to-[#0F172A]/65"></div>
@@ -427,7 +427,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
           <div class="flex flex-wrap gap-4">
             <a href="contact.html#quote" class="accent-btn inline-flex items-center justify-center gap-x-3 px-8 h-14 rounded-2xl text-lg font-semibold shadow-lg shadow-[#00A3E0]/30" data-quote="picker">
               Get Quote
-              <i class="fas fa-arrow-right"></i>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
             <a href="solar.html" 
                class="inline-flex items-center justify-center gap-x-3 px-7 h-14 rounded-2xl text-lg font-semibold border-2 border-white/70 hover:bg-white/10 transition-colors">
@@ -442,7 +442,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
           <div class="mt-8 flex items-center gap-x-8 text-sm">
             <div class="flex items-center gap-x-3">
               <div class="text-[#00A3E0]">
-                <i class="fas fa-check-circle text-xl"></i>
+                <i class="fas fa-check-circle text-xl" aria-hidden="true"></i>
               </div>
               <div>
                 <div class="font-semibold">Wrexham based</div>
@@ -464,19 +464,19 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             <div class="space-y-4 text-sm mt-5">
               <div class="flex gap-3">
                 <div class="shrink-0 w-6 h-6 rounded-full bg-[#00A3E0]/20 flex items-center justify-center mt-0.5">
-                  <i class="fas fa-check text-[#00A3E0] text-xs"></i>
+                  <i class="fas fa-check text-[#00A3E0] text-xs" aria-hidden="true"></i>
                 </div>
                 <div class="text-white/90"><strong class="text-white">Quality products.</strong> Chosen for the property, and fitted to a high standard.</div>
               </div>
               <div class="flex gap-3">
                 <div class="shrink-0 w-6 h-6 rounded-full bg-[#00A3E0]/20 flex items-center justify-center mt-0.5">
-                  <i class="fas fa-check text-[#00A3E0] text-xs"></i>
+                  <i class="fas fa-check text-[#00A3E0] text-xs" aria-hidden="true"></i>
                 </div>
                 <div class="text-white/90"><strong class="text-white">6-year warranty backing.</strong> 6 years on the labour for the complete job, and on most equipment.</div>
               </div>
               <div class="flex gap-3">
                 <div class="shrink-0 w-6 h-6 rounded-full bg-[#00A3E0]/20 flex items-center justify-center mt-0.5">
-                  <i class="fas fa-check text-[#00A3E0] text-xs"></i>
+                  <i class="fas fa-check text-[#00A3E0] text-xs" aria-hidden="true"></i>
                 </div>
                 <div class="text-white/90"><strong class="text-white">Service and aftercare.</strong> A calm visit, and aftercare that doesn't stop at handover.</div>
               </div>
@@ -526,14 +526,14 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
           <p>A calm service from the first visit, and aftercare that doesn't stop at handover.</p>
         </article>
       </div>
-      <div class="area-links" aria-label="Areas we cover">
+      <nav class="area-links" aria-label="Areas we cover">
         <a href="wrexham.html">Wrexham</a>
         <a href="chester.html">Chester</a>
         <a href="north-wales.html">North Wales</a>
         <a href="funding.html">Funding</a>
         <a href="warranty.html">Warranty</a>
         <a href="finance.html">Finance</a>
-      </div>
+      </nav>
     </div>
   </section>
 
@@ -634,7 +634,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
         <p class="text-slate-600 mt-2 max-w-md">Fully installed systems with a 6-year workmanship warranty. Prices include VAT at 0% for residential properties.</p>
       </div>
       <a href="solar.html#packages" class="mt-4 md:mt-0 text-sm font-semibold flex items-center gap-x-2 text-[#00A3E0] hover:underline">
-        Same packages on the solar page <i class="fas fa-arrow-right text-xs"></i>
+        Same packages on the solar page <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
       </a>
     </div>
 
@@ -644,7 +644,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
         <!-- Tier image with corner badge -->
         <div class="h-36 bg-cover bg-center relative" style="background-image: image-set(url('assets/images/custom/package-silver.webp') type('image/webp'), url('assets/images/custom/package-silver.jpg?v=8') type('image/jpeg'))">
           <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-600 text-xs font-bold px-2.5 py-1 rounded-full shadow flex items-center gap-x-1">
-            <i class="fas fa-medal text-slate-500"></i>
+            <i class="fas fa-medal text-slate-500" aria-hidden="true"></i>
             <span>SILVER</span>
           </div>
         </div>
@@ -681,9 +681,9 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
           <div class="mb-4">
             <div class="text-xs text-slate-500 mb-1.5">KEY COMPONENTS</div>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs">
-              <span class="flex items-center gap-x-1 text-slate-600"><i class="fas fa-solar-panel text-emerald-600"></i> DAS Panels</span>
-              <span class="flex items-center gap-x-1 text-slate-600"><i class="fas fa-microchip text-emerald-600"></i> Growatt</span>
-              <span class="flex items-center gap-x-1 text-slate-600"><i class="fas fa-battery-full text-emerald-600"></i> Pylontech Battery</span>
+              <span class="flex items-center gap-x-1 text-slate-600"><i class="fas fa-solar-panel text-emerald-600" aria-hidden="true"></i> DAS Panels</span>
+              <span class="flex items-center gap-x-1 text-slate-600"><i class="fas fa-microchip text-emerald-600" aria-hidden="true"></i> Growatt</span>
+              <span class="flex items-center gap-x-1 text-slate-600"><i class="fas fa-battery-full text-emerald-600" aria-hidden="true"></i> Pylontech Battery</span>
             </div>
           </div>
           <div class="included-label">What's included</div>
@@ -705,7 +705,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
         <!-- Tier image with corner badge -->
         <div class="h-36 bg-cover bg-center relative rounded-t-3xl" style="background-image: image-set(url('assets/images/custom/package-gold.webp') type('image/webp'), url('assets/images/custom/package-gold.jpg?v=9') type('image/jpeg'))">
           <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-yellow-700 text-xs font-bold px-2.5 py-1 rounded-full shadow flex items-center gap-x-1">
-            <i class="fas fa-trophy text-yellow-500"></i>
+            <i class="fas fa-trophy text-yellow-500" aria-hidden="true"></i>
             <span>GOLD</span>
           </div>
         </div>
@@ -742,9 +742,9 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
           <div class="mb-4">
             <div class="text-xs text-slate-500 mb-1.5">KEY COMPONENTS</div>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs">
-              <span class="flex items-center gap-x-1 text-slate-600"><i class="fas fa-solar-panel text-emerald-600"></i> DAS Panels</span>
-              <span class="flex items-center gap-x-1 text-slate-600"><i class="fas fa-microchip text-emerald-600"></i> Enphase Inverter</span>
-              <span class="flex items-center gap-x-1 text-slate-600"><i class="fas fa-battery-full text-emerald-600"></i> BYD Battery</span>
+              <span class="flex items-center gap-x-1 text-slate-600"><i class="fas fa-solar-panel text-emerald-600" aria-hidden="true"></i> DAS Panels</span>
+              <span class="flex items-center gap-x-1 text-slate-600"><i class="fas fa-microchip text-emerald-600" aria-hidden="true"></i> Enphase Inverter</span>
+              <span class="flex items-center gap-x-1 text-slate-600"><i class="fas fa-battery-full text-emerald-600" aria-hidden="true"></i> BYD Battery</span>
             </div>
           </div>
           <div class="included-label">What's included</div>
@@ -765,7 +765,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
         <!-- Tier image with corner badge -->
         <div class="h-36 bg-cover bg-center relative" style="background-image: image-set(url('assets/images/custom/package-platinum.webp') type('image/webp'), url('assets/images/custom/package-platinum.jpg?v=21') type('image/jpeg'))">
           <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-900 text-xs font-bold px-2.5 py-1 rounded-full shadow flex items-center gap-x-1">
-            <i class="fas fa-gem text-slate-700"></i>
+            <i class="fas fa-gem text-slate-700" aria-hidden="true"></i>
             <span>PLATINUM</span>
           </div>
         </div>
@@ -802,9 +802,9 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
           <div class="mb-4">
             <div class="text-xs text-white/60 mb-1.5">KEY COMPONENTS</div>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs">
-              <span class="flex items-center gap-x-1 text-white/80"><i class="fas fa-solar-panel text-emerald-400"></i> DAS Panels</span>
-              <span class="flex items-center gap-x-1 text-white/80"><i class="fas fa-microchip text-emerald-400"></i> Tesla Powerwall 3 (inverter)</span>
-              <span class="flex items-center gap-x-1 text-white/80"><i class="fas fa-battery-full text-emerald-400"></i> Tesla Powerwall 3</span>
+              <span class="flex items-center gap-x-1 text-white/80"><i class="fas fa-solar-panel text-emerald-400" aria-hidden="true"></i> DAS Panels</span>
+              <span class="flex items-center gap-x-1 text-white/80"><i class="fas fa-microchip text-emerald-400" aria-hidden="true"></i> Tesla Powerwall 3 (inverter)</span>
+              <span class="flex items-center gap-x-1 text-white/80"><i class="fas fa-battery-full text-emerald-400" aria-hidden="true"></i> Tesla Powerwall 3</span>
             </div>
           </div>
           <div class="included-label">What's included</div>
@@ -878,7 +878,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
           <div class="grid sm:grid-cols-2 gap-5">
             <div class="flex gap-4">
               <div class="w-9 h-9 mt-1 shrink-0 rounded-xl bg-[#00A3E0]/10 flex items-center justify-center text-[#00A3E0]">
-                <i class="fas fa-award text-xl"></i>
+                <i class="fas fa-award text-xl" aria-hidden="true"></i>
               </div>
               <div>
                 <div class="font-semibold mb-1">TrustMark</div>
@@ -887,7 +887,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             </div>
             <div class="flex gap-4">
               <div class="w-9 h-9 mt-1 shrink-0 rounded-xl bg-[#00A3E0]/10 flex items-center justify-center text-[#00A3E0]">
-                <i class="fas fa-tools text-xl"></i>
+                <i class="fas fa-tools text-xl" aria-hidden="true"></i>
               </div>
               <div>
                 <div class="font-semibold mb-1">End-to-End Service</div>
@@ -896,7 +896,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             </div>
             <div class="flex gap-4">
               <div class="w-9 h-9 mt-1 shrink-0 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500">
-                <i class="fas fa-leaf text-xl"></i>
+                <i class="fas fa-leaf text-xl" aria-hidden="true"></i>
               </div>
               <div>
                 <div class="flex items-center gap-x-2 font-semibold mb-1"><img src="assets/images/logo-reload-stamp-192.png" alt="" class="h-5 w-5 rounded-full object-contain" width="192" height="192" loading="lazy" decoding="async">Genuine Green Savings</div>
@@ -905,7 +905,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             </div>
             <div class="flex gap-4">
               <div class="w-9 h-9 mt-1 shrink-0 rounded-xl bg-[#00A3E0]/10 flex items-center justify-center text-[#00A3E0]">
-                <i class="fas fa-handshake text-xl"></i>
+                <i class="fas fa-handshake text-xl" aria-hidden="true"></i>
               </div>
               <div>
                 <div class="font-semibold mb-1">Truly Local Wrexham Team</div>
@@ -930,7 +930,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
         <p class="mt-1 text-slate-600 text-sm">We install solar and batteries for <a href="domestic.html" class="underline">homes</a> and <a href="commercial.html" class="underline">units, offices, farms and industrial sites</a> around Wrexham, Chester, Mold, Oswestry, Deeside and Flint. The same Wrexham team fits air conditioning, and stays on for servicing after switch-on. Heat pumps are coming soon.</p>
       </div>
       <a href="services.html" class="mt-3 md:mt-0 font-semibold text-sm flex items-center gap-x-2 hover:text-[#00A3E0]">
-        View full services <i class="fas fa-arrow-right ml-1"></i>
+        View full services <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
       </a>
     </div>
 
@@ -946,7 +946,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             <div class="flex items-center gap-x-2 font-semibold text-xl tracking-tight group-hover:text-[#00A3E0] transition-colors"><img src="assets/images/logo-reload-stamp-192.png" alt="" class="h-6 w-6 rounded-full object-contain" width="192" height="192" loading="lazy" decoding="async">Solar PV Systems</div>
             <div class="text-sm text-slate-600 mt-2 flex-1">Solar in Wrexham and Chester uses DAS 450W panels and hybrid inverters. Quotes use a local yield model of about 980 kWh/kWp.</div>
             <div class="mt-auto pt-4 flex items-center text-xs font-semibold text-emerald-500">
-              <span>Explore Solar</span> <i class="fas fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-0.5"></i>
+              <span>Explore Solar</span> <i class="fas fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true"></i>
             </div>
           </div>
         </a>
@@ -960,7 +960,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             <div class="font-semibold text-xl tracking-tight group-hover:text-[#00A3E0] transition-colors">Battery Storage</div>
             <div class="text-sm text-slate-600 mt-2 flex-1">Pylontech, BYD and Tesla Powerwall 3, as on the Silver, Gold and Platinum packages. Whole-home backup is the Platinum package.</div>
             <div class="mt-auto pt-4 flex items-center text-xs font-semibold text-[#00A3E0]">
-              <span>Learn About Batteries</span> <i class="fas fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-0.5"></i>
+              <span>Learn About Batteries</span> <i class="fas fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true"></i>
             </div>
           </div>
         </a>
@@ -980,7 +980,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             </div>
           </a>
           <div class="px-6 pb-6">
-            <a href="ac.html#ac-video" data-quote="ac" class="inline-flex items-center text-xs font-semibold text-[#00A3E0]">Get AC Quote <i class="fas fa-arrow-right ml-1.5"></i></a>
+            <a href="ac.html#ac-video" data-quote="ac" class="inline-flex items-center text-xs font-semibold text-[#00A3E0]">Get AC Quote <i class="fas fa-arrow-right ml-1.5" aria-hidden="true"></i></a>
           </div>
         </div>
 
@@ -996,7 +996,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             </div>
           </a>
           <div class="px-6 pb-6">
-            <a href="heat-pumps.html" class="inline-flex items-center text-xs font-semibold text-emerald-500">Heat pumps, coming soon <i class="fas fa-arrow-right ml-1.5"></i></a>
+            <a href="heat-pumps.html" class="inline-flex items-center text-xs font-semibold text-emerald-500">Heat pumps, coming soon <i class="fas fa-arrow-right ml-1.5" aria-hidden="true"></i></a>
           </div>
         </div>
 
@@ -1009,7 +1009,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             <div class="flex items-center gap-x-2 font-semibold text-xl tracking-tight group-hover:text-[#00A3E0] transition-colors"><img src="assets/images/logo-reload-stamp-192.png" alt="" class="h-6 w-6 rounded-full object-contain" width="192" height="192" loading="lazy" decoding="async">Servicing</div>
             <div class="text-sm text-slate-600 mt-2 flex-1">Annual servicing for solar and battery storage, battery retrofit on existing solar, and air conditioning servicing, repairs and refrigerant top-ups. Book by phone or email. A written quote comes before any work.</div>
             <div class="mt-auto pt-4 flex items-center text-xs font-semibold text-[#00A3E0]">
-              <span>Servicing</span> <i class="fas fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-0.5"></i>
+              <span>Servicing</span> <i class="fas fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true"></i>
             </div>
           </div>
         </a>
@@ -1127,7 +1127,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             <div class="md:col-span-2 pt-2">
               <button type="button" id="calculate-btn"
                       class="w-full accent-btn text-white font-semibold py-4 rounded-2xl text-lg flex items-center justify-center gap-x-3">
-                <i class="fas fa-calculator"></i>
+                <i class="fas fa-calculator" aria-hidden="true"></i>
                 <span>Run the model</span>
               </button>
             </div>
@@ -1706,7 +1706,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
 <!-- AI Chatbot Floating Button + Modal -->
   <div id="chat-button" 
        class="fixed bottom-24 md:bottom-6 right-6 z-[999] flex items-center gap-x-2 bg-[#00A3E0] hover:bg-[#0088C2] text-white shadow-xl rounded-full px-5 py-3.5 cursor-pointer transition-all active:scale-95">
-    <i class="fas fa-comments text-xl"></i>
+    <i class="fas fa-comments text-xl" aria-hidden="true"></i>
     <span class="hidden sm:block font-semibold text-sm tracking-tight">Chat with us</span>
   </div>
 
@@ -1718,12 +1718,12 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
       <div class="bg-[#0F172A] text-white px-5 py-4 flex items-center justify-between">
         <div class="flex items-center gap-x-3">
           <div class="w-9 h-9 rounded-full bg-[#00A3E0] flex items-center justify-center">
-            <i class="fas fa-headset text-white"></i>
+            <i class="fas fa-headset text-white" aria-hidden="true"></i>
           </div>
           <div>
             <div class="font-semibold tracking-tight">Reload Renewables &amp; AC</div>
             <div class="text-xs text-emerald-400 flex items-center gap-x-1">
-              <i class="fas fa-circle text-[8px]"></i> 
+              <i class="fas fa-circle text-[8px]" aria-hidden="true"></i> 
               <span>There is no promised reply time</span>
             </div>
           </div>

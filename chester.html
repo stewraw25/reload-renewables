@@ -138,7 +138,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
 <!-- OpenSolar widget handles quote buttons via the quotation form popup. -->
   <!-- Navigation (clean single bar - professional symmetrical layout with centered menu, forced single-line brand, and clear button styling/hovers per feedback) -->
-  <nav class="bg-white sticky top-0 z-50">
+  <nav class="bg-white sticky top-0 z-50" aria-label="Primary">
     <div class="max-w-7xl mx-auto px-4 md:px-6">
       <div class="flex items-center h-20">
         <!-- Logo + brand (LOCKED stamp v=47; smaller logo + responsive text to guarantee one line; flex-shrink to protect from menu pressure) -->
@@ -148,20 +148,20 @@
         </a>
 
         <!-- Desktop Menu - centered in the space between left brand and right CTAs for true symmetry. Subtle padded bg on hover makes links feel like interactive buttons. -->
-        <div class="hidden md:flex flex-1 site-nav" aria-label="Primary"><div class="nav-products"><a href="solar.html" class="nav-link">Solar</a><a href="battery.html" class="nav-link">Battery</a><a href="heat-pumps.html" class="nav-link">Heat Pumps</a><a href="ac.html" class="nav-link">AC</a></div><span class="nav-divider" aria-hidden="true"></span><a href="services.html" class="nav-link nav-servicing">Servicing</a><span class="nav-divider" aria-hidden="true"></span><div class="nav-who"><a href="domestic.html" class="nav-link">Domestic</a><a href="commercial.html" class="nav-link">Commercial</a><a href="about.html" class="nav-link">About</a></div><span class="nav-divider" aria-hidden="true"></span><a href="mission.html" class="nav-link nav-mission">Mission</a><a href="contact.html" class="nav-link nav-contact">Contact</a></div>
+        <div class="hidden md:flex flex-1 site-nav"><div class="nav-products"><a href="solar.html" class="nav-link">Solar</a><a href="battery.html" class="nav-link">Battery</a><a href="heat-pumps.html" class="nav-link">Heat Pumps</a><a href="ac.html" class="nav-link">AC</a></div><span class="nav-divider" aria-hidden="true"></span><a href="services.html" class="nav-link nav-servicing">Servicing</a><span class="nav-divider" aria-hidden="true"></span><div class="nav-who"><a href="domestic.html" class="nav-link">Domestic</a><a href="commercial.html" class="nav-link">Commercial</a><a href="about.html" class="nav-link">About</a></div><span class="nav-divider" aria-hidden="true"></span><a href="mission.html" class="nav-link nav-mission">Mission</a><a href="contact.html" class="nav-link nav-contact">Contact</a></div>
 
         <!-- CTA Buttons - clearly styled as buttons (bordered pill for quick Call, filled accent rounded for Get Quote). Professional and tappable. -->
         <div class="hidden md:flex items-center gap-x-2 flex-shrink-0">
           <a href="tel:01978809500" 
              class="flex items-center gap-x-1.5 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:border-slate-300 rounded-full transition-all border border-slate-200 whitespace-nowrap"
              title="Call us now">
-            <i class="fas fa-phone text-[#00A3E0]"></i>
+            <i class="fas fa-phone text-[#00A3E0]" aria-hidden="true"></i>
             <span>(01978) 809 500</span>
           </a>
           <a href="contact.html#quote" class="accent-btn text-white px-6 py-2.5 rounded-full text-sm font-semibold" data-quote="picker">Get Quote</a>
         </div>
 
-        <button id="mobile-menu-btn" class="md:hidden w-11 h-11 flex items-center justify-center text-2xl" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+        <button id="mobile-menu-btn" class="md:hidden w-11 h-11 flex items-center justify-center text-2xl" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
       </div>
     </div>
 
@@ -188,7 +188,7 @@
         <a href="contact.html" class="mobile-nav-link mobile-nav-link--contact">Contact</a>
         <div class="pt-4 mt-3 border-t flex flex-col gap-y-3">
           <a href="tel:01978809500" class="flex items-center justify-center gap-x-2 px-4 py-3 border border-slate-300 rounded-2xl font-semibold">
-            <i class="fas fa-phone"></i>
+            <i class="fas fa-phone" aria-hidden="true"></i>
             <span>(01978) 809 500</span>
           </a>
           <a href="contact.html#quote" class="accent-btn text-white text-center px-4 py-3.5 rounded-2xl font-semibold" data-quote="picker">Get Quote</a>
@@ -208,7 +208,7 @@
   <div class="max-w-5xl mx-auto px-6 py-12 text-slate-700">
     <p>Homes and businesses in Chester can ask for solar PV, battery storage and air conditioning. Heat pumps are coming soon. The same survey, the same written quote, and the same 6-year workmanship warranty apply as in Wrexham.</p>
     <p class="mt-4">Every qualifying installation is signed off and MCS certified through an MCS-certified installer partner, named on your quote. Reload's own MCS certification is awaiting approval.</p>
-    <div class="area-links" aria-label="Related pages">
+    <nav class="area-links" aria-label="Related pages">
         <a href="solar.html">Solar</a>
         <a href="battery.html">Battery</a>
         <a href="heat-pumps.html">Heat pumps</a>
@@ -217,7 +217,7 @@
         <a href="finance.html">Finance</a>
         <a href="funding.html">Funding</a>
         <a href="warranty.html">Warranty</a>
-      </div>
+      </nav>
     <h2 class="heading-font text-2xl tracking-tight mt-10 text-slate-900">How to start</h2>
     <p class="mt-3">Use the quotation form for solar and battery, the room-video guide for air conditioning, or call (01978) 809 500. Monday–Friday 8am–6pm. Closed Saturday and Sunday.</p>
   </div>
@@ -298,7 +298,7 @@
   <!-- AI Chatbot Floating Button + Modal -->
   <div id="chat-button" 
        class="fixed bottom-24 md:bottom-6 right-6 z-[999] flex items-center gap-x-2 bg-[#00A3E0] hover:bg-[#0088C2] text-white shadow-xl rounded-full px-5 py-3.5 cursor-pointer transition-all active:scale-95">
-    <i class="fas fa-comments text-xl"></i>
+    <i class="fas fa-comments text-xl" aria-hidden="true"></i>
     <span class="hidden sm:block font-semibold text-sm tracking-tight">Chat with us</span>
   </div>
 
@@ -310,12 +310,12 @@
       <div class="bg-[#0F172A] text-white px-5 py-4 flex items-center justify-between">
         <div class="flex items-center gap-x-3">
           <div class="w-9 h-9 rounded-full bg-[#00A3E0] flex items-center justify-center">
-            <i class="fas fa-headset text-white"></i>
+            <i class="fas fa-headset text-white" aria-hidden="true"></i>
           </div>
           <div>
             <div class="font-semibold tracking-tight">Reload Renewables &amp; AC</div>
             <div class="text-xs text-emerald-400 flex items-center gap-x-1">
-              <i class="fas fa-circle text-[8px]"></i> 
+              <i class="fas fa-circle text-[8px]" aria-hidden="true"></i> 
               <span>There is no promised reply time</span>
             </div>
           </div>
