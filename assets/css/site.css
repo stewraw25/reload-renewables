@@ -39,6 +39,19 @@ summary:focus-visible {
   #hero-video {
     display: none !important;
   }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .service-card:hover,
+  .package-card:hover,
+  .accent-btn:hover {
+    transform: none !important;
+  }
 }
 
 .cookie-notice {
@@ -238,15 +251,8 @@ main [id] {
     padding-right: 0.85rem;
   }
 }
-@media (min-width: 1440px) {
-  nav a.flex img.rounded-full {
-    width: 4rem;
-    height: 4rem;
-  }
-  nav .heading-font.whitespace-nowrap {
-    font-size: 1.35rem;
-  }
-}
+/* The header column stops at 80rem, so a larger logo here runs the
+   last nav link under the phone button. Keep the 1280px sizes. */
 footer .grid > div,
 footer a[href^="mailto:"] {
   min-width: 0;
@@ -317,7 +323,7 @@ footer a[href^="mailto:"] span {
   .nav-who .nav-link,
   .nav-servicing,
   .nav-mission,
-  .nav-contact { font-size: 0.8125rem; padding: 0.36rem 0.48rem; }
+  .nav-contact { font-size: 0.8125rem; padding: 0.36rem 0.32rem; }
 }
 .nav-products .nav-link { color: #0077a8; }
 .nav-products .nav-link:hover,
@@ -336,6 +342,7 @@ footer a[href^="mailto:"] span {
 .nav-servicing { color: #334155; }
 .nav-servicing:hover,
 .nav-servicing[aria-current="page"] {
+  color: #334155;
   text-decoration: underline;
   text-decoration-color: #334155;
   text-decoration-thickness: 1.5px;
@@ -366,6 +373,7 @@ footer a[href^="mailto:"] span {
 }
 .nav-contact:hover,
 .nav-contact[aria-current="page"] {
+  color: #0f172a;
   border-color: #0f172a;
   text-decoration: underline;
   text-decoration-color: #0f172a;
