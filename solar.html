@@ -30,7 +30,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600&display=swap"></noscript>
-  <link rel="preload" as="image" href="assets/images/custom/solar-hero-1.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/custom/solar-hero-1-640.webp" type="image/webp" media="(max-width: 640px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/custom/solar-hero-1.webp" type="image/webp" media="(min-width: 641px)" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/site.css">
 <!-- Google SEO Indicators: E-E-A-T, unique title ~55ch, meta ~155ch with local + keywords + benefit/CTA, schema for rich results, descriptive alts, fast images, helpful content, internal links, breadcrumb. Lighthouse green targets. -->
   <!-- Add your Google Search Console verification here: <meta name="google-site-verification" content="REPLACE_WITH_YOUR_CODE" /> -->
@@ -312,7 +313,7 @@
 
   <!-- Hero -->
   <header class="relative h-[420px] md:h-[480px] flex items-center justify-center overflow-hidden">
-    <picture class="absolute inset-0"><source type="image/webp" srcset="assets/images/custom/solar-hero-1.webp"><img src="assets/images/custom/solar-hero-1.jpg" alt="" class="w-full h-full object-cover" width="1200" height="380" fetchpriority="high"></picture>
+    <picture class="absolute inset-0"><source type="image/webp" srcset="assets/images/custom/solar-hero-1-640.webp 640w, assets/images/custom/solar-hero-1.webp 1200w" sizes="100vw"><img src="assets/images/custom/solar-hero-1.jpg" alt="" class="w-full h-full object-cover" width="1200" height="380" fetchpriority="high"></picture>
     <div class="absolute inset-0 bg-gradient-to-r from-[#0F172A]/80 via-[#0F172A]/70 to-[#0F172A]/60"></div>
     <div class="relative max-w-5xl mx-auto px-6 text-center text-white">
       <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur px-4 py-1 rounded-full text-sm mb-4 border border-white/20">
@@ -394,7 +395,7 @@
       <div class="grid md:grid-cols-3 gap-6">
         <!-- Silver -->
         <div class="solar-card bg-white rounded-3xl overflow-hidden flex flex-col border">
-          <div class="h-36 relative overflow-hidden"><picture class="absolute inset-0"><source type="image/webp" srcset="assets/images/custom/package-silver.webp 1200w" sizes="(min-width: 768px) 33vw, 100vw"><img src="assets/images/custom/package-silver.jpg?v=8" alt="" class="w-full h-full object-cover" width="1200" height="380" loading="lazy" decoding="async"></picture></div>
+          <div class="h-36 relative overflow-hidden"><picture class="absolute inset-0"><source type="image/webp" srcset="assets/images/custom/package-silver-640.webp 640w, assets/images/custom/package-silver.webp 1200w" sizes="(min-width: 768px) 33vw, 100vw"><img src="assets/images/custom/package-silver.jpg?v=8" alt="" class="w-full h-full object-cover" width="1200" height="380" loading="lazy" decoding="async"></picture></div>
           <div class="p-7 flex-1">
             <div class="text-sm font-semibold tracking-widest text-emerald-600">SILVER</div>
             <div class="text-4xl font-bold mt-1">from £8,000</div>
