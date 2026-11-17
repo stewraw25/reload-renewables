@@ -66,4 +66,4 @@ Serve the folder (paths are relative so they also work at `/reload-renewables/`)
 - Package prices and any stats beyond ~980 kWh/kWp
 - Analytics and Search Console only after the domain cutover
 
-Local pages are `wrexham.html`, `chester.html` and `north-wales.html`. `funding.html` only repeats the Boiler Upgrade Scheme line, domestic 0% VAT and Smart Export Guarantee help. `warranty.html` repeats the 6-year workmanship line and the manufacturer warranty lines already on the solar and battery pages. Do not add grant amounts, reviews or job counts to those pages.
+Local pages are `wrexham.html`, `chester.html` and `north-wales.html`. `funding.html` only repeats the Boiler Upgrade Scheme line, domestic 0% VAT and Smart Export Guarantee help. `warranty.html` repeats the 6-year workmanship line and the manufacturer warranty lines already on the solar and battery pages. Do not add grant amounts, reviews or job counts to those pages. `finance.html` repeats the published 0% and 9.9% APR examples. Reload is a broker, not the lender. Heat pumps are coming soon.
