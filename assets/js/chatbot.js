@@ -99,19 +99,36 @@
     const sendBtn = document.getElementById("chat-send");
     if (!chatButton || !chatModal || !chatMessages || !chatInput || !sendBtn || !closeChat) return;
     window.primeChatInitDone = true;
+    var lastChatFocus = null;
     chatButton.setAttribute("role", "button");
     chatButton.setAttribute("tabindex", "0");
     chatButton.setAttribute("aria-label", "Chat with us");
-    if (chatInput && !chatInput.getAttribute("aria-label")) {
-      chatInput.setAttribute("aria-label", "Your question");
-    }
     chatButton.setAttribute("aria-expanded", "false");
+    chatButton.setAttribute("aria-controls", "chat-modal");
+    chatModal.setAttribute("role", "dialog");
+    chatModal.setAttribute("aria-modal", "true");
+    chatModal.setAttribute("aria-label", "Chat with Reload Renewables");
+    chatMessages.setAttribute("aria-live", "polite");
+    chatMessages.setAttribute("aria-relevant", "additions");
+
+    function chatOpen() {
+      return !chatModal.classList.contains("hidden");
+    }
+
+    function chatFocusable() {
+      return Array.prototype.filter.call(
+        chatModal.querySelectorAll("a[href], button:not([disabled]), input:not([disabled]), textarea, select"),
+        function (el) { return el.getClientRects().length > 0; }
+      );
+    }
 
     function openChat() {
+      lastChatFocus = document.activeElement;
       chatButton.setAttribute("aria-expanded", "true");
       chatModal.classList.remove("hidden");
       chatModal.classList.add("flex");
       chatModal.style.display = "flex";
+      chatInput.focus();
       if (!window.primeChatHasGreeted) {
         setTimeout(function () {
           addMessage("Hi. Questions about solar and battery storage in Wrexham and Chester. We fit to a high standard, and there is no pressure to go ahead. There is no promised reply time.", true, chatMessages);
@@ -127,10 +144,13 @@
     }
 
     function closeChatModal() {
+      if (!chatOpen()) return;
       chatButton.setAttribute("aria-expanded", "false");
       chatModal.classList.add("hidden");
       chatModal.classList.remove("flex");
       chatModal.style.display = "";
+      var back = lastChatFocus && lastChatFocus !== document.body ? lastChatFocus : chatButton;
+      if (back && typeof back.focus === "function") back.focus();
     }
 
     function sendMessage() {
@@ -155,6 +175,29 @@
     });
 
     closeChat.addEventListener("click", closeChatModal);
+    chatModal.addEventListener("click", function (event) {
+      if (event.target === chatModal) closeChatModal();
+    });
+    document.addEventListener("keydown", function (event) {
+      if (!chatOpen()) return;
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeChatModal();
+        return;
+      }
+      if (event.key !== "Tab") return;
+      var items = chatFocusable();
+      if (!items.length) return;
+      var first = items[0];
+      var last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
   };
   // Start the chat on every page, even ones that don't call initPrimeChatbot themselves.
   if (document.readyState === "loading") {
