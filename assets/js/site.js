@@ -81,16 +81,30 @@
     });
   }
 
+  function motion() {
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+  }
+
+  function scrollTo(el, block) {
+    if (!el) return;
+    el.scrollIntoView({ behavior: motion(), block: block || "start" });
+  }
+
   function closeChat() {
     var chat = document.getElementById("chat-modal");
     if (!chat) return;
     chat.classList.add("hidden");
     chat.classList.remove("flex");
     chat.style.display = "";
+    var chatButton = document.getElementById("chat-button");
+    if (chatButton) chatButton.setAttribute("aria-expanded", "false");
   }
 
   function openPicker(mode, trigger) {
     var root = ensurePicker();
+    if (trigger && trigger.closest && trigger.closest("#chat-modal")) {
+      trigger = document.getElementById("chat-button") || trigger;
+    }
     lastFocus = trigger || document.activeElement;
     closeChat();
     var choices = root.querySelector(".quote-picker-choices");
@@ -139,7 +153,7 @@
     if (dest === "solar") {
       if (page === "contact.html" && document.getElementById("quote")) {
         history.pushState(null, "", "#quote");
-        document.getElementById("quote").scrollIntoView({ behavior: "smooth", block: "start" });
+        scrollTo(document.getElementById("quote"));
         return;
       }
       location.href = "contact.html#quote";
@@ -148,7 +162,7 @@
     if (dest === "ac") {
       if (page === "ac.html" && document.getElementById("ac-video")) {
         history.pushState(null, "", "#ac-video");
-        document.getElementById("ac-video").scrollIntoView({ behavior: "smooth", block: "start" });
+        scrollTo(document.getElementById("ac-video"));
         return;
       }
       location.href = "ac.html#ac-video";
@@ -224,7 +238,7 @@
     var next = (acType ? "?type=" + encodeURIComponent(acType) : "") + url.hash;
     history.pushState(null, "", next);
     if (acType) applyAcType(acType);
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    scrollTo(target);
   });
 
   document.addEventListener("keydown", function (event) {
@@ -255,7 +269,7 @@
   if (location.hash === "#quote" || location.hash === "#ac-video") {
     window.addEventListener("load", function () {
       var target = document.querySelector(location.hash);
-      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (target) scrollTo(target);
     });
   }
 })();
@@ -297,7 +311,7 @@
       if (value === "solar" || value === "battery") {
         if (note) note.hidden = true;
         var quote = document.getElementById("quote");
-        if (quote) quote.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (quote) scrollTo(quote);
         return;
       }
       if (!note) return;
@@ -335,6 +349,17 @@
     syncMenu();
     document.addEventListener("click", function () {
       syncMenu();
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key !== "Escape" || menu.classList.contains("hidden")) return;
+      menu.classList.add("hidden");
+      var icon = menuBtn.querySelector("i");
+      if (icon) {
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-times");
+      }
+      syncMenu();
+      menuBtn.focus();
     });
   }
 
