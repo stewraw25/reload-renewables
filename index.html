@@ -13,11 +13,15 @@
   <meta property="og:description" content="Careful solar and battery installation in Wrexham and Chester, with calm service from survey to switch-on. Mold, Oswestry and North Wales. Call (01978) 809 500.">
   <meta property="og:url" content="https://stewraw25.github.io/reload-renewables/">
   <meta property="og:image" content="https://stewraw25.github.io/reload-renewables/assets/images/logo-main.png?v=59">
+  <meta property="og:image:alt" content="Reload Renewables &amp; AC">
+  <meta property="og:image:width" content="827">
+  <meta property="og:image:height" content="527">
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Solar &amp; Battery Storage in Wrexham &amp; Chester | Reload">
   <meta name="twitter:description" content="Careful solar and battery installation in Wrexham and Chester, with calm service from survey to switch-on. Mold, Oswestry and North Wales. Call (01978) 809 500.">
   <meta name="twitter:image" content="https://stewraw25.github.io/reload-renewables/assets/images/logo-main.png?v=59">
+  <meta name="twitter:image:alt" content="Reload Renewables &amp; AC">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="assets/images/logo-reload-stamp-192.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -1085,8 +1089,8 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
             </div>
 
             <!-- System Type -->
-            <div class="md:col-span-2">
-              <label class="block text-sm font-semibold text-slate-700 mb-2">System type</label>
+            <div class="md:col-span-2" role="group" aria-labelledby="system-type-label">
+              <p id="system-type-label" class="block text-sm font-semibold text-slate-700 mb-2">System type</p>
               <div class="flex gap-4">
                 <label class="flex items-center gap-x-2 cursor-pointer">
                   <input type="radio" name="system-type" value="solar-battery" checked class="accent-[#00A3E0]">
@@ -1131,6 +1135,7 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
           </div>
         </div>
 
+        <p id="calculator-status" class="visually-hidden" aria-live="polite"></p>
         <!-- Results -->
         <div id="calculator-results" class="hidden mt-8 bg-slate-50 rounded-3xl p-8 border border-slate-200">
           <div class="text-sm font-semibold text-slate-500 mb-4">MODELLED ILLUSTRATION</div>
@@ -1677,6 +1682,8 @@ BATTERY (perfected): tight crop around emoji content (425,684,600,808) + exact s
 
         summaryEl.textContent = summary;
         breakdownEl.textContent = breakdown;
+        const statusEl = document.getElementById('calculator-status');
+        if (statusEl) statusEl.textContent = summary;
 
         results.classList.remove('hidden');
         results.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
