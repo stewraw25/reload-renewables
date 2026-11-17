@@ -202,14 +202,25 @@
             <select id="service-choice" name="service">
               <option value="solar">Solar</option>
               <option value="battery">Battery</option>
+              <option value="solar-battery">Solar + battery</option>
               <option value="ac">Air conditioning</option>
               <option value="heat">Heat pump (coming soon)</option>
               <option value="servicing">Servicing</option>
+              <option value="several">Several services</option>
               <option value="other">Something else</option>
             </select>
+            <fieldset id="service-several" class="service-ticks" hidden>
+              <legend>Which services? Tick two or more.</legend>
+              <label for="service-solar"><input id="service-solar" type="checkbox" name="services" value="solar"> Solar</label>
+              <label for="service-battery"><input id="service-battery" type="checkbox" name="services" value="battery"> Battery</label>
+              <label for="service-ac"><input id="service-ac" type="checkbox" name="services" value="ac"> Air conditioning</label>
+              <label for="service-heat"><input id="service-heat" type="checkbox" name="services" value="heat"> Heat pump (coming soon)</label>
+              <label for="service-servicing"><input id="service-servicing" type="checkbox" name="services" value="servicing"> Servicing</label>
+              <p id="service-several-error" hidden role="status"></p>
+            </fieldset>
             <button type="submit" class="accent-btn">Continue</button>
           </form>
-          <p id="service-route-note" class="service-route-note" hidden role="status"></p>
+          <p id="service-route-note" class="service-route-note" hidden role="status" tabindex="-1"></p>
           <h2 class="heading-font text-2xl tracking-tight text-slate-900">Request a survey</h2>
           <p class="text-slate-600 mt-2">The quotation form is provided by OpenSolar. Tell us about the property in your own time. We reply and arrange a survey, and there is no pressure to sign on the day. There is no promised reply time.</p>
           <div class="care-marks">
