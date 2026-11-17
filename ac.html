@@ -506,8 +506,8 @@
             <input id="ac-video-consent" name="consent" type="checkbox" required class="mt-1 accent-[#00A3E0]">
             <label for="ac-video-consent">I agree that Reload Renewables Ltd can use these details to reply to this enquiry. <a href="privacy.html" class="underline text-[#00A3E0]">Privacy notice</a>.</label>
           </div>
-          <button type="submit" class="accent-btn text-white px-8 py-3 rounded-2xl text-sm font-semibold">Send</button>
-          <p id="ac-video-form-note" class="hidden text-sm text-slate-700 border border-slate-300 rounded-2xl p-4" hidden role="status">Online upload is being switched on shortly. For now please email your video and details to <a class="underline text-[#00A3E0]" href="mailto:hello@reloadrenewables.com?subject=AC%20room%20video%20quote">hello@reloadrenewables.com</a>.</p>
+          <button type="submit" class="accent-btn text-white px-8 py-3 rounded-2xl text-sm font-semibold">Continue</button>
+          <p id="ac-video-form-note" class="hidden text-sm text-slate-700 border border-slate-300 rounded-2xl p-4" hidden role="status" tabindex="-1">This form has not sent your video. Online upload is not switched on yet. Email the video and these details to <a class="underline text-[#00A3E0]" href="mailto:hello@reloadrenewables.com?subject=AC%20room%20video%20quote">hello@reloadrenewables.com</a>.</p>
         </form>
         <script>
           (function () {
@@ -521,6 +521,7 @@
               if (!note) return;
               note.hidden = false;
               note.classList.remove("hidden");
+              note.focus();
               var rect = note.getBoundingClientRect();
               var reserve = 160;
               if (rect.bottom > window.innerHeight - reserve) {
@@ -581,17 +582,41 @@
               return Math.round(kw * 3412).toLocaleString("en-GB");
             }
 
-            function calculate() {
+            function setInvalid(id, invalid) {
+              var el = document.getElementById(id);
+              if (!el) return;
+              if (invalid) el.setAttribute("aria-invalid", "true");
+              else el.removeAttribute("aria-invalid");
+            }
+
+            function calculate(showError) {
               var areaMode = mode() === "area";
               document.getElementById("ac-size-dimensions").classList.toggle("hidden", areaMode);
               document.getElementById("ac-size-area-wrap").classList.toggle("hidden", !areaMode);
-              var area = areaMode ? numberValue("ac-size-area") : numberValue("ac-size-length") * numberValue("ac-size-width");
+              var length = numberValue("ac-size-length");
+              var width = numberValue("ac-size-width");
+              var enteredArea = numberValue("ac-size-area");
+              var area = areaMode ? enteredArea : length * width;
               var height = numberValue("ac-size-height");
+              var lengthBad = !areaMode && !(length > 0);
+              var widthBad = !areaMode && !(width > 0);
+              var areaBad = areaMode && !(enteredArea > 0);
+              var heightBad = !(height > 0);
               if (!isFinite(area) || area <= 0 || !isFinite(height) || height <= 0) {
                 latest = "";
-                result.innerHTML = '<p class="text-sm text-slate-600">Enter the room size to see a suggested unit.</p>';
+                setInvalid("ac-size-length", showError && lengthBad);
+                setInvalid("ac-size-width", showError && widthBad);
+                setInvalid("ac-size-area", showError && areaBad);
+                setInvalid("ac-size-height", showError && heightBad);
+                result.innerHTML = showError
+                  ? '<p class="text-sm text-slate-800">Enter a room length and width, or a floor area, and a ceiling height. The guide needs those before it can suggest a size.</p>'
+                  : '<p class="text-sm text-slate-600">Enter the room size to see a suggested unit.</p>';
                 return;
               }
+              setInvalid("ac-size-length", false);
+              setInvalid("ac-size-width", false);
+              setInvalid("ac-size-area", false);
+              setInvalid("ac-size-height", false);
               var sun = SUN[document.getElementById("ac-size-sun").value] || 1;
               var insulation = INSULATION[document.getElementById("ac-size-insulation").value] || 1;
               var room = ROOM[document.getElementById("ac-size-room").value] || 1;
@@ -610,12 +635,12 @@
               result.innerHTML = '<p class="text-xs font-semibold tracking-wide text-[#00A3E0]">SUGGESTED UNIT</p><p class="mt-1 text-2xl font-semibold text-slate-900">' + formatKw(size) + ' kW</p><p class="mt-1 text-sm text-slate-600">About ' + btu + ' BTU/h. The working figure before rounding was ' + raw.toFixed(2) + ' kW.</p>';
             }
 
-            form.addEventListener("input", calculate);
-            form.addEventListener("change", calculate);
-            document.getElementById("ac-size-calc").addEventListener("click", calculate);
+            form.addEventListener("input", function () { calculate(false); });
+            form.addEventListener("change", function () { calculate(false); });
+            document.getElementById("ac-size-calc").addEventListener("click", function () { calculate(true); });
             if (quote) {
               quote.addEventListener("click", function () {
-                calculate();
+                calculate(true);
                 var field = document.getElementById("ac-video-suggested");
                 var roomSize = document.getElementById("ac-video-size");
                 if (field && latest) field.value = latest;
@@ -746,7 +771,7 @@
 
   </script>
 
-  <script src="assets/js/chatbot.js"></script>
+  <script src="assets/js/chatbot.js" defer></script>
   <!-- AI Chatbot Floating Button + Modal -->
   <div id="chat-button" 
        class="fixed bottom-24 md:bottom-6 right-6 z-[999] flex items-center gap-x-2 bg-[#00A3E0] hover:bg-[#0088C2] text-white shadow-xl rounded-full px-5 py-3.5 cursor-pointer transition-all active:scale-95">
@@ -793,7 +818,7 @@
   </div>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-  <script src="assets/js/site.js"></script>
+  <script src="assets/js/site.js" defer></script>
 
 </body>
 </html>

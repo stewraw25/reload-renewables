@@ -309,7 +309,10 @@
         return;
       }
       if (value === "solar" || value === "battery") {
-        if (note) note.hidden = true;
+        if (note) {
+          note.innerHTML = "The quotation form is below. Nothing has been sent. Fill it in when you are ready, or call <a href=\"tel:01978809500\">(01978) 809 500</a>.";
+          note.hidden = false;
+        }
         var quote = document.getElementById("quote");
         if (quote) scrollTo(quote);
         return;
