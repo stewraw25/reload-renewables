@@ -323,6 +323,21 @@
     });
   }
 
+  var menuBtn = document.getElementById("mobile-menu-btn");
+  var menu = document.getElementById("mobile-menu");
+  if (menuBtn && menu) {
+    menuBtn.setAttribute("aria-controls", "mobile-menu");
+    function syncMenu() {
+      var open = !menu.classList.contains("hidden");
+      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+    syncMenu();
+    document.addEventListener("click", function () {
+      syncMenu();
+    });
+  }
+
   var video = document.getElementById("hero-video");
   if (!video) return;
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
