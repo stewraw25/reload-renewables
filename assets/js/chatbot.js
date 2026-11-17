@@ -102,6 +102,9 @@
     chatButton.setAttribute("role", "button");
     chatButton.setAttribute("tabindex", "0");
     chatButton.setAttribute("aria-label", "Chat with us");
+    if (chatInput && !chatInput.getAttribute("aria-label")) {
+      chatInput.setAttribute("aria-label", "Your question");
+    }
     chatButton.setAttribute("aria-expanded", "false");
 
     function openChat() {

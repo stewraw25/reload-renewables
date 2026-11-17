@@ -385,7 +385,9 @@ footer a[href^="mailto:"] span {
 }
 .mobile-nav-label:first-child { margin-top: 0; }
 .mobile-nav-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
   padding: 0.7rem 0.9rem;
   border-radius: 0.85rem;
   font-weight: 600;
@@ -1039,10 +1041,43 @@ footer .trust-check {
   font-weight: 700;
   cursor: pointer;
 }
-footer .footer-col a { display: block; margin: 0.38rem 0; }
+footer .footer-col a { display: block; margin: 0.38rem 0; overflow-wrap: anywhere; }
+footer .footer-col p,
+footer .footer-col address { overflow-wrap: anywhere; }
+footer .care-marks { width: 100%; justify-content: flex-start; }
+footer .care-marks .badge-slot {
+  flex: 1 1 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+@media (max-width: 1023px) {
+  footer .grid.md\:grid-cols-12 { grid-template-columns: 1fr 1fr !important; }
+  footer .md\:col-span-4,
+  footer .md\:col-span-2 { grid-column: span 1 / span 1 !important; }
+}
 footer .footer-col a:hover { color: #fff; }
 footer .footer-col address { margin-top: 0.7rem; font-style: normal; font-size: 0.78rem; line-height: 1.45; color: #e2e8f0; }
 
 /* White text on #00A3E0 is about 2.9:1. These fills are the compiled button utilities. */
 .bg-\[\#00A3E0\] { background-color: #0077a8; }
 .hover\:bg-\[\#0088C2\]:hover { background-color: #005f88; }
+
+/* #00A3E0 and emerald-500 fail AA on white. Darken text on light surfaces, and keep the lighter colours on navy. */
+.text-\[\#00A3E0\],
+.hover\:text-\[\#00A3E0\]:hover,
+.group:hover .group-hover\:text-\[\#00A3E0\] { color: #0077a8; }
+#home-hero .text-\[\#00A3E0\],
+.bg-\[\#0F172A\] .text-\[\#00A3E0\] { color: #00A3E0; }
+.text-emerald-500 { color: #047857; }
+.text-emerald-600 { color: #047857; }
+.bg-\[\#0F172A\] .text-emerald-500,
+.bg-\[\#0F172A\] .text-emerald-600 { color: #10b981; }
+
+@media (max-width: 767px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="button"]):not([type="submit"]):not([type="hidden"]),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
