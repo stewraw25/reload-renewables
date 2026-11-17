@@ -297,6 +297,14 @@
     });
   }
 
+  var heatInterest = document.getElementById("heat-interest");
+  if (heatInterest) {
+    heatInterest.addEventListener("submit", function () {
+      var note = document.getElementById("heat-interest-note");
+      if (note) note.hidden = false;
+    });
+  }
+
   var serviceRoute = document.getElementById("service-route");
   if (serviceRoute) {
     serviceRoute.addEventListener("submit", function (event) {
