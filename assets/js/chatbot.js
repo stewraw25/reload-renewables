@@ -11,7 +11,7 @@
     { keywords: ["servicing", "maintenance", "service", "annual", "repair"], answer: "We service solar and battery systems, and we can add a battery to existing solar. Air conditioning covers new installs, replacements, repairs, annual servicing and refrigerant top-ups. Book by phone or email. A written quote comes before any work. Heat pumps are coming soon." },
     { keywords: ["cost", "price", "how much", "expensive"], answer: "Our popular packages start from £8,000 for Silver (3.6kWp + 5.1kWh battery). Prices vary depending on your property — we always provide a free, no-obligation site survey and quote." },
     { keywords: ["payback", "return", "save", "bill reduction"], answer: "Savings depend on your usage, tariff and the system we specify. Use the estimator on the homepage for a modelled figure, or call (01978) 809 500 for a site survey. We use ~980 kWh/kWp for this area." },
-    { keywords: ["tesla", "powerwall", "byd"], answer: "We install both BYD batteries (excellent value) and Tesla Powerwall 3. The Platinum package includes the Tesla Powerwall 3 + Gateway." },
+    { keywords: ["tesla", "powerwall", "byd"], answer: "BYD is the battery on the Gold package. Tesla Powerwall 3 is on Platinum, with the Gateway. Pylontech is on Silver." },
     { keywords: ["commercial", "business", "office", "chester", "wrexham business"], answer: "We design and install solar, battery storage and air conditioning for homes and businesses in Wrexham, Chester and North Wales. Heat pumps are coming soon. Commercial prices are set after a survey." },
     { keywords: ["time", "how long", "installation", "install"], answer: "We do not publish an install duration. The written quote after the survey sets out the work, including the warranty in writing. Take time to decide. DNO paperwork is G98 or G99 where the connection needs it. Every qualifying installation is signed off and MCS certified through an MCS-certified installer partner, named on your quote. Reload's own MCS certification is awaiting approval." },
     { keywords: ["solar installers", "solar wrexham", "solar chester", "best solar", "recommended solar", "solar installers wrexham", "solar installers chester"], answer: "We are local solar installers based in Wrexham. We fit quality products to a high installation standard, with a calm service from the first visit to switch-on, for homes and businesses in Wrexham, Chester, Mold, Oswestry and North Wales. Free site survey, and no pressure to go ahead." },
@@ -101,8 +101,11 @@
     window.primeChatInitDone = true;
     chatButton.setAttribute("role", "button");
     chatButton.setAttribute("tabindex", "0");
+    chatButton.setAttribute("aria-label", "Chat with us");
+    chatButton.setAttribute("aria-expanded", "false");
 
     function openChat() {
+      chatButton.setAttribute("aria-expanded", "true");
       chatModal.classList.remove("hidden");
       chatModal.classList.add("flex");
       chatModal.style.display = "flex";
@@ -121,6 +124,7 @@
     }
 
     function closeChatModal() {
+      chatButton.setAttribute("aria-expanded", "false");
       chatModal.classList.add("hidden");
       chatModal.classList.remove("flex");
       chatModal.style.display = "";

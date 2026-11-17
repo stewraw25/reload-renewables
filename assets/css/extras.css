@@ -59,9 +59,6 @@ summary:focus-visible {
 .cookie-notice p {
   margin: 0;
   min-width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .cookie-notice[hidden] {
   display: none !important;
@@ -71,7 +68,7 @@ summary:focus-visible {
   text-decoration: underline;
 }
 .cookie-notice button {
-  background: #00a3e0;
+  background: #0077a8;
   color: #fff;
   border-radius: 999px;
   padding: 0.35rem 0.85rem;
@@ -85,6 +82,11 @@ body.has-cookie-notice #chat-button {
   bottom: 7.35rem;
 }
 @media (min-width: 768px) {
+  .cookie-notice p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .cookie-notice {
     bottom: 0;
     padding-left: 1.25rem;
@@ -316,11 +318,11 @@ footer a[href^="mailto:"] span {
   .nav-mission,
   .nav-contact { font-size: 0.8125rem; padding: 0.36rem 0.48rem; }
 }
-.nav-products .nav-link { color: #00A3E0; }
+.nav-products .nav-link { color: #0077a8; }
 .nav-products .nav-link:hover,
 .nav-products .nav-link[aria-current="page"] {
   text-decoration: underline;
-  text-decoration-color: #00A3E0;
+  text-decoration-color: #0077a8;
   text-decoration-thickness: 1.5px;
 }
 .nav-divider {
@@ -388,15 +390,15 @@ footer a[href^="mailto:"] span {
   font-weight: 600;
 }
 .mobile-nav-link:hover { background: #f8fafc; }
-.mobile-nav-link--product { color: #00A3E0; }
+.mobile-nav-link--product { color: #0077a8; }
 .mobile-nav-link--service { color: #334155; }
 .mobile-nav-link--who { color: #0F766E; }
 .mobile-nav-link--mission { color: #8B6914; }
 .mobile-nav-link--contact { color: #0f172a; }
 .mobile-nav-link[aria-current="page"] { background: #f1f5f9; }
 .eyebrow-stamp { width: 3.5rem; height: 3.5rem; flex: none; }
-.accent-btn { background-color: #00A3E0; color: #fff; }
-.accent-btn:hover { background-color: #0088C2; }
+.accent-btn { background-color: #0077a8; color: #fff; }
+.accent-btn:hover { background-color: #005f88; }
 
 #home-hero > .relative {
   padding-top: 1.15rem !important;
@@ -711,10 +713,10 @@ body.quote-picker-open { overflow: hidden; }
 }
 .quote-picker-soon { margin-top: 1rem; }
 .quote-picker-soon p { color: #334155; line-height: 1.5; }
-.quote-picker-soon a { color: #00A3E0; font-weight: 650; }
+.quote-picker-soon a { color: #0077a8; font-weight: 650; }
 .quote-picker-back {
   margin-top: 0.9rem;
-  background: #00A3E0;
+  background: #0077a8;
   color: #fff;
   border: 0;
   border-radius: 1rem;
@@ -839,7 +841,7 @@ body.quote-picker-open { overflow: hidden; }
   max-width: none !important;
   display: block !important;
   margin: 0.35rem 0 0 !important;
-  background: #00A3E0 !important;
+  background: #0077a8 !important;
   color: #fff !important;
   border: 0 !important;
   border-radius: 1rem !important;
@@ -849,7 +851,7 @@ body.quote-picker-open { overflow: hidden; }
   letter-spacing: 0.04em !important;
   cursor: pointer !important;
 }
-#quote button.widget:hover { background: #0088c2 !important; }
+#quote button.widget:hover { background: #005f88 !important; }
 #quote .widget-hidden-os { display: none !important; }
 
 .crumbs {
@@ -923,7 +925,7 @@ footer .trust-check {
   width: 1.55rem;
   height: 1.55rem;
   border-radius: 999px;
-  background: #00A3E0;
+  background: #0077a8;
   color: #fff;
   align-items: center;
   justify-content: center;
@@ -1024,10 +1026,11 @@ footer .trust-check {
   padding: 0.65rem 0.8rem;
   background: #fff;
   font: inherit;
+  font-size: 16px;
 }
 .interest-form button {
   margin-top: 0.9rem;
-  background: #00A3E0;
+  background: #0077a8;
   color: #fff;
   border: 0;
   border-radius: 0.9rem;
@@ -1038,3 +1041,7 @@ footer .trust-check {
 footer .footer-col a { display: block; margin: 0.38rem 0; }
 footer .footer-col a:hover { color: #fff; }
 footer .footer-col address { margin-top: 0.7rem; font-style: normal; font-size: 0.78rem; line-height: 1.45; color: #e2e8f0; }
+
+/* White text on #00A3E0 is about 2.9:1. These fills are the compiled button utilities. */
+.bg-\[\#00A3E0\] { background-color: #0077a8; }
+.hover\:bg-\[\#0088C2\]:hover { background-color: #005f88; }
