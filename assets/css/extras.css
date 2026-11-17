@@ -1068,6 +1068,8 @@ footer .footer-col address { margin-top: 0.7rem; font-style: normal; font-size: 
 .group:hover .group-hover\:text-\[\#00A3E0\] { color: #0077a8; }
 #home-hero .text-\[\#00A3E0\],
 .bg-\[\#0F172A\] .text-\[\#00A3E0\] { color: #00A3E0; }
+.text-slate-400 { color: #475569; }
+#home-hero .text-slate-400 { color: #cbd5e1; }
 .text-emerald-500 { color: #047857; }
 .text-emerald-600 { color: #047857; }
 .bg-\[\#0F172A\] .text-emerald-500,
