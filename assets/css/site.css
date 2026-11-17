@@ -1085,6 +1085,83 @@ main > section.py-16 {
   border-radius: 1rem;
 }
 
+/* Shared navy hero for the pages that are not photo heroes. */
+.page-hero {
+  background: #0F172A;
+  color: #fff;
+  padding: 4.25rem 0 3.5rem !important;
+}
+.page-hero h1 {
+  font-size: clamp(2rem, 4.2vw, 3.15rem) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.03em;
+  max-width: 22em;
+}
+.page-hero p:not([class*="tracking-"]) {
+  max-width: 40rem;
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+.page-hero .text-emerald-100 { color: #e2e8f0 !important; }
+main .text-emerald-500,
+main .text-emerald-600 { color: #0077a8; }
+.page-hero .text-emerald-500,
+.page-hero .text-emerald-600 { color: #00A3E0 !important; }
+main a.accent-btn,
+main button.accent-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  border-radius: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+main a.w-full {
+  display: flex;
+  width: 100%;
+}
+main .rounded-3xl.border,
+main .rounded-3xl.border-2,
+main .bg-slate-900.rounded-3xl {
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+}
+.figure-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+@media (min-width: 768px) {
+  .figure-grid { grid-template-columns: 1fr 1fr; }
+}
+.figure-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+}
+.figure-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+.figure-card p { margin: 0.55rem 0 0; }
+.figure-label {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: #0077a8;
+}
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-scroll table { min-width: 36rem; }
+
 .existing-block, .pathway-wrap, .finance-wrap {
   max-width: 80rem;
   margin: 0 auto;
@@ -1111,8 +1188,9 @@ main > section.py-16 {
   background: #0077a8;
   color: #fff;
   border: 0;
-  border-radius: 0.9rem;
-  padding: 0.7rem 1rem;
+  border-radius: 1rem;
+  min-height: 3rem;
+  padding: 0.7rem 1.25rem;
   font-weight: 700;
   cursor: pointer;
 }

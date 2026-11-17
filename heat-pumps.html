@@ -105,7 +105,7 @@
     "name": "Do you install heat pumps now?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Heat pumps are coming soon. We are not booking those installs yet. Register interest by phone, email, or the form on this page."
+        "text": "Heat pumps are coming soon. We are not booking those installs yet. Phone or email the office. The form on this page opens an email in your own mail app. This page does not send the message."
     }
   },
   {
@@ -237,7 +237,7 @@
   </nav>
 <main id="main" tabindex="-1">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Heat pumps</span></nav>
-  <header class="bg-[#0F172A] text-white py-14">
+  <header class="page-hero">
     <div class="max-w-5xl mx-auto px-6">
       <p class="text-[#00A3E0] text-sm tracking-[2px] font-semibold">COMING SOON</p>
       <h1 class="heading-font text-4xl md:text-5xl tracking-tighter mt-3">Air source heat pumps, coming soon</h1>
@@ -260,8 +260,9 @@
       </ol>
     </section>
     <h2 class="heading-font text-2xl tracking-tight mt-10 text-slate-900">Register interest</h2>
-    <p class="mt-3">Phone <a class="underline" href="tel:01978809500">(01978) 809 500</a> or email <a class="underline" href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a>. Or send the form. It opens an email to us. We do not promise a reply time.</p>
-    <form class="interest-form" action="mailto:hello@reloadrenewables.com" method="post" enctype="text/plain">
+    <p class="mt-3">Heat pumps are coming soon. This is not a booking. Phone <a class="underline" href="tel:01978809500">(01978) 809 500</a> or email <a class="underline" href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a>. Monday–Friday 8am–6pm. We do not promise a reply time.</p>
+    <p class="mt-3">The form does not send a message from this site. It opens an email in your own mail app. If that app does not open, use the email address above. Nothing has been sent until you send that email yourself.</p>
+    <form id="heat-interest" class="interest-form" action="mailto:hello@reloadrenewables.com" method="post" enctype="text/plain">
       <label>Name <input name="name" type="text" required autocomplete="name"></label>
       <label>Postcode <input name="postcode" type="text" required autocomplete="postal-code"></label>
       <label>Current fuel
@@ -273,11 +274,12 @@
           <option>Other</option>
         </select>
       </label>
-      <button type="submit">Email your interest</button>
+      <button type="submit">Open an email</button>
     </form>
+    <p id="heat-interest-note" class="mt-3" hidden role="status">Your email app should open. This page has not sent the message.</p>
     <p class="mt-6 text-sm">Monday–Friday 8am–6pm. Closed Saturday and Sunday. Jubilee Manor, Sun Lane, Wrexham, LL13 9RW.</p>
   </div>
-<section class="faq-block" id="faq"><h2>Heat pump questions</h2><div class="faq-grid"><div><h3>Do you install heat pumps now?</h3><p>Heat pumps are coming soon. We are not booking those installs yet. Register interest by phone, email, or the form on this page.</p></div><div><h3>What is an air source heat pump?</h3><p>An air source heat pump takes heat from the outside air and uses it to warm the home and, on many systems, the hot water. It runs on electricity.</p></div><div><h3>Is the Boiler Upgrade Scheme available?</h3><p>The Boiler Upgrade Scheme exists for eligible homes. We do not publish a grant amount. MCS certification matters for grants. Every qualifying installation is signed off and MCS certified through an MCS-certified installer partner, named on your quote. Reload&#x27;s own MCS certification is awaiting approval.</p></div><div><h3>Can solar and a battery sit alongside a heat pump?</h3><p>Yes. Solar and a battery can be quoted now and can sit alongside a future heat pump. The heat pump is not part of the current quote.</p></div><div><h3>Are you MCS certified?</h3><p>Every qualifying installation is signed off and MCS certified through an MCS-certified installer partner, named on your quote. Reload&#x27;s own MCS certification is awaiting approval.</p></div><div><h3>How soon will you reply?</h3><p>We do not promise a reply time or an install date.</p></div><div><h3>Do you publish running-cost comparisons?</h3><p>No. We do not publish savings figures.</p></div></div></section>
+<section class="faq-block" id="faq"><h2>Heat pump questions</h2><div class="faq-grid"><div><h3>Do you install heat pumps now?</h3><p>Heat pumps are coming soon. We are not booking those installs yet. Phone or email the office. The form on this page opens an email in your own mail app. This page does not send the message.</p></div><div><h3>What is an air source heat pump?</h3><p>An air source heat pump takes heat from the outside air and uses it to warm the home and, on many systems, the hot water. It runs on electricity.</p></div><div><h3>Is the Boiler Upgrade Scheme available?</h3><p>The Boiler Upgrade Scheme exists for eligible homes. We do not publish a grant amount. MCS certification matters for grants. Every qualifying installation is signed off and MCS certified through an MCS-certified installer partner, named on your quote. Reload&#x27;s own MCS certification is awaiting approval.</p></div><div><h3>Can solar and a battery sit alongside a heat pump?</h3><p>Yes. Solar and a battery can be quoted now and can sit alongside a future heat pump. The heat pump is not part of the current quote.</p></div><div><h3>Are you MCS certified?</h3><p>Every qualifying installation is signed off and MCS certified through an MCS-certified installer partner, named on your quote. Reload&#x27;s own MCS certification is awaiting approval.</p></div><div><h3>How soon will you reply?</h3><p>We do not promise a reply time or an install date.</p></div><div><h3>Do you publish running-cost comparisons?</h3><p>No. We do not publish savings figures.</p></div></div></section>
 <nav class="related-row" aria-label="Related">
   <a href="solar.html">Solar that can be quoted now</a>
   <a href="battery.html">Battery storage that can be quoted now</a>
