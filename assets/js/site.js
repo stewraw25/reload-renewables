@@ -60,11 +60,11 @@
       + '<a class="quote-choice" data-quote-go="solar" href="contact.html#quote"><strong>Solar</strong><span>Open the quotation form</span></a>'
       + '<a class="quote-choice" data-quote-go="solar" href="contact.html#quote"><strong>Battery</strong><span>Open the quotation form</span></a>'
       + '<a class="quote-choice" data-quote-go="ac" href="ac.html#ac-video"><strong>Air conditioning</strong><span>Guide price from a room video</span></a>'
-      + '<button type="button" class="quote-choice" data-quote-go="heat"><strong>Heat pump</strong><span>Call or email for a survey</span></button>'
+      + '<a class="quote-choice" data-quote-go="heat" href="heat-pumps.html"><strong>Heat pump</strong><span>Coming soon</span></a>'
       + '<button type="button" class="quote-choice" data-quote-go="service"><strong>Servicing</strong><span>Call or email</span></button>'
       + '</div>'
       + '<div class="quote-picker-soon" hidden>'
-      + '<p data-soon="heat">There is no separate online form for heat pumps yet. Call <a href="tel:01978809500">(01978) 809 500</a> or email <a href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a> and we will arrange a survey. There is no pressure to go ahead.</p>'
+      + '<p data-soon="heat">Heat pumps are coming soon. The <a href="heat-pumps.html">heat pump page</a> explains air source heat pumps and how to register interest. Call <a href="tel:01978809500">(01978) 809 500</a> or email <a href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a>.</p>'
       + '<p data-soon="service" hidden>For servicing, call <a href="tel:01978809500">(01978) 809 500</a> or email <a href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a>. The <a href="services.html">servicing page</a> lists what we cover.</p>'
       + '<button type="button" class="quote-picker-back" data-quote-back>Other quote options</button>'
       + '</div>'
@@ -176,7 +176,12 @@
     var choice = event.target.closest("[data-quote-go]");
     if (choice && choice.closest("#quote-picker")) {
       var dest = choice.getAttribute("data-quote-go");
-      if (dest === "heat" || dest === "service") {
+      if (dest === "heat") {
+        event.preventDefault();
+        location.href = "heat-pumps.html";
+        return;
+      }
+      if (dest === "service") {
         event.preventDefault();
         var picker = document.getElementById("quote-picker");
         picker.querySelector(".quote-picker-choices").hidden = true;
@@ -197,9 +202,14 @@
     if (!link || !link.getAttribute("href")) return;
     if (link.closest("#quote-picker")) return;
     var kind = quoteKind(link);
-    if (kind === "picker" || kind === "heat") {
+    if (kind === "heat") {
       event.preventDefault();
-      openPicker(kind === "heat" ? "heat" : "choices", link);
+      location.href = "heat-pumps.html";
+      return;
+    }
+    if (kind === "picker") {
+      event.preventDefault();
+      openPicker("choices", link);
       return;
     }
     if (kind !== "solar" && kind !== "ac") return;
@@ -294,7 +304,8 @@
       var phone = '<a href="tel:01978809500">(01978) 809 500</a>';
       var email = '<a href="mailto:hello@reloadrenewables.com">hello@reloadrenewables.com</a>';
       if (value === "heat") {
-        note.innerHTML = "There is no separate online form for heat pumps yet. Call " + phone + " or email " + email + " and we will arrange a survey. There is no pressure to go ahead. The <a href=\"heat-pumps.html\">heat pump page</a> explains the work.";
+        location.href = "heat-pumps.html";
+        return;
       } else if (value === "servicing") {
         note.innerHTML = "For servicing, call " + phone + " or email " + email + ". The <a href=\"services.html\">servicing page</a> lists what we cover.";
       } else {
