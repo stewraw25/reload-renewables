@@ -384,6 +384,8 @@
     var mp4 = document.createElement("source");
     mp4.src = "assets/videos/hero-background.mp4";
     mp4.type = "video/mp4";
+    webm.setAttribute("fetchpriority", "low");
+    mp4.setAttribute("fetchpriority", "low");
     video.appendChild(webm);
     video.appendChild(mp4);
     video.muted = true;
