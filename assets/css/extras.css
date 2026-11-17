@@ -1082,3 +1082,23 @@ footer .footer-col address { margin-top: 0.7rem; font-style: normal; font-size: 
     font-size: 16px;
   }
 }
+
+/* 60% white on navy is about 4:1 for small type. Keep it lighter so the label stays readable. */
+.text-white\/50 { color: rgba(255, 255, 255, 0.82); }
+.text-white\/60 { color: rgba(255, 255, 255, 0.9); }
+
+/* Keyboard focus stays visible where a utility removes the outline. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #0077a8 !important;
+  outline-offset: 2px;
+}
+#home-hero :focus-visible,
+.bg-\[\#0F172A\] :focus-visible,
+.bg-slate-900 :focus-visible {
+  outline-color: #ffffff !important;
+}
