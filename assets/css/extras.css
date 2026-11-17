@@ -262,7 +262,7 @@ footer a[href^="mailto:"] span {
 
 /* Keep the phone chat button in the right-hand gutter so it does not sit on
    text, buttons or form fields. The cookie line stays above the call bar. */
-@media (max-width: 1023px) {
+@media (max-width: 1536px) {
   #chat-button {
     right: 0.5rem;
     width: 2.5rem;
@@ -356,14 +356,10 @@ footer a[href^="mailto:"] span {
 .nav-mission {
   font-weight: 650;
   color: #8B6914;
-  background-image: linear-gradient(100deg, #8B6914 0%, #C9A227 42%, #E8C872 58%, #8B6914 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .nav-mission:hover,
 .nav-mission[aria-current="page"] {
-  border-bottom: 1.5px solid #C9A227;
+  border-bottom: 1.5px solid #8B6914;
 }
 .nav-contact {
   color: #0f172a;
@@ -629,6 +625,9 @@ footer .badge-slot { box-shadow: none; }
   margin: 0.75rem 0 0;
   color: #334155;
   line-height: 1.5;
+}
+[aria-invalid="true"] {
+  border-color: #b91c1c;
 }
 .area-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
 .area-links a {
