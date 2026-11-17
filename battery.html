@@ -249,7 +249,7 @@
 
   <!-- Hero -->
   <header class="relative h-[420px] md:h-[480px] flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: image-set(url('assets/images/custom/battery-hero-1.webp') type('image/webp'), url('assets/images/custom/battery-hero-1.jpg') type('image/jpeg'))"></div>
+    <picture class="absolute inset-0"><source type="image/webp" srcset="assets/images/custom/gold-battery.webp"><img src="assets/images/custom/gold-battery.jpg?v=7" alt="" class="w-full h-full object-cover" width="1200" height="380" fetchpriority="high" decoding="async"></picture>
     <div class="absolute inset-0 bg-gradient-to-r from-[#0F172A]/85 via-[#0F172A]/75 to-[#0F172A]/65"></div>
     <div class="relative max-w-5xl mx-auto px-6 text-center text-white">
       <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur px-4 py-1 rounded-full text-sm mb-4 border border-white/20">
@@ -414,14 +414,8 @@
     <!-- Gallery -->
     <section class="py-10">
       <h2 class="text-2xl font-semibold tracking-tight mb-5">Typical battery equipment we specify</h2>
-      <p class="text-sm text-slate-600 mb-5">Graphics of the kit we quote — not named customer jobs.</p>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
-        <picture class="block w-full"><source type="image/webp" srcset="assets/images/custom/battery-gallery-1.webp 800w, assets/images/custom/battery-gallery-1-640.webp 640w" sizes="(min-width: 1024px) 40vw, 100vw"><img src="assets/images/custom/battery-gallery-1.jpg" alt="Tesla Powerwall-style home battery graphic specified on Platinum packages" class="w-full h-44 object-cover rounded-2xl" loading="lazy" width="800" height="520" decoding="async"></picture>
-        <picture class="block w-full"><source type="image/webp" srcset="assets/images/custom/battery-gallery-2.webp 800w, assets/images/custom/battery-gallery-2-640.webp 640w" sizes="(min-width: 1024px) 40vw, 100vw"><img src="assets/images/custom/battery-gallery-2.jpg" alt="BYD-style battery graphic specified on Gold packages" class="w-full h-44 object-cover rounded-2xl" loading="lazy" width="800" height="520" decoding="async"></picture>
-        <picture class="block w-full"><source type="image/webp" srcset="assets/images/custom/battery-gallery-3.webp 800w, assets/images/custom/battery-gallery-3-640.webp 640w" sizes="(min-width: 1024px) 40vw, 100vw"><img src="assets/images/custom/battery-gallery-3.jpg" alt="Pylontech-style modular battery graphic specified on Silver packages" class="w-full h-44 object-cover rounded-2xl" loading="lazy" width="800" height="520" decoding="async"></picture>
-        <picture class="block w-full"><source type="image/webp" srcset="assets/images/custom/battery-gallery-4.webp 800w, assets/images/custom/battery-gallery-4-640.webp 640w" sizes="(min-width: 1024px) 40vw, 100vw"><img src="assets/images/custom/battery-gallery-4.jpg" alt="Hybrid inverter and battery graphic for solar plus storage" class="w-full h-44 object-cover rounded-2xl" loading="lazy" width="800" height="520" decoding="async"></picture>
-        <picture class="block w-full"><source type="image/webp" srcset="assets/images/custom/battery-gallery-5.webp 800w, assets/images/custom/battery-gallery-5-640.webp 640w" sizes="(min-width: 1024px) 40vw, 100vw"><img src="assets/images/custom/battery-gallery-5.jpg" alt="Larger battery graphic for commercial or whole-home backup quotes" class="w-full h-44 object-cover rounded-2xl" loading="lazy" width="800" height="520" decoding="async"></picture>
-      </div>
+      <p class="text-sm text-slate-600 mb-5">One illustration of a wall battery. Not a named customer job. Pylontech, BYD and Tesla Powerwall 3 are named on the quote.</p>
+      <picture class="block max-w-3xl"><source type="image/webp" srcset="assets/images/custom/gold-battery-640.webp 640w, assets/images/custom/gold-battery.webp 1200w" sizes="(min-width: 768px) 48rem, 100vw"><img src="assets/images/custom/gold-battery.jpg?v=7" alt="Wall battery in a garage. Illustration, not a named customer job." class="w-full h-64 object-cover rounded-2xl" width="1200" height="380" loading="lazy" decoding="async"></picture>
     </section>
 
     <!-- Process & Local -->
